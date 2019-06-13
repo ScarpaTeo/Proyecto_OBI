@@ -1,7 +1,10 @@
 from tkinter import *
-
+from controladores.loginController import loginController
 class Login():
     def cargar(self):
+        def validar():
+            usuario=user.get()
+            password=contrasena.get()
         ventana=Tk()
         ventana.title("Log In")
         ventana.geometry('395x268')
@@ -17,7 +20,7 @@ class Login():
         contrasena=Entry(ventana,show="*" ,width=35)
         contrasena.place(x=98, y=200)
         #botones enter y cancelar
-        bt_enter=Button(ventana, text="Enter").place(x=321,y=230)
+        bt_enter=Button(ventana, text="Enter", command=validar).place(x=321,y=230)
         bt_cancelar=Button(ventana, text="Cancel").place(x=230,y=230)
         ventana.mainloop()
 
