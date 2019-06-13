@@ -1,10 +1,15 @@
 from tkinter import *
-from controladores.loginController import loginController
+import sys
+sys.path.append('../controladores')
+from loginController import ginController
 class Login():
     def cargar(self):
+        
         def validar():
-            usuario=user.get()
-            password=contrasena.get()
+            usuario=str(user.get())
+            password=str(contrasena.get())
+            con=ginController()
+            con.validarUsuario(usuario,password)
         ventana=Tk()
         ventana.title("Log In")
         ventana.geometry('395x268')

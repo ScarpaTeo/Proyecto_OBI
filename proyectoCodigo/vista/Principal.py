@@ -1,7 +1,7 @@
 from tkinter import *
-
 class Principal():
     def cargar(self):
+
         ventana=Tk()
         ventana.title("Principal")
         ventana.geometry('400x310')
