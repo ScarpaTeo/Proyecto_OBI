@@ -12,11 +12,10 @@ class Login():
             con.validarUsuario(usuario,password)
         ventana=Tk()
         ventana.title("Log In")
-        ventana.geometry('395x268')
-        img = PhotoImage(file="../imagenes/imgLogin.png")
-        Limagen = Label(ventana, image=img).pack()
-        Ltitulo=Label(ventana, text="OWNER BUIDER INTEGRATIVE", fg="red" ,font = ( "Helvetica" , 15)).place(x=45,y=140)
-        
+        ventana.geometry('900x600')
+        ventana.resizable(width=False,height=False)
+        img = PhotoImage(file="../imagenes/fondo.png")
+        Limagen = Label(ventana, image=img).pack(fill = BOTH, expand=1)
         #label y campo user
         Luser=Label(ventana,text="User:").place(x=52, y=170)
         user=Entry(ventana, width=35)
