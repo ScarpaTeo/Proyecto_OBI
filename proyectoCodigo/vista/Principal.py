@@ -5,6 +5,8 @@ class Principal():
         ventana=Tk()
         ventana.title("Principal")
         ventana.geometry('400x310')
+
+        LFondo= PhotoImage("")
         
         Bcimiento=Button(ventana, text="Cimiento", width=42, height=2)
         Bcimiento.place(x=20, y=10)
