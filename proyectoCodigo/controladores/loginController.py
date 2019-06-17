@@ -1,16 +1,13 @@
 import sys
-sys.path.append('../modelos')
 sys.path.append('../vista')
-import Principal
-import loginModel
+sys.path.append('../modelos')
+from loginModel import LoginModel
 
-class ginController():
+class loginController():
     def validarUsuario(self,user,passw):
-        modelo=loginModel.LoginModel()
+        modelo=LoginModel()
         validacion=modelo.validarUsuarioModel(user,passw)
-        
         if(validacion==True):
-            prin=Principal.Principal()
-            prin.cargar()
+            return True;
         else:
-            pass
+            return False

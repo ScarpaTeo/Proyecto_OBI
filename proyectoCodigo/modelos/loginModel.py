@@ -1,6 +1,4 @@
 import sys
-sys.path.append('../controladores')
-import loginController
 class LoginModel():
 
     def validarUsuarioModel(self,user,passw):
