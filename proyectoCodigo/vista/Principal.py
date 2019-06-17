@@ -1,23 +1,42 @@
 from tkinter import *
+from calculo import calculo
 class Principal():
     def __init__(self):
+        c=calculo()
+        def cimiento():
+            #se tiene que llamar a la vista que va a hacer los calculos
+            ventana.destroy()
+            c.cimiento()
+        def pared():
+            #se tiene que llamar a la vista que va a hacer los calculos
+            ventana.destroy()
+            c.pared()
+        def contrapiso():
+            #se tiene que llamar a la vista que va a hacer los calculos
+            ventana.destroy()
+            c.contrapiso()
+        def revoque():
+            #se tiene que llamar a la vista que va a hacer los calculos
+            ventana.destroy()
+            c.revoque()
+
         ventana=Tk()
         ventana.title("Principal")
         ventana.geometry('500x310')
         ventana.resizable(width=False,height=False)
 
-        Bcimiento=Button(ventana, text="Cimiento",fg="white",bg="#848484", font=("Arial",24),width=23, height=1)
+        Bcimiento=Button(ventana, text="Cimiento",fg="white",bg="#848484", font=("Arial",24),width=23, height=1, command=cimiento)
         Bcimiento.place(x=30, y=10)
 
-        Bpared=Button(ventana, text="Pared",fg="white",bg="#848484", font=("Arial",24),width=23, height=1)
+        Bpared=Button(ventana, text="Pared",fg="white",bg="#848484", font=("Arial",24),width=23, height=1,command=pared)
         Bpared.place(x=30,y=70)
 
-        Bcontrapiso=Button(ventana, text="Contrapiso",fg="white",bg="#848484", font=("Arial",24),width=23, height=1)
+        Bcontrapiso=Button(ventana, text="Contrapiso",fg="white",bg="#848484", font=("Arial",24),width=23, height=1,command=contrapiso)
         Bcontrapiso.place(x=30, y=130)
 
-        Brevoque=Button(ventana, text="Revoque",fg="white",bg="#848484", font=("Arial",24),width=23, height=1)
+        Brevoque=Button(ventana, text="Revoque",fg="white",bg="#848484", font=("Arial",24),width=23, height=1,command=revoque)
         Brevoque.place(x=30, y=190)
 
-        Btecho=Button(ventana, text="Contrapiso",fg="white",bg="#848484", font=("Arial",24),width=23, height=1)
+        Btecho=Button(ventana, text="Techo",fg="white",bg="#848484", font=("Arial",24),width=23, height=1)
         Btecho.place(x=30, y=250)
         ventana.mainloop()
