@@ -1,9 +1,27 @@
 from tkinter import *
-
+import tkinter.ttk as ttk
+# import sys
+# sys.path.append('../calculos')
+# from calculo import *
 class calculo():
 
     #ventana para el calculo de cimiento
     def cimiento(self):
+        def calculoCimiento():
+            alto=float(Calto.get())
+            ancho=float(Cancho.get())
+            profundidad=float(Cprofundidad.get())
+            valor=str(Ctipo.get())
+
+            if valor=="pilotin":
+                print("es un pilotin")
+            elif valor=="Corrida":
+                print("es una corrida")
+            elif valor=="viga":
+                print("es una viga")
+
+            
+
         ventana=Tk()
         ventana.title('Calcular Cimiento')
         ventana.geometry('300x300')
@@ -22,7 +40,12 @@ class calculo():
         Cprofundidad=Entry(ventana,width=30)
         Cprofundidad.place(x=28,y=230)
 
-        BcalcularCimiento=Button(ventana,text="Calcular").place(x=109,y=260)
+        Ctipo = ttk.Combobox(values=["Corrida", "viga", "pilotin"])
+        # cbx.set("uno")
+        Ctipo.configure(width=29)
+        Ctipo.place(x=28,y=250)
+
+        BcalcularCimiento=Button(ventana,text="Calcular",command=calculoCimiento).place(x=109,y=260)
         ventana.mainloop()
     
     #ventana para el calculo de contrapiso
