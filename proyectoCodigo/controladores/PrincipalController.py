@@ -2,8 +2,11 @@ import sys
 sys.path.append('../modelos')
 sys.path.append('../vista')
 from Principal import Principal
-import loginModel
+from calculo import *
 
 class PrincipalController():
-    def __init__(self):
+    def levantarVentanaCalculo():
+        pri=Principal()
+        tipo=pri.mostrar()
+        
         
