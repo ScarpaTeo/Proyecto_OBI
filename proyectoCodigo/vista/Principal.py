@@ -9,8 +9,11 @@ class Principal():
     def mostrar(self):
         ventana=Tk()
         ventana.title("Principal")
-        ventana.geometry('500x310')
+        ventana.geometry('700x600')
         ventana.resizable(width=False,height=False)
+        #----------- imagen de fondo
+        icono=PhotoImage(file="../imagenes/Opc.png")
+        Limg=Label(ventana,image=icono).pack()
 
         
         def cimiento():
@@ -43,20 +46,20 @@ class Principal():
             x.techo()
             #self.dato="revoque"
 
-        Bcimiento=Button(ventana, text="Cimiento",fg="white",bg="#848484", font=("Arial",24),width=23, height=1, command=cimiento)
-        Bcimiento.place(x=30, y=10)
+        Bcimiento=Button(ventana, text="Cimiento",fg="black", bg="#FFDE00",relief="flat", height=2, width=33, font=("Arial",12),command=cimiento)
+        Bcimiento.place(x=205, y=142)
 
-        Bpared=Button(ventana, text="Pared",fg="white",bg="#848484", font=("Arial",24),width=23, height=1,command=pared)
-        Bpared.place(x=30,y=70)
+        Bpared=Button(ventana, text="Pared",fg="black", bg="#FFDE00",relief="flat", height=2, width=33, font=("Arial",12),command=pared)
+        Bpared.place(x=205,y=219)
 
-        Bcontrapiso=Button(ventana, text="Contrapiso",fg="white",bg="#848484", font=("Arial",24),width=23, height=1,command=contrapiso)
-        Bcontrapiso.place(x=30, y=130)
+        Bcontrapiso=Button(ventana, text="Contrapiso",fg="black", bg="#FFDE00",relief="flat", height=2, width=33, font=("Arial",12),command=contrapiso)
+        Bcontrapiso.place(x=205, y=295)
 
-        Brevoque=Button(ventana, text="Revoque",fg="white",bg="#848484", font=("Arial",24),width=23, height=1,command=revoque)
-        Brevoque.place(x=30, y=190)
+        Brevoque=Button(ventana, text="Revoque",fg="black", bg="#FFDE00",relief="flat", height=2, width=33, font=("Arial",12),command=revoque)
+        Brevoque.place(x=205, y=373)
 
-        Btecho=Button(ventana, text="Techo",fg="white",bg="#848484", font=("Arial",24),width=23, height=1,command=techo)
-        Btecho.place(x=30, y=250)
+        Btecho=Button(ventana, text="Techo",fg="black", bg="#FFDE00",relief="flat", height=2, width=33, font=("Arial",12),command=techo)
+        Btecho.place(x=205, y=450)
         ventana.mainloop()
         return self.dato
 #-----------------------

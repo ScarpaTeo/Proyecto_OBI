@@ -5,38 +5,50 @@ class Login():
     def __init__(self):
         self.datos = None
     def Motrar(self):
-        
-        ventana=Tk()
-        ventana.title("Log In")
-        ventana.geometry('430x410')
-        ventana.resizable(width=False,height=False)
-        
-        #icono
-        icono=PhotoImage(file="../imagenes/casco.png")
-        Limg=Label(ventana,image=icono).pack()
-        
-        #label y campo user
-        Luser=Label(ventana,text="Usuario",font=("Arial",20)).place(x=162, y=230)
-        self.user=Entry(ventana, width=45)
-        self.user.place(x=35, y=265)
 
-        #label y campo contrasena
-        Lcontrasena=Label(ventana,text="Contrasena",font=("Arial",20)).place(x=143, y=300)        
-        self.contrasena=Entry(ventana,show="*" ,width=45)
-        self.contrasena.place(x=35, y=335)
         def validar():
-            usuario=str(self.user.get())
-            password=str(self.contrasena.get())
+            'funcion obtiene el valor de los campos'
+            usuario = str(self.user.get())
+            password = str(self.contrasena.get())
             ventana.destroy()
-            self.datos={
-                "user":usuario,
-                "pass":password
+            self.datos = {
+                "user": usuario,
+                "pass": password
             }
             return self.datos
-        #botones enter y cancelar
-        bt_enter=Button(ventana, text="Ingresar", fg="black", bg="#04B404",command=validar).place(x=320,y=368)
-        bt_cancelar=Button(ventana, text="Cancel", fg="black", bg="red").place(x=230,y=368)
+
+        def cerrar():
+            'funcion que cierra la app'
+            sys.exit()
+
+        ventana=Tk()
+        ventana.title("Log In")
+        ventana.geometry('700x600')
+        ventana.resizable(width=False,height=False)
         
+        #----------- imagen de fondo
+        icono=PhotoImage(file="../imagenes/log2.png")
+        Limg=Label(ventana,image=icono).pack()
+        
+        #------------- campo user
+        self.user=Entry(ventana, width=16,relief="flat",bg="#FEE780",font=('Arial',18))
+        self.user.place(x=253, y=281)
+
+        #-----------campo contrasena
+        self.contrasena=Entry(ventana,show="*" ,width=16,relief="flat",bg="#FEE780",font=('Arial',18))
+        self.contrasena.place(x=253 ,y=373)
+
+        #--------------- botones enter y cancelar
+        bt_enter = Button(ventana, text="Ingresar", fg="black", bg="#FFDE00", command=validar, relief="flat", height=2,
+                          width=14).place(x=212, y=445)
+        bt_cancelar = Button(ventana, text="Cancel", fg="black", bg="#FFFFFF", relief="flat", height=2, width=14,
+                             command=cerrar).place(x=404, y=445)
+
         ventana.mainloop()
         return self.datos
 
+
+
+
+#x=Login()
+#x.Motrar()
