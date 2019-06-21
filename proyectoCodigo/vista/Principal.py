@@ -1,8 +1,9 @@
 from tkinter import *
+from calculo import calculo
 class Principal():
 
     def __init__(self):
-        self.tipo=None
+        self.dato=None
 
 
     def mostrar(self):
@@ -14,23 +15,33 @@ class Principal():
         
         def cimiento():
             ventana.destroy()
-            self.dato="cimiento"
+            x=calculo()
+            x.cimiento()
+            #self.dato="cimiento"
 
         def pared():
             ventana.destroy()
-            self.dato="pared"
+            x=calculo()
+            x.pared()
+            #self.dato="pared"
 
         def contrapiso():
             ventana.destroy()
-            self.dato="contrapiso"
+            x=calculo()
+            x.contrapiso()
+            #self.dato="contrapiso"
 
         def revoque():
             ventana.destroy()
-            self.dato="revoque"
+            x=calculo()
+            x.revoque()
+            #self.dato="revoque"
 
         def techo():
             ventana.destroy()
-            self.dato="revoque"
+            x=calculo()
+            x.techo()
+            #self.dato="revoque"
 
         Bcimiento=Button(ventana, text="Cimiento",fg="white",bg="#848484", font=("Arial",24),width=23, height=1, command=cimiento)
         Bcimiento.place(x=30, y=10)
@@ -48,3 +59,7 @@ class Principal():
         Btecho.place(x=30, y=250)
         ventana.mainloop()
         return self.dato
+#-----------------------
+#a=Principal()
+#a.mostrar()
+#print(a.dato)
