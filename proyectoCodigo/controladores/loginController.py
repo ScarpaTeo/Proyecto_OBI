@@ -1,9 +1,9 @@
 import sys
 sys.path.append('../vista')
 sys.path.append('../modelos')
+from PrincipalController import PrincipalController
 from loginModel import LoginModel
 from Inicio import Login
-from Principal import Principal
 #from ErrorUsController import ErrorCntrl
 from Error_Usuario import ErrorUsuario
 
@@ -32,8 +32,8 @@ class loginController():
         datos = lo.Motrar()
         validacion = modelo.validarUsuarioModel(datos['user'], datos['pass'])
         if (validacion == True):
-            pri = Principal()
-            print(pri.mostrar())
+            pri=PrincipalController()
+            pri.levantarVentanaCalculo()
         else:
             y = ErrorCntrl()
 
