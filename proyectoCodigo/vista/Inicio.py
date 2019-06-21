@@ -39,4 +39,3 @@ class Login():
         
         ventana.mainloop()
         return self.datos
-
