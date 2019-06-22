@@ -8,7 +8,7 @@ class PrincipalController():
     def levantarVentanaCalculo(self):
         pri=Principal()
         tipo=pri.mostrar()
-        ca=calculo()
+        
         if tipo=="cimiento":
             ca.cimiento()
         elif tipo=="pared":

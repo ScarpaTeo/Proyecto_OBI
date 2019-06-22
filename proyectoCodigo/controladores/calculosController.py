@@ -1,9 +1,16 @@
 import sys
 sys.path.append('../vista')
-from calculo import calculo
-
+from PrincipalController import PrincipalController
 class calculoController():
-    ca=calculo()
+    
+    
     def verCimiento(self):
-        self.ca.cimiento()
-    def verRevoque(self):
+        dato=self.ca.cimiento()
+        #vuelve atras
+        if dato==True:
+            pri=PrincipalController()
+            pri.levantarVentanaCalculo()
+        #trae los datos para calcular
+        if dato!=False and dato!=True:
+            #traer datos del modelo
+            #egregar funcion calculo
