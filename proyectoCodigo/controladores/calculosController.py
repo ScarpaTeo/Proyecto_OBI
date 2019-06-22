@@ -1,16 +1,19 @@
 import sys
 sys.path.append('../vista')
-from PrincipalController import PrincipalController
-class calculoController():
-    
+from calculoCimiento import Cimiento
+class Controllercalculo():
     
     def verCimiento(self):
-        dato=self.ca.cimiento()
+        ci=Cimiento()
+        dato=ci.vistaCimiento()
+        
         #vuelve atras
         if dato==True:
-            pri=PrincipalController()
-            pri.levantarVentanaCalculo()
+            #se tiene que levantar la clase principal
+            pass
         #trae los datos para calcular
         if dato!=False and dato!=True:
-            #traer datos del modelo
-            #egregar funcion calculo
+            #traer datos de la DB
+            #realizar los calculos 
+            #ci.cargarResultado(resultado) // se le pasa el resultado de nuevo a la ventana
+            pass

@@ -13,7 +13,7 @@ import tkinter.ttk as ttk
 # from calculo import *
 
 class Cimiento():
-    def __init__():
+    def __init__(self):
         self.valor=False
         #variable para cargar el resultado
         self.resultado=""
@@ -67,7 +67,7 @@ class Cimiento():
         Dtextfiel=Text(ventana,width=21,height=13,relief="flat",bg="#FFFFFF",font=('Arial',18)).place(x=316 ,y=150)
 
         #---------boton calcular
-        BcalcularCimiento=Button(ventana,width=11,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calculoCimiento).place(x=131,y=454)
+        BcalcularCimiento=Button(ventana,width=11,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=131,y=454)
 
         # ---------boton atras
         Batras=Button(ventana,width=4,relief="flat",bg="#FFFFFF",font=('Arial',16),text="Atras",command=volverAtras).place(x=518,y=89)

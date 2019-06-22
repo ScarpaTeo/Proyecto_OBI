@@ -1,10 +1,10 @@
 import sys
 sys.path.append('../vista')
 sys.path.append('../modelos')
-from loginController import loginController
+from loginController import Controllerlogin
 from Error_Usuario import ErrorUsuario
 
-class ErrorCntrl:
+class ErrorUsuario():
     def __init__(self):
         self.t = None
         self.Obtner()

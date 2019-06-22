@@ -1,5 +1,4 @@
 from tkinter import *
-from calculo import calculo
 class Principal():
 
     def __init__(self):

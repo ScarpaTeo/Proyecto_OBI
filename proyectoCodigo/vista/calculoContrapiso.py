@@ -17,6 +17,9 @@ class Contrapiso():
         self.valor=False
         self.resultado=""
     
+    #a esta funcion le pasas el string de resultado y la variable resultado le agregas al textFile
+    def cargarResultado(self,resu):
+        self.resultado=resu
     
     def vistaContrapiso(self):
 
@@ -61,6 +64,6 @@ class Contrapiso():
         BcalcularCimiento=Button(ventana,width=11,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=131,y=454)
 
         # ---------boton atras
-        Batras=Button(ventana,width=4,relief="flat",bg="#FFFFFF",font=('Arial',16),text="Atras").place(x=518,y=89)
+        Batras=Button(ventana,width=4,relief="flat",bg="#FFFFFF",font=('Arial',16),text="Atras",command=volverAtras).place(x=518,y=89)
         ventana.mainloop()
         return self.valor

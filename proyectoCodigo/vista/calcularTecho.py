@@ -16,6 +16,10 @@ class Techo():
     def __init__(self):
         self.valor=False
         self.resultado=""
+
+    #a esta funcion le pasas el string de resultado y la variable resultado le agregas al textFile
+    def cargarResultado(self,resu):
+        self.resultado=resu
         
     def vistaTecho(self):
 
@@ -54,9 +58,9 @@ class Techo():
         Dtextfiel=Text(ventana,width=21,height=13,relief="flat",bg="#FFFFFF",font=('Arial',18)).place(x=316 ,y=150)
 
         #---------boton calcular
-        BcalcularCimiento=Button(ventana,width=11,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calculoTecho).place(x=131,y=454)
+        BcalcularCimiento=Button(ventana,width=11,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=131,y=454)
 
         #--------boton atras
-        Batras=Button(ventana,width=4,relief="flat",bg="#FFFFFF",font=('Arial',16),text="Atras").place(x=518,y=89)
+        Batras=Button(ventana,width=4,relief="flat",bg="#FFFFFF",font=('Arial',16),text="Atras",command=volverAtras).place(x=518,y=89)
         ventana.mainloop()
         return self.valor
