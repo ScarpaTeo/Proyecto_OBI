@@ -18,33 +18,23 @@ class Principal():
         
         def cimiento():
             ventana.destroy()
-            x=calculo()
-            x.cimiento()
-            #self.dato="cimiento"
+            self.dato="cimiento"
 
         def pared():
             ventana.destroy()
-            x=calculo()
-            x.pared()
-            #self.dato="pared"
+            self.dato="pared"
 
         def contrapiso():
             ventana.destroy()
-            x=calculo()
-            x.contrapiso()
-            #self.dato="contrapiso"
+            self.dato="contrapiso"
 
         def revoque():
             ventana.destroy()
-            x=calculo()
-            x.revoque()
-            #self.dato="revoque"
+            self.dato="revoque"
 
         def techo():
             ventana.destroy()
-            x=calculo()
-            x.techo()
-            #self.dato="revoque"
+            self.dato="revoque"
 
         Bcimiento=Button(ventana, text="Cimiento",fg="black", bg="#FFDE00",relief="flat", height=2, width=33, font=("Arial",12),command=cimiento)
         Bcimiento.place(x=205, y=142)
@@ -62,7 +52,3 @@ class Principal():
         Btecho.place(x=205, y=450)
         ventana.mainloop()
         return self.dato
-#-----------------------
-#a=Principal()
-#a.mostrar()
-#print(a.dato)

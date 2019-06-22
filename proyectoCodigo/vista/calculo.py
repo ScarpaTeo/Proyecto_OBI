@@ -16,20 +16,24 @@ class calculo():
 
     #ventana para el calculo de cimiento
     def cimiento(self):
+        volver=False
 
-        def calculoCimiento():
+        def calculoCimiento(self):
             alto=float(Calto.get())
             ancho=float(Cancho.get())
             profundidad=float(Cprofundidad.get())
-            valor=str(Ctipo.get())
+            tipo_a_calcular=str(Ctipo.get())
 
-            if valor=="pilotin":
-                print("es un pilotin")
-            elif valor=="Corrida":
-                print("es una corrida")
-            elif valor=="viga":
-                print("es una viga")
-
+            self.volver={
+                "alto":alto,
+                "ancho":ancho,
+                "profundidad":profundidad,
+                "tipo_a_calcular":tipo_a_calcular
+            }
+        
+        def volverAtras(self):
+            ventana.destroy()
+            self.volver=True
 
         ventana=Tk()
         ventana.title('Calcular Cimiento')
@@ -60,9 +64,10 @@ class calculo():
         BcalcularCimiento=Button(ventana,width=11,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calculoCimiento).place(x=131,y=454)
 
         # ---------boton atras
-        Batras=Button(ventana,width=4,relief="flat",bg="#FFFFFF",font=('Arial',16),text="Atras").place(x=518,y=89)
+        Batras=Button(ventana,width=4,relief="flat",bg="#FFFFFF",font=('Arial',16),text="Atras",command=volverAtras).place(x=518,y=89)
 
         ventana.mainloop()
+        return volver
     #ventana para el calculo de contrapiso
     def contrapiso(self):
 
