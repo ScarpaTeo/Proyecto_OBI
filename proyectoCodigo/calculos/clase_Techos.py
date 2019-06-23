@@ -1,15 +1,15 @@
 #clase calculo de techos-------------------------------------
-class Techos:
-    def __init__(self,largo,ancho):
+class Techos_calculo:
+    def __init__(self,largo,ancho,chapa):
         self.largo=largo
         self.ancho=ancho
+        self.chapa=chapa
         self.detalle=[]
 
     def calculo_techo(self):
         'Cantidad de chapas necesarias'
         y=self.largo*self.ancho
-        chapa=float(input("""ingrese la medida de las chapas:\n """))
-        cantidad=round(y/chapa,2)
+        cantidad=round(y/self.chapa,2)
         self.detalle.append(cantidad)
 
     def calculo_correas(self):

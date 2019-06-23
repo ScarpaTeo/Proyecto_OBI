@@ -5,6 +5,12 @@ from calculorRevoque import Revoque
 from calculoContrapiso import Contrapiso
 from calcularTecho import Techo
 from calculoPared import Pared
+sys.path.append('../calculos')
+from Clase_cimiento import *
+from Clase_contrapiso import *
+from Clase_reboque import *
+from Clase_pared import *
+from clase_Techos import *
 class Controllercalculo():
     
     def verCimiento(self):
@@ -20,8 +26,18 @@ class Controllercalculo():
         if dato!=False and dato!=True:
             #traer datos de la DB
             #realizar los calculos
-            resultado=dato['alto']+dato['ancho']+dato['profundidad']
-            ci.vistaCimiento(resultado)
+            nuevo=Zapata_corrida(dato['alto'],dato['ancho'],dato['profundidad'])
+            nuevo.Corrida_cemento()
+            lista1=nuevo.detalle
+            precios = [(10), (7.8), (1450), (2100)]
+            total = [a * b for a, b in zip(precios, lista1)]
+            string = '''
+            Cal...${0}\n
+            Cemento...${1}\n
+            Arena...${2}\n
+            Piedra...${3}\n
+            Total...${4}'''.format(round(total[0],2),round(total[1],2),round(total[2],2),round(total[3],2), round(sum(total),2))
+            ci.vistaCimiento(string)
 
     def verRevoque(self):
         ci=Revoque()
@@ -35,8 +51,17 @@ class Controllercalculo():
         if dato!=False and dato!=True:
             #traer datos de la DB
             #realizar los calculos
-            resultado=dato['alto']+dato['ancho'] 
-            ci.vistaRevoque(resultado)
+            nuevo = Reboque(dato['alto'], dato['ancho'])
+            nuevo.reboqueGrueso()
+            lista1 = nuevo.detalle
+            precios = [(10), (7.8), (1450)]
+            total = [a * b for a, b in zip(precios, lista1)]
+            string = '''
+            Cal...${0}\n
+            Cemento...${1}\n
+            Arena...${2}\n
+            Total...${3}'''.format(round(total[0], 2), round(total[1], 2), round(total[2], 2),round(sum(total), 2))
+            ci.vistaRevoque(string)
     
     def verContrapiso(self):
         ci=Contrapiso()
@@ -50,8 +75,17 @@ class Controllercalculo():
         if dato!=False and dato!=True:
             #traer datos de la DB
             #realizar los calculos
-            resultado=dato['alto']+dato['ancho']+dato['profundidad'] 
-            ci.vistaContrapiso(resultado)
+            nuevo=Contrapiso_calculo(dato['alto'],dato['ancho'],dato['profundidad'])
+            nuevo.calcular_Contrapiso()
+            lista1=nuevo.detalle
+            precios = [(7.8), (1450), (1100)]
+            total = [a * b for a, b in zip(precios, lista1)]
+            string = '''
+            Cemento...${0}\n
+            Arena...${1}\n
+            Piedra...${2}\n
+            Total...${3}'''.format(round(total[0],2),round(total[1],2),round(total[2],2),round(sum(total),2))
+            ci.vistaContrapiso(string)
     
     def verPared(self):
         ci=Pared()
@@ -65,8 +99,18 @@ class Controllercalculo():
         if dato!=False and dato!=True:
             #traer datos de la DB
             #realizar los calculos
-            resultado=dato['alto']+dato['ancho']
-            ci.vistaPared(resultado)
+            nuevo = Pared_Comun(dato['alto'], dato['ancho'])
+            nuevo.calculo_PC15()
+            lista1 = nuevo.detalle
+            precios = [(10), (7.8), (1450),(4)]
+            total = [a * b for a, b in zip(precios, lista1)]
+            string = '''
+            Cal...${0}\n
+            Cemento...${1}\n
+            Arena...${2}\n
+            Ladrillos...${3}
+            Total...${4}'''.format(round(total[0], 2), round(total[1], 2), round(total[2], 2), round(total[3], 2),round(sum(total), 2))
+            ci.vistaPared(string)
     
     def verTecho(self):
         ci=Techo()
@@ -80,5 +124,12 @@ class Controllercalculo():
         if dato!=False and dato!=True:
             #traer datos de la DB
             #realizar los calculos
-            resultado=dato['alto']+dato['ancho']
-            ci.vistaTecho(resultado)
+            nuevo = Techos_calculo(dato['alto'], dato['ancho'],dato['tipo'])
+            nuevo.calculo_techo()
+            lista1 = nuevo.detalle
+            precios = [(1000)]
+            total = [a * b for a, b in zip(precios, lista1)]
+            string = '''
+            Chapas...{0}\n
+            Total...${1}'''.format(round(lista1[0], 2),round(sum(total), 2))
+            ci.vistaTecho(string)

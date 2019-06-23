@@ -1,5 +1,5 @@
 
-class Contrapiso():
+class Contrapiso_calculo():
     def __init__(self,largo,ancho,espesor):
         self.largo = largo
         self.ancho = ancho
@@ -17,3 +17,6 @@ class Contrapiso():
         self.detalle.append(arena)
         self.detalle.append(cascote)
 #----------------------------------------------------
+x=Contrapiso_calculo(8,8,0.15)
+x.calcular_Contrapiso()
+print(x.detalle)

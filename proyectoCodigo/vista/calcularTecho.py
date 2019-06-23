@@ -21,7 +21,7 @@ class Techo():
         def calcular():
             alto=float(Calto.get())
             ancho=float(Cancho.get())
-            tipo=str(Ccombo.get())
+            tipo=float(Ccombo.get())
             self.valor={
                 "alto":alto,
                 "ancho":ancho,
