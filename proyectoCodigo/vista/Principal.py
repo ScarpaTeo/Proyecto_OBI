@@ -33,7 +33,7 @@ class Principal():
 
         def techo():
             ventana.destroy()
-            self.dato="revoque"
+            self.dato="techo"
 
         Bcimiento=Button(ventana, text="Cimiento",fg="black", bg="#FFDE00",relief="flat", height=2, width=33, font=("Arial",12),command=cimiento)
         Bcimiento.place(x=205, y=142)

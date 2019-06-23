@@ -10,12 +10,12 @@ class Login():
             'funcion obtiene el valor de los campos'
             usuario = str(self.user.get())
             password = str(self.contrasena.get())
-            ventana.destroy()
+            
             self.datos = {
                 "user": usuario,
                 "pass": password
             }
-            return self.datos
+            ventana.destroy()
 
         def cerrar():
             'funcion que cierra la app'

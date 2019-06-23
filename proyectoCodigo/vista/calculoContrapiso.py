@@ -15,25 +15,19 @@ import tkinter.ttk as ttk
 class Contrapiso():
     def __init__(self):
         self.valor=False
-        self.resultado=""
     
-    #a esta funcion le pasas el string de resultado y la variable resultado le agregas al textFile
-    def cargarResultado(self,resu):
-        self.resultado=resu
-    
-    def vistaContrapiso(self):
+    def vistaContrapiso(self,resultado=""):
 
         def calcular():
             alto=float(Calto.get())
             ancho=float(Cancho.get())
             profundidad=float(Cprofundidad.get())
-            tipo=str(Ctipo.get())
             self.valor={
                 "alto":alto,
                 "ancho":ancho,
                 "profundidad":profundidad
-                "tipo":tipo
             }
+            ventana.destroy()
 
         def volverAtras():
             ventana.destroy()
@@ -60,7 +54,7 @@ class Contrapiso():
         #------------------------Text field
         Dtextfiel=Text(ventana,width=21,height=13,relief="flat",bg="#FFFFFF",font=('Arial',14))
         Dtextfiel.place(x=316 ,y=150)
-        Dtextfiel.insert(INSERT,self.resultado)
+        Dtextfiel.insert(INSERT,resultado)
         Dtextfiel.configure(state='disabled')
 
         #---------boton calcular

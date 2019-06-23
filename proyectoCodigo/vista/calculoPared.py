@@ -1,16 +1,23 @@
+# esto sirve para insertar por lineas en los textfield en el Tkinter
+#T.insert(tk.END, "Just a text Widget\nin two lines\n")
 
+#como enviar texto a los textfield
+#text.configure(state='normal')
+#text.insert('end', 'Some Text')
+#text.configure(state='disabled')
+
+from tkinter import *
+import tkinter.ttk as ttk
+# import sys
+# sys.path.append('../calculos')
+# from calculo import *
 
 
 class Pared():
     def __init__(self):
         self.valor=False
-        self.resultado=""
 
-    #a esta funcion le pasas el string de resultado y la variable resultado le agregas al textFile
-    def cargarResultado(self,resu):
-        self.resultado=resu
-
-    def vistaPared(self):
+    def vistaPared(self, resultado=""):
 
         def calcular():
             alto=float(Calto.get())
@@ -23,6 +30,7 @@ class Pared():
                 "tipo":tipo,
                 "espesor":espesor
             }
+            ventana.destroy()
 
         def volverAtras():
             ventana.destroy()
@@ -54,7 +62,7 @@ class Pared():
         #------------------------Text field
         Dtextfiel=Text(ventana,width=21,height=13,relief="flat",bg="#FFFFFF",font=('Arial',14))
         Dtextfiel.place(x=316 ,y=150)
-        Dtextfiel.insert(INSERT,self.resultado)
+        Dtextfiel.insert(INSERT,resultado)
         Dtextfiel.configure(state='disabled')
 
         #---------boton calcular

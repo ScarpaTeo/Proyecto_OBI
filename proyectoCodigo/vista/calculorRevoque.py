@@ -16,13 +16,7 @@ import tkinter.ttk as ttk
 class Revoque():
     def __init__(self):
         self.valor=False
-        self.resultado=""
-
-    #a esta funcion le pasas el string de resultado y la variable resultado le agregas al textFile
-    def cargarResultado(self,resu):
-        self.resultado=resu
-
-    def vistaRevoque(self):
+    def vistaRevoque(self,resultado=""):
         def calcular():
             alto=float(Calto.get())
             ancho=float(Cancho.get())
@@ -32,6 +26,7 @@ class Revoque():
                 "ancho":ancho,
                 "tipo":tipo
             }
+            ventana.destroy()
         def volverAtras():
             ventana.destroy()
             self.valor=True
@@ -57,7 +52,7 @@ class Revoque():
         #------------------------Text field
         Dtextfiel=Text(ventana,width=21,height=13,relief="flat",bg="#FFFFFF",font=('Arial',14))
         Dtextfiel.place(x=316 ,y=150)
-        Dtextfiel.insert(INSERT,self.resultado)
+        Dtextfiel.insert(INSERT,resultado)
         Dtextfiel.configure(state='disabled')
 
         #---------boton calcular
@@ -66,3 +61,4 @@ class Revoque():
         #--------boton atras
         Batras=Button(ventana,width=4,relief="flat",bg="#FFFFFF",font=('Arial',16),text="Atras",command=volverAtras).place(x=518,y=89)
         ventana.mainloop()
+        return self.valor

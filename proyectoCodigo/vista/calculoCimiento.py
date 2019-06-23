@@ -20,26 +20,20 @@ class Cimiento():
     def __init__(self):
         self.valor=False
         #variable para cargar el resultado
-        self.resultado=""
-    
-    #a esta funcion le pasas el string de resultado y la variable resultado le agregas al textFile
-    def cargarResultado(self,resu):
-        self.resultado="hola mundo "
 
-    def vistaCimiento(self):
-
+    def vistaCimiento(self,resultado=""):
         def calcular():
             alto=float(Calto.get())
             ancho=float(Cancho.get())
             profundidad=float(Cprofundidad.get())
-            tipo_a_calcular=str(Ctipo.get())
-
+            tipo_a_calcular=str(Ccombo.get())
             self.valor={
                 "alto":alto,
                 "ancho":ancho,
                 "profundidad":profundidad,
                 "tipo_a_calcular":tipo_a_calcular
             }
+            ventana.destroy()
 
         def volverAtras():
             ventana.destroy()
@@ -70,7 +64,7 @@ class Cimiento():
         #------------------------Text field
         Dtextfiel=Text(ventana,width=21,height=13,relief="flat",bg="#FFFFFF",font=('Arial',14))
         Dtextfiel.place(x=316 ,y=150)
-        Dtextfiel.insert(INSERT,self.resultado)
+        Dtextfiel.insert(INSERT,resultado)
         Dtextfiel.configure(state='disabled')
 
         #---------boton calcular
