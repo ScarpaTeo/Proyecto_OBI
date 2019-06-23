@@ -11,8 +11,12 @@ import tkinter.ttk as ttk
 # import sys
 # sys.path.append('../calculos')
 # from calculo import *
+from tkinter import *
+
+
 
 class Cimiento():
+
     def __init__(self):
         self.valor=False
         #variable para cargar el resultado
@@ -20,7 +24,7 @@ class Cimiento():
     
     #a esta funcion le pasas el string de resultado y la variable resultado le agregas al textFile
     def cargarResultado(self,resu):
-        self.resultado=resu
+        self.resultado="hola mundo "
 
     def vistaCimiento(self):
 
@@ -64,7 +68,10 @@ class Cimiento():
         Cprofundidad.place(x=128,y=388)
 
         #------------------------Text field
-        Dtextfiel=Text(ventana,width=21,height=13,relief="flat",bg="#FFFFFF",font=('Arial',18)).place(x=316 ,y=150)
+        Dtextfiel=Text(ventana,width=21,height=13,relief="flat",bg="#FFFFFF",font=('Arial',14))
+        Dtextfiel.place(x=316 ,y=150)
+        Dtextfiel.insert(INSERT,self.resultado)
+        Dtextfiel.configure(state='disabled')
 
         #---------boton calcular
         BcalcularCimiento=Button(ventana,width=11,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=131,y=454)
@@ -75,3 +82,7 @@ class Cimiento():
         ventana.mainloop()
         return self.valor
         #ventana para el calculo de contrapiso
+
+#x=Cimiento()
+#x.resultado="Detalle de materiales\n que ondaaaa\n ahre nada que ver"
+#x.vistaCimiento()
