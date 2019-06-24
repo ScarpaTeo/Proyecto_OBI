@@ -1,13 +1,11 @@
 from tkinter import *
-class ErrorUsuario:
+class Error_Usuario():
     def __init__(self):
-        self.valor=None
-    def mostrar(self):
-
+        self.valor=""
+    def errorUsarioIncorrecto(self):
         def Obtener():
             ventana.destroy()
-            self.valor=True
-
+            self.valor="cerrar"
         ventana = Tk()
         ventana.title("Error!")
         ventana.geometry("285x80")
@@ -18,7 +16,18 @@ class ErrorUsuario:
         Aceptar.place(x=98, y=45)
         ventana.mainloop()
         return self.valor
-
-#x=ErrorUsuario()
-#x.mostrar()
-#print(x.valor)
+    
+    def errorCamposVacios(self):
+        def Obtener():
+            ventana.destroy()
+            self.valor="cerrar"
+        ventana = Tk()
+        ventana.title("Error!")
+        ventana.geometry("285x80")
+        ventana.resizable(width=False, height=False)
+        msjError = Label(ventana, text="Error, Todos los campos deben estar copletos", bg="red")
+        msjError.place(x=22, y=10)
+        Aceptar = Button(ventana, text="Aceptar", command=Obtener)
+        Aceptar.place(x=98, y=45)
+        ventana.mainloop()
+        return self.valor
