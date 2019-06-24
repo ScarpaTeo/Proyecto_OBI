@@ -37,5 +37,6 @@ class Controllerlogin():
         else:
             y = ErrorCntrl()
 
-lo=Controllerlogin()
-lo.validarUsuario()
+if __name__=="__main__":
+    lo=Controllerlogin()
+    lo.validarUsuario()

@@ -11,6 +11,9 @@ from Clase_contrapiso import *
 from Clase_reboque import *
 from Clase_pared import *
 from clase_Techos import *
+import PrincipalController
+
+
 class Controllercalculo():
     
     def verCimiento(self):
@@ -19,8 +22,9 @@ class Controllercalculo():
         
         #vuelve atras
         if dato==True:
-            #se tiene que levantar la clase principal
-            print("cerrar ventana", dato)
+            x=PrincipalController.ControllerPrincipal()
+            x.levantarVentanaCalculo()
+
 
         #trae los datos para calcular
         if dato!=False and dato!=True:
@@ -45,8 +49,9 @@ class Controllercalculo():
         
         #vuelve atras
         if dato==True:
-            #se tiene que levantar la clase principal
-            print("vuelve atras")
+            x=PrincipalController.ControllerPrincipal()
+            x.levantarVentanaCalculo()
+
         #trae los datos para calcular
         if dato!=False and dato!=True:
             #traer datos de la DB
@@ -69,8 +74,9 @@ class Controllercalculo():
         
         #vuelve atras
         if dato==True:
-            #se tiene que levantar la clase principal
-            print("vuelve atras")
+            x=PrincipalController.ControllerPrincipal()
+            x.levantarVentanaCalculo()
+
         #trae los datos para calcular
         if dato!=False and dato!=True:
             #traer datos de la DB
@@ -93,8 +99,9 @@ class Controllercalculo():
         
         #vuelve atras
         if dato==True:
-            #se tiene que levantar la clase principal
-            print("vuelve atras")
+            x=PrincipalController.ControllerPrincipal()
+            x.levantarVentanaCalculo()
+
         #trae los datos para calcular
         if dato!=False and dato!=True:
             #traer datos de la DB
@@ -118,8 +125,9 @@ class Controllercalculo():
         
         #vuelve atras
         if dato==True:
-            #se tiene que levantar la clase principal
-            print("vuelve atras")
+            x=PrincipalController.ControllerPrincipal()
+            x.levantarVentanaCalculo()
+
         #trae los datos para calcular
         if dato!=False and dato!=True:
             #traer datos de la DB
