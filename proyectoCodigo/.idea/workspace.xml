@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c69abf5-e6d9-4a7b-a768-dc7db273947d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controladores/PrincipalController.py" beforeDir="false" afterPath="$PROJECT_DIR$/controladores/PrincipalController.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controladores/calculosController.py" beforeDir="false" afterPath="$PROJECT_DIR$/controladores/calculosController.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controladores/loginController.py" beforeDir="false" afterPath="$PROJECT_DIR$/controladores/loginController.py" afterDir="false" />
-    </list>
+    <list default="true" id="6c69abf5-e6d9-4a7b-a768-dc7db273947d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +10,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controladores/loginController.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="296">
@@ -33,10 +28,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controladores/calculosController.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-26">
+            <state relative-caret-position="131">
               <caret line="129" selection-start-line="129" selection-end-line="129" />
             </state>
           </provider>
@@ -153,7 +148,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.loginController">
+  <component name="RunManager" selected="Python.Menu">
     <configuration name="Clase_contrapiso" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="proyectoCodigo" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -176,7 +171,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ErrorUsController" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Menu" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="proyectoCodigo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -184,12 +179,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/controladores" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vista" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/controladores/ErrorUsController.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vista/Menu.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -266,11 +261,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Menu" />
         <item itemvalue="Python.loginController" />
         <item itemvalue="Python.calculosController" />
         <item itemvalue="Python.Clase_contrapiso" />
         <item itemvalue="Python.calculo" />
-        <item itemvalue="Python.ErrorUsController" />
       </list>
     </recent_temporary>
   </component>
@@ -289,12 +284,12 @@
       <workItem from="1560986625655" duration="14679000" />
       <workItem from="1561091579058" duration="22796000" />
       <workItem from="1561315748056" duration="7218000" />
-      <workItem from="1561353287181" duration="337000" />
+      <workItem from="1561353287181" duration="645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56932000" />
+    <option name="totallyTimeSpent" value="57240000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -305,7 +300,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2569558" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2569558" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -359,6 +354,7 @@
     <SUITE FILE_PATH="coverage/proyectoCodigo$calculosController.coverage" NAME="calculosController Coverage Results" MODIFIED="1561325558232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controladores" />
     <SUITE FILE_PATH="coverage/proyectoCodigo$calculo.coverage" NAME="calculo Coverage Results" MODIFIED="1561157548167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
     <SUITE FILE_PATH="coverage/proyectoCodigo$Clase_contrapiso.coverage" NAME="Clase_contrapiso Coverage Results" MODIFIED="1561321696439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/calculos" />
+    <SUITE FILE_PATH="coverage/proyectoCodigo$Menu.coverage" NAME="Menu Coverage Results" MODIFIED="1561356319116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/modelos/loginModel.py">
@@ -473,6 +469,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controladores/loginController.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controladores/PrincipalController.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -482,15 +485,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controladores/calculosController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-26">
+        <state relative-caret-position="131">
           <caret line="129" selection-start-line="129" selection-end-line="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controladores/loginController.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="41" column="23" lean-forward="true" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
         </state>
       </provider>
     </entry>
