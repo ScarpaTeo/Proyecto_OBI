@@ -11,21 +11,17 @@ class Controllerlogin():
         modelo = LoginModel()
         lo = Login()
         datos = lo.Motrar()
-        if not datos['user']:
+        if not datos['user'] or not datos['pass']:
             err=ErrorUsuarioController.ErrorUsuario()
             err.erroCamVacios()
         else:
-            if not datos['pass']:
-                err=ErrorUsuarioController.ErrorUsuario()
-                err.erroCamVacios()
+            validacion = modelo.validarUsuarioModel(datos['user'], datos['pass'])
+            if (validacion == True):
+                pri=ControllerPrincipal()
+                pri.levantarVentanaCalculo()
             else:
-                validacion = modelo.validarUsuarioModel(datos['user'], datos['pass'])
-                if (validacion == True):
-                    pri=ControllerPrincipal()
-                    pri.levantarVentanaCalculo()
-                else:
-                    err=ErrorUsuarioController.ErrorUsuario()
-                    err.errorUIncorrecto()
+                err=ErrorUsuarioController.ErrorUsuario()
+                err.errorUIncorrecto()
                     
 
 if __name__=="__main__":

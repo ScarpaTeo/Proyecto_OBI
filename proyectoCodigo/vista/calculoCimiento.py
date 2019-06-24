@@ -13,27 +13,33 @@ import tkinter.ttk as ttk
 # from calculo import *
 from tkinter import *
 
-
-
 class Cimiento():
 
     def __init__(self):
         self.valor=False
         #variable para cargar el resultado
 
-    def vistaCimiento(self,resultado=""):
+    def vistaCimiento(self,resultado="",estado="normal"):
         def calcular():
-            alto=float(Calto.get())
-            ancho=float(Cancho.get())
-            profundidad=float(Cprofundidad.get())
-            tipo_a_calcular=str(Ccombo.get())
-            self.valor={
-                "alto":alto,
-                "ancho":ancho,
-                "profundidad":profundidad,
-                "tipo_a_calcular":tipo_a_calcular
-            }
-            ventana.destroy()
+            if not Calto.get() or not Cancho.get() or not Cprofundidad.get() or not Ccombo.get():
+                self.valor="ErrorVacio"
+                ventana.destroy()
+            else:
+                try:
+                    alto=float(Calto.get())
+                    ancho=float(Cancho.get())
+                    profundidad=float(Cprofundidad.get())
+                    tipo_a_calcular=str(Ccombo.get())
+                except Exception as a:
+                    ventana.destroy()
+                    self.valor="errorDeTipo"
+                self.valor={
+                    "alto":alto,
+                    "ancho":ancho,
+                    "profundidad":profundidad,
+                    "tipo_a_calcular":tipo_a_calcular
+                }
+                ventana.destroy()
 
         def volverAtras():
             ventana.destroy()
@@ -68,8 +74,10 @@ class Cimiento():
         Dtextfiel.configure(state='disabled')
 
         #---------boton calcular
-        BcalcularCimiento=Button(ventana,width=11,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=131,y=454)
-
+        if estado =="normal":
+            BcalcularCimiento=Button(ventana,width=11,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=131,y=454)
+        else:
+            BcalcularCimiento=Button(ventana,state=DISABLED,width=11,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=131,y=454)
         # ---------boton atras
         Batras=Button(ventana,width=4,relief="flat",bg="#FFFFFF",font=('Arial',16),text="Atras",command=volverAtras).place(x=518,y=89)
 

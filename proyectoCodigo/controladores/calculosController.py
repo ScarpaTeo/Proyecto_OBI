@@ -12,24 +12,34 @@ from Clase_reboque import *
 from Clase_pared import *
 from clase_Techos import *
 import PrincipalController
-
+import ErrorCalculosController
 
 class Controllercalculo():
     
     def verCimiento(self):
         ci=Cimiento()
         dato=ci.vistaCimiento()
+
+        if dato=="ErrorVacio":
+            ee=ErrorCalculosController.ControllerCalculoError()
+            ee.campoVacio()
+            vi=Cimiento()
+            vi.vistaCimiento()
         
+        if dato=="errorDeTipo":
+            ee=ErrorCalculosController.ControllerCalculoError()
+            ee.campoIncorrecto()
+            vi=Cimiento()
+            vi.vistaCimiento()
+
         #vuelve atras
         if dato==True:
             x=PrincipalController.ControllerPrincipal()
             x.levantarVentanaCalculo()
-
-
         #trae los datos para calcular
         if dato!=False and dato!=True:
             #traer datos de la DB
-            #realizar los calculos
+            #realizar los calculo
             nuevo=Zapata_corrida(dato['alto'],dato['ancho'],dato['profundidad'])
             nuevo.Corrida_cemento()
             lista1=nuevo.detalle
@@ -41,7 +51,7 @@ class Controllercalculo():
             Arena...${2}\n
             Piedra...${3}\n
             Total...${4}'''.format(round(total[0],2),round(total[1],2),round(total[2],2),round(total[3],2), round(sum(total),2))
-            ci.vistaCimiento(string)
+            ci.vistaCimiento(string,"DISABLE")
 
     def verRevoque(self):
         ci=Revoque()
