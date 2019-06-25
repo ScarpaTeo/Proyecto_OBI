@@ -8,31 +8,41 @@
 
 from tkinter import *
 import tkinter.ttk as ttk
-# import sys
-# sys.path.append('../calculos')
-# from calculo import *
-from tkinter import *
 
 class Cimiento():
 
     def __init__(self):
         self.valor=False
         #variable para cargar el resultado
-
     def vistaCimiento(self,resultado="",estado="normal"):
+        ventana=Tk()
+        ventana.title('Calcular Cimiento')
+        ventana.geometry('700x600')
+        img=PhotoImage(file="../imagenes/cimiento.png")
+        Licono=Label(ventana,image=img).pack()
+
+        def errorVacio():
+            error=Label(ventana,text="*error campos vacios*",bg="white",fg="red",font=("Arial",12)).place(x=253, y=80)
+        def errorIncorrecto():
+            error=Label(ventana,text="*error valores incorrectos*",bg="white",fg="red",font=("Arial",12)).place(x=253, y=80)
+        
         def calcular():
             if not Calto.get() or not Cancho.get() or not Cprofundidad.get() or not Ccombo.get():
-                self.valor="ErrorVacio"
-                ventana.destroy()
+                errorVacio()
+                Calto.delete(0,END)
+                Cancho.delete(0,END)
+                Cprofundidad.delete(0,END)
             else:
                 try:
                     alto=float(Calto.get())
                     ancho=float(Cancho.get())
                     profundidad=float(Cprofundidad.get())
                     tipo_a_calcular=str(Ccombo.get())
-                except Exception as a:
-                    ventana.destroy()
-                    self.valor="errorDeTipo"
+                except Exception:
+                    errorIncorrecto()
+                    Calto.delete(0,END)
+                    Cancho.delete(0,END)
+                    Cprofundidad.delete(0,END)
                 self.valor={
                     "alto":alto,
                     "ancho":ancho,
@@ -43,14 +53,7 @@ class Cimiento():
 
         def volverAtras():
             ventana.destroy()
-            self.valor=True
-
-        ventana=Tk()
-        ventana.title('Calcular Cimiento')
-        ventana.geometry('700x600')
-        img=PhotoImage(file="../imagenes/cimiento.png")
-        Licono=Label(ventana,image=img).pack()
-
+            self.valor="principal"    
         #--------------combo box
         Ccombo = ttk.Combobox(values=["Corrida", "viga", "pilotin"],state="readonly",width=16,font=('Arial',12))
         Ccombo.place(x=128,y=140)
@@ -83,8 +86,3 @@ class Cimiento():
 
         ventana.mainloop()
         return self.valor
-        #ventana para el calculo de contrapiso
-
-#x=Cimiento()
-#x.resultado="Detalle de materiales\n que ondaaaa\n ahre nada que ver"
-#x.vistaCimiento()
