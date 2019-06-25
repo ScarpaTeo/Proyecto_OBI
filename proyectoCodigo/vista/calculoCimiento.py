@@ -15,16 +15,17 @@ class Cimiento():
         self.valor=False
         #variable para cargar el resultado
     def vistaCimiento(self,resultado="",estado="normal"):
+        def errorVacio():
+            error.config(text="error! campos vacios")
+        def errorIncorrecto():
+            error.config(text="error! valores incorrectos")
         ventana=Tk()
         ventana.title('Calcular Cimiento')
         ventana.geometry('700x600')
         img=PhotoImage(file="../imagenes/cimiento.png")
         Licono=Label(ventana,image=img).pack()
-
-        def errorVacio():
-            error=Label(ventana,text="*error campos vacios*",bg="white",fg="red",font=("Arial",12)).place(x=253, y=80)
-        def errorIncorrecto():
-            error=Label(ventana,text="*error valores incorrectos*",bg="white",fg="red",font=("Arial",12)).place(x=253, y=80)
+        error=Label(ventana,text="",bg="white",fg="red",font=("Arial",12))
+        error.place(x=253, y=80)
         
         def calcular():
             if not Calto.get() or not Cancho.get() or not Cprofundidad.get() or not Ccombo.get():
