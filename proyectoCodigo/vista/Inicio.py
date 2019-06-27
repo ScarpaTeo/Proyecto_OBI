@@ -23,7 +23,7 @@ class Login():
 
         ventana=Tk()
         ventana.title("Log In")
-        ventana.geometry('700x600')
+        ventana.geometry('700x600+350+0')
         ventana.resizable(width=False,height=False)
         
         #----------- imagen de fondo

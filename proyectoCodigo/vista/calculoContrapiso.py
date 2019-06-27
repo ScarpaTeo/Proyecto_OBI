@@ -24,7 +24,7 @@ class Contrapiso():
            
         ventana=Tk()
         ventana.title('Calcular Contrapiso')
-        ventana.geometry('700x600')
+        ventana.geometry('700x600+350+0')
         img=PhotoImage(file="../imagenes/contrapiso.png")
         Licono=Label(ventana,image=img).pack()
         error=Label(ventana,text="",bg="white",fg="red",font=("Arial",12))

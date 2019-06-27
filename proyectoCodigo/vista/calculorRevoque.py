@@ -24,7 +24,7 @@ class Revoque():
            
         ventana=Tk()
         ventana.title('Calcular Reboques')
-        ventana.geometry('700x600')
+        ventana.geometry('700x600+350+0')
         img=PhotoImage(file="../imagenes/revoque.png")
         Licono=Label(ventana,image=img).pack()
         error=Label(ventana,text="",bg="white",fg="red",font=("Arial",12))

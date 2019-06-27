@@ -8,7 +8,7 @@ class Principal():
     def mostrar(self):
         ventana=Tk()
         ventana.title("Principal")
-        ventana.geometry('700x600')
+        ventana.geometry('700x600+350+0')
         ventana.resizable(width=False,height=False)
         #----------- imagen de fondo
         icono=PhotoImage(file="../imagenes/Opc.png")

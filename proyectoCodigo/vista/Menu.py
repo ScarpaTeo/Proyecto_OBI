@@ -11,7 +11,7 @@ class MostrarMenu:
         'crea la ventana menu'
         ventana = Tk()
         ventana.title("Menu")
-        ventana.geometry('700x600')
+        ventana.geometry('700x600+350+0')
         ventana.resizable(width=False, height=False)
 
         # ----------- imagen de fondo

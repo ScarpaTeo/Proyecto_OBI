@@ -8,7 +8,7 @@ class Error_Usuario():
             self.valor="cerrar"
         ventana = Tk()
         ventana.title("Error!")
-        ventana.geometry("285x80")
+        ventana.geometry("285x80+550-450")
         ventana.resizable(width=False, height=False)
         msjError = Label(ventana, text="Error, usuario o contraseña incorrecto", bg="red")
         msjError.place(x=22, y=10)
@@ -23,7 +23,7 @@ class Error_Usuario():
             self.valor="cerrar"
         ventana = Tk()
         ventana.title("Error!")
-        ventana.geometry("285x80")
+        ventana.geometry("285x80+550-450")
         ventana.resizable(width=False, height=False)
         msjError = Label(ventana, text="Error, Todos los campos deben estar copletos", bg="red")
         msjError.place(x=22, y=10)

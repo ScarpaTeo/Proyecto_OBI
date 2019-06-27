@@ -21,7 +21,7 @@ class Cimiento():
             error.config(text="error! valores incorrectos")
         ventana=Tk()
         ventana.title('Calcular Cimiento')
-        ventana.geometry('700x600')
+        ventana.geometry('700x600+350+0')
         img=PhotoImage(file="../imagenes/cimiento.png")
         Licono=Label(ventana,image=img).pack()
         error=Label(ventana,text="",bg="white",fg="red",font=("Arial",12))
