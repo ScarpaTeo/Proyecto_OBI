@@ -6,12 +6,17 @@ from Error_Usuario import Error_Usuario
 
 class ErrorUsuario():
 
+    def __del__(self):
+        print("objeto eliminado")
+
+
     def erroCamVacios(self):
         er=Error_Usuario()
         dato=er.errorCamposVacios()
         if dato=="cerrar":
             lo=loginController.Controllerlogin()
             lo.validarUsuario()
+            sys.exit()
     
     def errorUIncorrecto(self):
         err=Error_Usuario()
@@ -19,3 +24,4 @@ class ErrorUsuario():
         if dato=="cerrar":
             lo=loginController.Controllerlogin()
             lo.validarUsuario()
+            sys.exit()

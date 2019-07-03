@@ -14,12 +14,17 @@ from clase_Techos import *
 import PrincipalController
 
 class Controllercalculo():
-    
+
+    def __del__(self):
+        print("objeto eliminado")
+
+
     def verCimiento(self):
         def calcular(dato):
             if dato=="principal":
                 x=PrincipalController.ControllerPrincipal()
                 x.levantarVentanaCalculo()
+
             #trae los datos para calcular
             if dato!=False and dato!=True:
                 #traer datos de la DB
@@ -40,6 +45,7 @@ class Controllercalculo():
         ci=Cimiento()
         dato=ci.vistaCimiento()
         calcular(dato)
+        sys.exit()
         
     def verRevoque(self):
         def calcular(dato):
@@ -67,6 +73,7 @@ class Controllercalculo():
         ci=Revoque()
         dato=ci.vistaRevoque()
         calcular(dato)
+        sys.exit()
     
     def verContrapiso(self):
         def calcular(dato):
@@ -94,6 +101,7 @@ class Controllercalculo():
         ci=Contrapiso()
         dato=ci.vistaContrapiso()
         calcular(dato)
+        sys.exit()
     
     def verPared(self):
         def calcular(dato):
@@ -122,6 +130,7 @@ class Controllercalculo():
         ci=Pared()
         dato=ci.vistaPared()
         calcular(dato)
+        sys.exit()
         
     
     def verTecho(self):
@@ -148,3 +157,5 @@ class Controllercalculo():
         ci=Techo()
         dato=ci.vistaTecho()
         calcular(dato)
+        sys.exit()
+

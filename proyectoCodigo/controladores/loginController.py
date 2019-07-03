@@ -7,6 +7,9 @@ from Inicio import Login
 import ErrorUsuarioController
 class Controllerlogin():
 
+    def __del__(self):
+        print("objeto eliminado")
+
     def validarUsuario(self):
         modelo = LoginModel()
         lo = Login()
@@ -22,7 +25,7 @@ class Controllerlogin():
             else:
                 err=ErrorUsuarioController.ErrorUsuario()
                 err.errorUIncorrecto()
-                    
+
 
 if __name__=="__main__":
     lo=Controllerlogin()
