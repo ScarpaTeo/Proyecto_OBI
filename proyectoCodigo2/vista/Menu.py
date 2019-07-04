@@ -3,10 +3,12 @@
 #cargar precios
 
 from tkinter import *
+from tkinter import messagebox
 
 class MostrarMenu:
     def __init__(self):
         self.valor=False
+    
     def mostrar(self):
         def cargarPr():
             ventana.destroy()
@@ -16,12 +18,20 @@ class MostrarMenu:
             ventana.destroy()
             self.valor="presupuesto"
         #--------------------------
+
+        def salirEscape(evento):
+            pregunta = messagebox.askokcancel("Salir","¿ Desea salir de la Aplicación")
+            if pregunta == True:
+                ventana.destroy()
+
         'crea la ventana menu'
         ventana = Tk()
+        ventana.focus()
         ventana.title("Menu")
         ventana.geometry('700x600+350+0')
         ventana.resizable(width=False, height=False)
-
+        ventana.focus()
+        ventana.bind("<Escape>",salirEscape)
         # ----------- imagen de fondo
         icono = PhotoImage(file="../imagenes/menu.png")
         Limg = Label(ventana, image=icono).pack()

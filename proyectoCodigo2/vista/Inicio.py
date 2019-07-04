@@ -21,11 +21,15 @@ class Login():
             self.datos="Registro"
             ventana.destroy()
 
+        def pressEnter(evento):
+            validar()
+
         ventana=Tk()
         ventana.title("Log In")
         ventana.geometry('700x600+350+0')
         ventana.resizable(width=False,height=False)
-        
+        ventana.bind("<Return>",pressEnter)
+
         #----------- imagen de fondo
         icono=PhotoImage(file="../imagenes/log2.png")
         Limg=Label(ventana,image=icono).pack()
@@ -33,7 +37,7 @@ class Login():
         #------------- campo user
         self.user=Entry(ventana, width=16,relief="flat",bg="#FEE780",font=('Arial',18))
         self.user.place(x=253, y=281)
-
+        self.user.focus()
         #-----------campo contrasena
         self.contrasena=Entry(ventana,show="*" ,width=16,relief="flat",bg="#FEE780",font=('Arial',18))
         self.contrasena.place(x=253 ,y=373)
@@ -43,6 +47,5 @@ class Login():
                           width=14).place(x=212, y=445)
         bt_registrar = Button(ventana, text="Registrarse", fg="black", bg="#FFFFFF", relief="flat", height=2, width=14,
                              command=registrarse).place(x=404, y=445)
-
         ventana.mainloop()
         return self.datos

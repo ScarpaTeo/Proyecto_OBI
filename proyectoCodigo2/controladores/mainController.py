@@ -11,6 +11,7 @@ from calculorRevoque import Revoque
 from calculoContrapiso import Contrapiso
 from calcularTecho import Techo
 from calculoPared import Pared
+from actualizarPrecio import ActualizarPrecio
 from Menu import *
 sys.path.append('../calculos')
 from Clase_cimiento import *
@@ -58,7 +59,7 @@ class Controlador():
         m.mostrar()
         dato=m.valor
         if dato=="precios":
-            pass
+            self.levantarVentanaPrecio()
         elif dato=="presupuesto":
             self.levantarVentanaCalculo()
 
@@ -69,6 +70,19 @@ class Controlador():
             self.erroCamVacios()
         else:  
             self.validarUsuario()       
+    def levantarVentanaPrecio(self):
+        ap = ActualizarPrecio()
+        ap.vistaActualizar()
+        dato= ap.valor
+        if dato == "principal":
+            self.levantarMenu()
+        else:
+            cadena = "%s.. $%s" %(dato['tipo'], dato['precio'])
+            precioActualizado = ap.vistaActualizar(cadena,"disable")
+            if precioActualizado == 'principal':
+                self.levantarMenu()
+
+
     def levantarVentanaCalculo(self):
         pri=Principal()
         tipo=pri.mostrar()
