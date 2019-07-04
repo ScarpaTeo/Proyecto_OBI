@@ -11,6 +11,7 @@ class Reboque:
         cemento_hidro = round(2.7*m3,2)
         arena_hidro =round(0.06*m3,2)
         self.detalle.append(cemento_hidro)
+        self.detalle.append(0)
         self.detalle.append(arena_hidro)
         
     def reboqueGrueso(self):

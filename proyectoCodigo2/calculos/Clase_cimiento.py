@@ -14,10 +14,12 @@ class Zapata_corrida:
         cemento = round(38.40 * y,2)
         arena = round(0.51 * y,2)
         cascote = round(0.77 * y,2)
-        self.detalle.append(cal)
+        #self.detalle.append(cal)
         self.detalle.append(cemento)
         self.detalle.append(arena)
         self.detalle.append(cascote)
+        self.detalle.append(0)
+        self.detalle.append(0)
 
     def Corrida_hercal(self):
         "Calculo de zapata corrida hecha con Hercal"
