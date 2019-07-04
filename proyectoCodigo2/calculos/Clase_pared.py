@@ -64,6 +64,7 @@ class Pared_tabiques:
         arena = round(0.16 * y ,2)
         bloques = round(30 * y,2)
         self.detalle.append(cal)
+        self.detalle.append(cemento)
         self.detalle.append(arena)
         self.detalle.append(bloques)
     def calculo_PH20(self):

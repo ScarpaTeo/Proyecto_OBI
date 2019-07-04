@@ -35,6 +35,10 @@ class Principal():
             ventana.destroy()
             self.dato="techo"
 
+        def volverAtras():
+            ventana.destroy()
+            self.dato="menu"
+
         Bcimiento=Button(ventana, text="Cimiento",fg="black", bg="#FFDE00",relief="flat", height=2, width=33, font=("Arial",12),command=cimiento)
         Bcimiento.place(x=205, y=142)
 
@@ -49,5 +53,11 @@ class Principal():
 
         Btecho=Button(ventana, text="Techo",fg="black", bg="#FFDE00",relief="flat", height=2, width=33, font=("Arial",12),command=techo)
         Btecho.place(x=205, y=450)
+        # ---------boton atras
+        Batras=Button(ventana,width=8,relief="flat",bg="#FFFFFF",font=('Arial',10),text="Atras",command=volverAtras).place(x=518,y=80)
+
         ventana.mainloop()
         return self.dato
+
+#x=Principal()
+#x.mostrar()

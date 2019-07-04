@@ -9,7 +9,6 @@ from Principal import Principal
 from calculoCimiento import Cimiento
 from calculorRevoque import Revoque
 from calculoContrapiso import Contrapiso
-from actualizarPrecio import ActualizarPrecio
 from calcularTecho import Techo
 from calculoPared import Pared
 from Menu import *
@@ -56,10 +55,9 @@ class Controlador():
         m.mostrar()
         dato=m.valor
         if dato=="precios":
-             self.levantarVentanaPrecio()
+            pass
         elif dato=="presupuesto":
             self.levantarVentanaCalculo()
-
     '''def levantarVentanaRegistro(self):
         reg=Registro()
         reg.mostrarRegistro()
@@ -68,7 +66,6 @@ class Controlador():
             self.erroCamVacios()
         else:  
             self.levantarMenu()'''         
-
     def levantarVentanaCalculo(self):
         pri=Principal()
         tipo=pri.mostrar()
@@ -82,17 +79,8 @@ class Controlador():
             self.verPared()
         elif tipo=="techo":
             self.verTecho()
-
-    
-    def levantarVentanaPrecio(self):
-        ap = ActualizarPrecio()
-        ap.vistaActualizar()
-        dato= ap.valor
-        if dato == "principal":
+        elif tipo=="menu":
             self.levantarMenu()
-        else:
-            cadena = "%s.. $%s" %(dato['tipo'], dato['precio'])
-            ap.vistaActualizar(cadena)
 
     def verTecho(self):
         t=Techo()
@@ -120,17 +108,27 @@ class Controlador():
         if dato == True or dato == "principal":
             self.levantarVentanaCalculo()
         if dato != False and dato != True:
-            nuevo = Zapata_corrida(dato['alto'], dato['ancho'], dato['profundidad'])
-            nuevo.Corrida_cemento()
-            lista1 = nuevo.detalle
-            precios = [(10), (7.8), (1450), (2100)]
+            if dato['tipo_a_calcular']=='Corrida':
+                nuevo = Zapata_corrida(dato['alto'], dato['ancho'], dato['profundidad'])
+                nuevo.Corrida_cemento()
+                lista1 = nuevo.detalle
+            elif dato['tipo_a_calcular']=='viga':
+                nuevo = Viga_encadenado(dato['alto'], dato['ancho'], dato['profundidad'])
+                nuevo.calculo_Viga()
+                lista1 = nuevo.detalle
+            elif dato['tipo_a_calcular']=='pilotin':
+                nuevo = Pilotines(dato['alto'], dato['ancho'], dato['profundidad'])
+                nuevo.calculo_pilotin()
+                lista1 = nuevo.detalle
+            precios = [(7.8), (1450), (2100),(850),(550)]
             total = [a * b for a, b in zip(precios, lista1)]
             string = '''
-    Cal...{0} kg\n
-    Cemento...{1} kg\n
-    Arena...{2} m3\n
-    Piedra...{3} m3\n
-    Total...${4}'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2], 2), round(lista1[3], 2),round(sum(total), 2))
+    Cemento...{0} kg\n
+    Arena...{1} m3\n
+    Piedra...{2} m3\n
+    Hierro 10...{3}m\n
+    Hierro 4...{4}m\n
+    Total...${5}'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2], 2), round(lista1[3], 2), round(lista1[4], 2),round(sum(total), 2))
             new_c = c.vistaCimiento(string, "DISABLE")
             self.detalleGeneral.append(string)
             if c.valor == "principal":
@@ -143,9 +141,18 @@ class Controlador():
         if dato == True or dato == "principal":
             self.levantarVentanaCalculo()
         if dato != False and dato != True:
-            nuevo = Reboque(dato['alto'], dato['ancho'])
-            nuevo.reboqueGrueso()
-            lista1 = nuevo.detalle
+            if dato["tipo"]=="Reboque Grueso":
+                nuevo = Reboque(dato['alto'], dato['ancho'])
+                nuevo.reboqueGrueso()
+                lista1 = nuevo.detalle
+            elif dato["tipo"]=="Revoque Impearmeable":
+                nuevo = Reboque(dato['alto'], dato['ancho'])
+                nuevo.reboqueImpermeable()
+                lista1 = nuevo.detalle
+            elif dato["tipo"]=="Reboque fino":
+                nuevo = Reboque(dato['alto'], dato['ancho'])
+                nuevo.reboqueFino()
+                lista1 = nuevo.detalle
             precios = [(10), (7.8), (1450)]
             total = [a * b for a, b in zip(precios, lista1)]
             string = '''
@@ -179,6 +186,7 @@ class Controlador():
             self.detalleGeneral.append(string)
             if cn.valor == "principal":
                 self.levantarVentanaCalculo()
+
     def verPared(self):
         p=Pared()
         p.vistaPared()
@@ -186,17 +194,51 @@ class Controlador():
         if dato == True or dato == "principal":
             self.levantarVentanaCalculo()
         if dato != False and dato != True:
-            nuevo = Pared_Comun(dato['alto'], dato['ancho'])
-            nuevo.calculo_PC15()
-            lista1 = nuevo.detalle
+            if dato['tipo']=='Pared de Bloques' and dato['espesor']=='0.15 cm':
+                nuevo = Pared_Bloques(dato['alto'], dato['ancho'])
+                nuevo.calculo_PC15()
+                lista1 = nuevo.detalle
+            elif dato['tipo']=='Pared de Bloques' and dato['espesor']=='0.20 cm':
+                nuevo = Pared_Bloques(dato['alto'], dato['ancho'])
+                nuevo.calculo_PC20()
+                lista1 = nuevo.detalle
+            elif dato['tipo']=='Pared de Bloques' and dato['espesor']=='0.30 cm':
+                nuevo = Pared_Bloques(dato['alto'], dato['ancho'])
+                nuevo.calculo_PC20()
+                lista1 = nuevo.detalle
+            elif dato['tipo']=='Pared de Tabiques' and dato['espesor']=='0.15 cm':
+                nuevo = Pared_tabiques(dato['alto'], dato['ancho'])
+                nuevo.calculo_PH15()
+                lista1 = nuevo.detalle
+            elif dato['tipo']=='Pared de Tabiques' and dato['espesor']=='0.20 cm':
+                nuevo = Pared_tabiques(dato['alto'], dato['ancho'])
+                nuevo.calculo_PH20()
+                lista1 = nuevo.detalle
+            elif dato['tipo']=='Pared de Tabiques' and dato['espesor']=='0.30 cm':
+                nuevo = Pared_tabiques(dato['alto'], dato['ancho'])
+                nuevo.calculo_PH20()
+                lista1 = nuevo.detalle
+            elif dato['tipo']=='Pared Común' and dato['espesor']=='0.15 cm':
+                nuevo = Pared_Comun(dato['alto'], dato['ancho'])
+                nuevo.calculo_PC15()
+                lista1 = nuevo.detalle
+            elif dato['tipo']=='Pared Común' and dato['espesor']=='0.20 cm':
+                nuevo = Pared_Comun(dato['alto'], dato['ancho'])
+                nuevo.calculo_PC20()
+                lista1 = nuevo.detalle
+            elif dato['tipo'] == 'Pared Común' and dato['espesor'] == '0.30 cm':
+                nuevo = Pared_Comun(dato['alto'], dato['ancho'])
+                nuevo.calculo_PC30()
+                lista1 = nuevo.detalle
+
             precios = [(10), (7.8), (1450), (4)]
             total = [a * b for a, b in zip(precios, lista1)]
             string = '''
-    Cal...${0} kg\n
-    Cemento...${1} kg\n
-    Arena...{2} m3\n
-    Ladrillos...{3}
-    Total...${4}'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2], 2),round(lista1[3], 2),round(sum(total), 2))
+        Cal...${0} kg\n
+        Cemento...${1} kg\n
+        Arena...{2} m3\n
+        Ladrillos...{3}
+        Total...${4}'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2], 2),round(lista1[3], 2),round(sum(total), 2))
             new_p = p.vistaPared(string, "disable")
             self.detalleGeneral.append(string)
             if p.valor == "principal":

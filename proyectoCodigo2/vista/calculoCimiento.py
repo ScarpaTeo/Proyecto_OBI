@@ -93,3 +93,4 @@ class Cimiento():
 
 #x=Cimiento()
 #x.vistaCimiento()
+#print(x.valor)

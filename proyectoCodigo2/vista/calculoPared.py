@@ -101,3 +101,4 @@ class Pared():
 
 #x=Pared()
 #x.vistaPared()
+#print(x.valor)
