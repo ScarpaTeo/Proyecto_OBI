@@ -8,6 +8,7 @@ from Principal import Principal
 from calculoCimiento import Cimiento
 from calculorRevoque import Revoque
 from calculoContrapiso import Contrapiso
+from actualizarPrecio import ActualizarPrecio
 from calcularTecho import Techo
 from calculoPared import Pared
 from Menu import *
@@ -54,9 +55,10 @@ class Controlador():
         m.mostrar()
         dato=m.valor
         if dato=="precios":
-            pass
+             self.levantarVentanaPrecio()
         elif dato=="presupuesto":
             self.levantarVentanaCalculo()
+
 
     def levantarVentanaCalculo(self):
         pri=Principal()
@@ -71,6 +73,17 @@ class Controlador():
             self.verPared()
         elif tipo=="techo":
             self.verTecho()
+
+    
+    def levantarVentanaPrecio(self):
+        ap = ActualizarPrecio()
+        ap.vistaActualizar()
+        dato= ap.valor
+        if dato == "principal":
+            self.levantarMenu()
+        else:
+            cadena = "%s.. $%s" %(dato['tipo'], dato['precio'])
+            ap.vistaActualizar(cadena)
 
     def verTecho(self):
         t=Techo()
