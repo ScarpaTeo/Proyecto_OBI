@@ -47,5 +47,7 @@ class Login():
                           width=14).place(x=212, y=445)
         bt_registrar = Button(ventana, text="Registrarse", fg="black", bg="#FFFFFF", relief="flat", height=2, width=14,
                              command=registrarse).place(x=404, y=445)
+        
+        ventana.focus_force()
         ventana.mainloop()
         return self.datos

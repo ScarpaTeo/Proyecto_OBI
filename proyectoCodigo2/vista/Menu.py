@@ -26,11 +26,9 @@ class MostrarMenu:
 
         'crea la ventana menu'
         ventana = Tk()
-        ventana.focus()
         ventana.title("Menu")
         ventana.geometry('700x600+350+0')
         ventana.resizable(width=False, height=False)
-        ventana.focus()
         ventana.bind("<Escape>",salirEscape)
         # ----------- imagen de fondo
         icono = PhotoImage(file="../imagenes/menu.png")
@@ -42,4 +40,12 @@ class MostrarMenu:
         B_cargarPrecio= Button(ventana, text="Cargar Precios", fg="black", bg="#FFDE00",command=cargarPr, relief="flat", height=3, width=21,font=('Arial',13))
         B_cargarPrecio.place(x=364, y=153)
 
+<<<<<<< HEAD
         ventana.mainloop()
+=======
+        ventana.focus_force()
+        ventana.mainloop()
+
+#x=MostrarMenu()
+#x.mostrar()
+>>>>>>> 31e2026f5091efef25e300ada0ba279a746c2945

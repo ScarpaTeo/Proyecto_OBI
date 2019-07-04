@@ -78,6 +78,8 @@ class ActualizarPrecio():
             BcalcularCimiento=Button(ventana,width=11,relief="flat",bg="#FFDE00",font=('Arial',18),text="Actualizar",command=actulizar).place(x=131,y=450)
         #--------boton atras
         Batras=Button(ventana,width=8,relief="flat",bg="#FFFFFF",font=('Arial',10),text="Atras",command=volverAtras).place(x=511,y=90)
+    
+        ventana.focus_force()
         ventana.mainloop()
         return self.valor
 
