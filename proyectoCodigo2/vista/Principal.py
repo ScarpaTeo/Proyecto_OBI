@@ -55,7 +55,8 @@ class Principal():
         Btecho.place(x=205, y=450)
         # ---------boton atras
         Batras=Button(ventana,width=8,relief="flat",bg="#FFFFFF",font=('Arial',10),text="Atras",command=volverAtras).place(x=518,y=80)
-
+        
+        ventana.focus_force()
         ventana.mainloop()
         return self.dato
 

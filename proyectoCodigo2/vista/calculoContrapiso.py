@@ -21,10 +21,14 @@ class Contrapiso():
             error.config(text="error! campos vacios")
         def errorIncorrecto():
             error.config(text="error! valores incorrectos")
+        
+        def pressEnter(evento):
+            calcular()
            
         ventana=Tk()
         ventana.title('Calcular Contrapiso')
         ventana.geometry('700x600+350+0')
+        ventana.bind("<Return>",pressEnter)
         img=PhotoImage(file="../imagenes/contrapiso.png")
         Licono=Label(ventana,image=img).pack()
         error=Label(ventana,text="",bg="white",fg="red",font=("Arial",12))
@@ -87,6 +91,8 @@ class Contrapiso():
         Bimprimir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="imprimir",command=volverAtras).place(x=516,y=475)
         #--------------seguir calculando
         Bañadir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="añadir",command=volverAtras).place(x=369,y=475)
+        
+        ventana.focus_force()        
         ventana.mainloop()
         return self.valor
 #x=Contrapiso()
