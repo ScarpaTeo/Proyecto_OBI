@@ -15,9 +15,9 @@ class Registro():
             icono=PhotoImage(file="../imagenes/Registro.png")
             img=Label(ventana,image=icono).pack()
             bt_register = Button(ventana, text="Registrar", fg="black", bg="#FEE780", command=validar, relief="flat", height=2,
-                          width=13,font=('Arial',11)).place(x=215, y=521)
+                          width=13,font=('Arial',11)).place(x=215, y=522)
             bt_cancelar = Button(ventana, text="Cancelar", fg="black", bg="#FEE780", command=validar, relief="flat", height=2,
-                          width=13,font=('Arial',11)).place(x=387, y=521)
+                          width=13,font=('Arial',11)).place(x=387, y=522)
             ventana.mainloop()
 
 x=Registro()
