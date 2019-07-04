@@ -33,6 +33,3 @@ class MostrarMenu:
         B_cargarPrecio.place(x=364, y=153)
 
         ventana.mainloop()
-
-#x=MostrarMenu()
-#x.mostrar()

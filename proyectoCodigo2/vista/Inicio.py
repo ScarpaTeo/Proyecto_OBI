@@ -48,9 +48,3 @@ class Login():
 
         ventana.mainloop()
         return self.datos
-
-
-
-
-x=Login()
-x.Motrar()
