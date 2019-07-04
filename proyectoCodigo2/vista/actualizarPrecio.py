@@ -20,14 +20,19 @@ class ActualizarPrecio():
         def errorIncorrecto():
             error.config(text="error! valores incorrectos")
 
+        def pressEnter(evento):
+            actulizar()
+
         ventana=Tk()
         ventana.title('Actualizar Precios')
         ventana.geometry('700x600+350+0')
+        ventana.bind("<Return>",pressEnter)
         img=PhotoImage(file="../imagenes/Precios.png")
         Licono=Label(ventana,image=img).pack()
         error=Label(ventana,text="",bg="white",fg="red",font=("Arial",12))
         error.place(x=253, y=80)
-        
+
+
         def actulizar():
             if  not Cprecio.get() or not Ccombo.get():
                 errorVacio()
@@ -50,6 +55,8 @@ class ActualizarPrecio():
         def volverAtras():
             ventana.destroy()
             self.valor="principal"
+        
+   
 
          #--------------combo box tipo de pared
         Ccombo = ttk.Combobox(values=["Arena","Cal","Cemento","Hierro del 10","Hierro del 4","Piedra"],state="readonly",font=('Arial',12))

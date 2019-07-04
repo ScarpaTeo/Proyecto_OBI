@@ -2,7 +2,6 @@ import sys
 sys.path.append('../vista')
 from tkinter import *
 class Login():
-
     def __init__(self):
         self.datos = None
         self.valor=None
@@ -32,7 +31,7 @@ class Login():
         ventana.geometry('700x600+350+0')
         ventana.resizable(width=False,height=False)
         ventana.bind("<Return>",pressEnter)
-        
+
         #----------- imagen de fondo
         icono=PhotoImage(file="../imagenes/log2.png")
         Limg=Label(ventana,image=icono).pack()
@@ -46,16 +45,15 @@ class Login():
         self.contrasena.place(x=253 ,y=373)
 
         #--------------- botones enter y cancelar
-        bt_enter = Button(ventana,text="Ingresar", fg="black", bg="#FFDE00", command=validar, relief="flat", height=2,
+        bt_enter = Button(ventana, text="Ingresar", fg="black", bg="#FFDE00", command=validar, relief="flat", height=2,
                           width=14).place(x=212, y=445)
         bt_cancelar = Button(ventana, text="Registrarse", fg="black", bg="#FFFFFF", relief="flat", height=2, width=14,
                              command=registrarse).place(x=404, y=445)
-       
-
         ventana.mainloop()
         return self.datos
 
 
 
 
-
+#x=Login()
+#x.Motrar()
