@@ -71,6 +71,8 @@ class Controlador():
             self.verPared()
         elif tipo=="techo":
             self.verTecho()
+        elif tipo=="menu":
+            self.levantarMenu()
 
     def verTecho(self):
         t=Techo()

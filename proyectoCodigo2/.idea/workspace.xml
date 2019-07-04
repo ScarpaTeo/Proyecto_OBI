@@ -13,17 +13,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controladores/mainController.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="239" column="14" lean-forward="true" selection-start-line="239" selection-start-column="14" selection-end-line="239" selection-end-column="14" />
+            <state relative-caret-position="198">
+              <caret line="72" column="27" lean-forward="true" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/calculos/Clase_reboque.py">
+        <entry file="file://$PROJECT_DIR$/vista/Principal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+            <state relative-caret-position="324">
+              <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vista/calculoContrapiso.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="84" column="56" lean-forward="true" selection-start-line="84" selection-start-column="56" selection-end-line="84" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -45,7 +54,6 @@
       <list>
         <option value="$PROJECT_DIR$/vista/Error_Usuario.py" />
         <option value="$PROJECT_DIR$/controladores/ErrorUsController.py" />
-        <option value="$PROJECT_DIR$/vista/Principal.py" />
         <option value="$PROJECT_DIR$/vista/calculo.py" />
         <option value="$PROJECT_DIR$/calculos/clase_Techos.py" />
         <option value="$PROJECT_DIR$/controladores/PrincipalController.py" />
@@ -64,8 +72,9 @@
         <option value="$PROJECT_DIR$/vista/Inicio.py" />
         <option value="$PROJECT_DIR$/calculos/Clase_cimiento.py" />
         <option value="$PROJECT_DIR$/vista/calcularTecho.py" />
-        <option value="$PROJECT_DIR$/controladores/mainController.py" />
         <option value="$PROJECT_DIR$/calculos/Clase_reboque.py" />
+        <option value="$PROJECT_DIR$/vista/Principal.py" />
+        <option value="$PROJECT_DIR$/controladores/mainController.py" />
       </list>
     </option>
   </component>
@@ -136,7 +145,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.mainController">
-    <configuration name="Clase_pared" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Principal" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="proyectoCodigo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -144,12 +153,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/calculos" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vista" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/calculos/Clase_pared.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vista/Principal.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -249,10 +258,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.mainController" />
+        <item itemvalue="Python.Principal" />
         <item itemvalue="Python.calcularTecho" />
         <item itemvalue="Python.calculoCimiento" />
         <item itemvalue="Python.calculoPared" />
-        <item itemvalue="Python.Clase_pared" />
       </list>
     </recent_temporary>
   </component>
@@ -276,12 +285,12 @@
       <workItem from="1562076795905" duration="6460000" />
       <workItem from="1562103647681" duration="18579000" />
       <workItem from="1562176652270" duration="2687000" />
-      <workItem from="1562193283129" duration="22873000" />
+      <workItem from="1562193283129" duration="23786000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108625000" />
+    <option name="totallyTimeSpent" value="109538000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -345,11 +354,12 @@
     <SUITE FILE_PATH="coverage/proyectoCodigo$Principal.coverage" NAME="Principal Coverage Results" MODIFIED="1561143540944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
     <SUITE FILE_PATH="coverage/proyectoCodigo$PrincipalController.coverage" NAME="PrincipalController Coverage Results" MODIFIED="1560921993903" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controladores" />
     <SUITE FILE_PATH="coverage/proyectoCodigo2$Clase_pared.coverage" NAME="Clase_pared Coverage Results" MODIFIED="1562244778605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/calculos" />
+    <SUITE FILE_PATH="coverage/proyectoCodigo2$Principal.coverage" NAME="Principal Coverage Results" MODIFIED="1562255630467" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
     <SUITE FILE_PATH="coverage/proyectoCodigo$ErrorUsController.coverage" NAME="ErrorUsController Coverage Results" MODIFIED="1561157105984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controladores" />
     <SUITE FILE_PATH="coverage/proyectoCodigo$calculosController.coverage" NAME="calculosController Coverage Results" MODIFIED="1561325558232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controladores" />
     <SUITE FILE_PATH="coverage/proyectoCodigo2$calculoCimiento.coverage" NAME="calculoCimiento Coverage Results" MODIFIED="1562252389085" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
     <SUITE FILE_PATH="coverage/proyectoCodigo$Menu.coverage" NAME="Menu Coverage Results" MODIFIED="1562092500383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
-    <SUITE FILE_PATH="coverage/proyectoCodigo2$mainController.coverage" NAME="mainController Coverage Results" MODIFIED="1562254882594" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controladores" />
+    <SUITE FILE_PATH="coverage/proyectoCodigo2$mainController.coverage" NAME="mainController Coverage Results" MODIFIED="1562255821626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controladores" />
     <SUITE FILE_PATH="coverage/proyectoCodigo2$calcularTecho.coverage" NAME="calcularTecho Coverage Results" MODIFIED="1562253758032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
     <SUITE FILE_PATH="coverage/proyectoCodigo$loginController.coverage" NAME="loginController Coverage Results" MODIFIED="1562087255555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controladores" />
     <SUITE FILE_PATH="coverage/proyectoCodigo2$calculoPared.coverage" NAME="calculoPared Coverage Results" MODIFIED="1562247490231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
@@ -361,13 +371,6 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../OBI-OLD.py" />
     <entry file="file://$PROJECT_DIR$/vista/calculo.py" />
-    <entry file="file://$PROJECT_DIR$/vista/Principal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="467">
-          <caret line="52" column="24" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controladores/ErrorUsController.py" />
     <entry file="file://$PROJECT_DIR$/../../POO_python/Vistas/main_window.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -410,13 +413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
           <caret line="74" column="68" lean-forward="true" selection-start-line="74" selection-start-column="68" selection-end-line="74" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vista/calculoContrapiso.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="92" column="1" selection-start-line="92" selection-start-column="1" selection-end-line="92" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -485,15 +481,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/calculos/Clase_reboque.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        <state relative-caret-position="330">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/calculoContrapiso.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="84" column="56" lean-forward="true" selection-start-line="84" selection-start-column="56" selection-end-line="84" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/Principal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="39" column="27" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controladores/mainController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="239" column="14" lean-forward="true" selection-start-line="239" selection-start-column="14" selection-end-line="239" selection-end-column="14" />
+        <state relative-caret-position="198">
+          <caret line="72" column="27" lean-forward="true" selection-start-line="72" selection-start-column="27" selection-end-line="72" selection-end-column="27" />
         </state>
       </provider>
     </entry>
