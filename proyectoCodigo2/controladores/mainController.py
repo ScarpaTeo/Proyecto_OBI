@@ -3,6 +3,7 @@ import sys
 sys.path.append('../vista')
 sys.path.append('../modelos')
 from loginModel import LoginModel
+#from ventanaRegistro import Registro
 from Inicio import Login
 from Principal import Principal
 from calculoCimiento import Cimiento
@@ -59,6 +60,14 @@ class Controlador():
         elif dato=="presupuesto":
             self.levantarVentanaCalculo()
 
+    '''def levantarVentanaRegistro(self):
+        reg=Registro()
+        reg.mostrarRegistro()
+        dato=reg.valor
+        if not datos['name'] or not datos['user'] or not datos['email'] or not datos['contrasena'] or not datos['confirm_pass']:
+            self.erroCamVacios()
+        else:  
+            self.levantarMenu()'''         
 
     def levantarVentanaCalculo(self):
         pri=Principal()
@@ -193,7 +202,7 @@ class Controlador():
             if p.valor == "principal":
                 self.levantarVentanaCalculo()
 
-'''if __name__=="__main__":
+if __name__=="__main__":
     new=Controlador()
     new.validarUsuario()
-    print(new.detalleGeneral)'''
+    print(new.detalleGeneral)

@@ -65,13 +65,5 @@ class Login():
 
 
         ventana.mainloop()
-<<<<<<< HEAD
+
         return self.datos
-=======
-        return self.datos
-
-
-
-
-
->>>>>>> 745d914ccde8b9aa6f8f37cedca0c1beccbc3d1d
