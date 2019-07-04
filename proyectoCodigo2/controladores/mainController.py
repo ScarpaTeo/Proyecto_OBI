@@ -180,7 +180,7 @@ class Controlador():
             if p.valor == "principal":
                 self.levantarVentanaCalculo()
 
-if __name__=="__main__":
+'''if __name__=="__main__":
     new=Controlador()
     new.validarUsuario()
-    print(new.detalleGeneral)
+    print(new.detalleGeneral)'''
