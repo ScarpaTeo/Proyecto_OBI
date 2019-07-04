@@ -8,12 +8,13 @@ class Error_Usuario():
             self.valor="cerrar"
         ventana = Tk()
         ventana.title("Error!")
-        ventana.geometry("285x80+550-450")
+        ventana.geometry("400x85")
         ventana.resizable(width=False, height=False)
-        msjError = Label(ventana, text="Error, usuario o contraseña incorrecto", bg="red")
-        msjError.place(x=22, y=10)
-        Aceptar = Button(ventana, text="Aceptar", command=Obtener)
-        Aceptar.place(x=98, y=45)
+        img=PhotoImage(file="../imagenes/usuariocontraseña.png")
+        msjError=Label(ventana, image=img).place(x=-2, y=-13)
+        Aceptar=Button(ventana, text="Aceptar", command=Obtener)
+        Aceptar.config(height=1, width=14)
+        Aceptar.place(x=158, y=47.5)
         ventana.mainloop()
         return self.valor
     
@@ -23,11 +24,12 @@ class Error_Usuario():
             self.valor="cerrar"
         ventana = Tk()
         ventana.title("Error!")
-        ventana.geometry("285x80+550-450")
+        ventana.geometry("400x85")
         ventana.resizable(width=False, height=False)
-        msjError = Label(ventana, text="Error, Todos los campos deben estar copletos", bg="red")
-        msjError.place(x=22, y=10)
-        Aceptar = Button(ventana, text="Aceptar", command=Obtener)
-        Aceptar.place(x=98, y=45)
+        img=PhotoImage(file="../imagenes/campos-vacios.png")
+        msjError=Label(ventana, image=img).place(x=-2, y=-13)
+        Aceptar=Button(ventana, text="Aceptar", command=Obtener)
+        Aceptar.config(height=1, width=14)
+        Aceptar.place(x=158, y=47.5)
         ventana.mainloop()
         return self.valor
