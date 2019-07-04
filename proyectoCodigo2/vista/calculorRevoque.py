@@ -59,27 +59,33 @@ class Revoque():
         #--------------combo box tipo de pared
         Ccombo = ttk.Combobox(values=["Revoque Impearmeable", "Reboque Grueso", "Reboque fino"],state="readonly",font=('Arial',12))
         Ccombo.configure(width=16)
-        Ccombo.place(x=128,y=168)
+        Ccombo.place(x=105,y=200)
         #--------------------campo Alto
         Calto=Entry(ventana,width=14,relief="flat",bg="#FEE780",font=('Arial',16))
-        Calto.place(x=128,y=249)
+        Calto.place(x=101,y=281)
 
         #-------------------campo ancho
         Cancho=Entry(ventana,width=14,relief="flat",bg="#FEE780",font=('Arial',16))
-        Cancho.place(x=128,y=332)
+        Cancho.place(x=101,y=366)
 
         #------------------------Text field
-        Dtextfiel=Text(ventana,width=21,height=13,relief="flat",bg="#FFFFFF",font=('Arial',14))
-        Dtextfiel.place(x=316 ,y=150)
+        Dtextfiel=Text(ventana,width=24,height=12,relief="flat",bg="#FFFFFF",font=('Arial',14))
+        Dtextfiel.place(x=344 ,y=154)
         Dtextfiel.insert(INSERT,resultado)
         Dtextfiel.configure(state='disabled')
 
         if estado=="normal":
         #---------boton calcular
-            BcalcularCimiento=Button(ventana,width=11,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=131,y=454)
+            BcalcularCimiento=Button(ventana,width=12,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=100,y=465)
         else:
-            BcalcularCimiento=Button(ventana,state=DISABLED,width=11,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=131,y=454)
+            BcalcularCimiento=Button(ventana,state=DISABLED,width=12,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=100,y=465)
         #--------boton atras
-        Batras=Button(ventana,width=4,relief="flat",bg="#FFFFFF",font=('Arial',16),text="Atras",command=volverAtras).place(x=518,y=89)
+        Batras=Button(ventana,width=8,relief="flat",bg="#FFFFFF",font=('Arial',10),text="Atras",command=volverAtras).place(x=544,y=91)
+        #-------------imprimir detalle
+        Bimprimir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="imprimir",command=volverAtras).place(x=516,y=475)
+        #--------------seguir calculando
+        Bañadir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="añadir",command=volverAtras).place(x=369,y=475)
         ventana.mainloop()
         return self.valor
+#x=Revoque()
+#x.vistaRevoque()

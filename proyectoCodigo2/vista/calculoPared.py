@@ -65,32 +65,39 @@ class Pared():
         #--------------combo box tipo de pared
         Ccombo = ttk.Combobox(values=["Pared de Bloques", "Pared de Tabiques", "Pared Común"],state="readonly",font=('Arial',12))
         Ccombo.configure(width=16)
-        Ccombo.place(x=128,y=140)
+        Ccombo.place(x=105,y=136)
         #--------------------campo Alto
         Calto=Entry(ventana,width=14,relief="flat",bg="#FEE780",font=('Arial',16))
-        Calto.place(x=128,y=220)
+        Calto.place(x=101,y=216)
 
         #-------------------campo ancho
         Cancho=Entry(ventana,width=14,relief="flat",bg="#FEE780",font=('Arial',16))
-        Cancho.place(x=128,y=304)
+        Cancho.place(x=101,y=297)
 
         #---------------combox espesor
         Cespesor= ttk.Combobox(values=["0.15 cm", "0.20 cm", "0.30 cm"],state="readonly",font=('Arial',11))
         Cespesor.configure(width=9)
-        Cespesor.place(x=128,y=390)
+        Cespesor.place(x=106,y=385)
 
         #------------------------Text field
-        Dtextfiel=Text(ventana,width=21,height=13,relief="flat",bg="#FFFFFF",font=('Arial',14))
-        Dtextfiel.place(x=316 ,y=150)
+        Dtextfiel=Text(ventana,width=24,height=12,relief="flat",bg="#FFFFFF",font=('Arial',14))
+        Dtextfiel.place(x=344 ,y=138)
         Dtextfiel.insert(INSERT,resultado)
         Dtextfiel.configure(state='disabled')
         if estado=="normal":
         #---------boton calcular
-            BcalcularCimiento=Button(ventana,width=11,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=131,y=454)
+            BcalcularCimiento=Button(ventana,width=12,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=99,y=448)
         else:
-            BcalcularCimiento=Button(ventana,state=DISABLED,width=11,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=131,y=454)
+            BcalcularCimiento=Button(ventana,state=DISABLED,width=12,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=99,y=448)
 
         #--------boton atras
-        Batras=Button(ventana,width=4,relief="flat",bg="#FFFFFF",font=('Arial',16),text="Atras",command=volverAtras).place(x=518,y=89)
+        Batras=Button(ventana,width=8,relief="flat",bg="#FFFFFF",font=('Arial',10),text="Atras",command=volverAtras).place(x=543,y=70)
+        #-------------imprimir detalle
+        Bimprimir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="imprimir",command=volverAtras).place(x=516,y=458)
+        #--------------seguir calculando
+        Bañadir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="añadir",command=volverAtras).place(x=369,y=458)
         ventana.mainloop()
         return self.valor
+
+#x=Pared()
+#x.vistaPared()
