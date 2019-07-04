@@ -27,6 +27,11 @@ class Registro():
                 self.valor="Registrar"
                 ventana.destroy()
 
+            def volverLogin():
+            #cierra la ventana y vuelve al menu de login
+                ventana.destroy()
+                self.valor = "Principal"
+
             #-------------------Seccion ventana
             ventana=Tk()
             ventana.title("Registro")
@@ -59,6 +64,3 @@ class Registro():
                           width=13,font=('Arial',11)).place(x=387, y=522)
 
             ventana.mainloop()
-
-x=Registro()
-x.mostrarRegistro()

@@ -4,7 +4,6 @@ from tkinter import *
 class Login():
     def __init__(self):
         self.datos = None
-        self.valor=None
     def Motrar(self):
 
         def validar():
@@ -19,8 +18,7 @@ class Login():
             ventana.destroy()
 
         def registrarse():
-            'funcion que cierra la app'
-            self.valor="Registro"
+            self.datos="Registro"
             ventana.destroy()
 
         ventana=Tk()
@@ -43,19 +41,8 @@ class Login():
         #--------------- botones enter y cancelar
         bt_enter = Button(ventana, text="Ingresar", fg="black", bg="#FFDE00", command=validar, relief="flat", height=2,
                           width=14).place(x=212, y=445)
-        bt_cancelar = Button(ventana, text="Registrarse", fg="black", bg="#FFFFFF", relief="flat", height=2, width=14,
+        bt_registrar = Button(ventana, text="Registrarse", fg="black", bg="#FFFFFF", relief="flat", height=2, width=14,
                              command=registrarse).place(x=404, y=445)
 
         ventana.mainloop()
-<<<<<<< HEAD
-
         return self.datos
-=======
-        return self.datos
-
-
-
-
-#x=Login()
-#x.Motrar()
->>>>>>> bd3f0655956ef973d8c9e5ed27d5e09d2c573bbf
