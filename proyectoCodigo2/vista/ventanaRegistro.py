@@ -3,7 +3,6 @@ class Registro():
 
         def __init__(self):
             self.datos=None
-            self.valor=None
         def mostrarRegistro(self):
             def validar():
                 #funcion para validar los datos 
@@ -22,15 +21,10 @@ class Registro():
                }
                ventana.destroy()
 
-            def nuevoRegistro():
-            #cierra la ventana luego del nuevo registro
-                self.valor="Registrar"
-                ventana.destroy()
-
             def volverLogin():
             #cierra la ventana y vuelve al menu de login
                 ventana.destroy()
-                self.valor = "Principal"
+                self.datos = "Login"
 
             #-------------------Seccion ventana
             ventana=Tk()
@@ -60,7 +54,7 @@ class Registro():
             #-------------------seccion botones
             bt_register = Button(ventana, text="Registrar", fg="black", bg="#FEE780", command=validar, relief="flat", height=2,
                           width=13,font=('Arial',11)).place(x=215, y=522)
-            bt_cancelar = Button(ventana, text="Cancelar", fg="black", bg="#FFFFFF", command=validar, relief="flat", height=2,
+            bt_cancelar = Button(ventana, text="Cancelar", fg="black", bg="#FFFFFF", command=volverLogin, relief="flat", height=2,
                           width=13,font=('Arial',11)).place(x=387, y=522)
 
             ventana.mainloop()

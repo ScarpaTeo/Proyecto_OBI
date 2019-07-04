@@ -40,12 +40,8 @@ class MostrarMenu:
         B_cargarPrecio= Button(ventana, text="Cargar Precios", fg="black", bg="#FFDE00",command=cargarPr, relief="flat", height=3, width=21,font=('Arial',13))
         B_cargarPrecio.place(x=364, y=153)
 
-<<<<<<< HEAD
-        ventana.mainloop()
-=======
         ventana.focus_force()
         ventana.mainloop()
 
 #x=MostrarMenu()
 #x.mostrar()
->>>>>>> 31e2026f5091efef25e300ada0ba279a746c2945

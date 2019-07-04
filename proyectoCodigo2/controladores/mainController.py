@@ -65,7 +65,9 @@ class Controlador():
 
     def levantarVentanaRegistro(self):
         reg=Registro()
-        reg.mostrarRegistro()
+        datos=reg.mostrarRegistro()
+        if datos=="Login":
+            self.validarUsuario() 
         if not datos['name'] or not datos['user'] or not datos['email'] or not datos['contrasena'] or not datos['confirm_pass']:
             self.erroCamVacios()
         else:  
