@@ -1,7 +1,7 @@
 import mysql.connector
 
 class Conexion:
-    def __init__(self,host="localhost",user="root",passwd="464985",database="mydatabase"):
+    def __init__(self,host="localhost",user="root",passwd="",database="obi"):
         self.host=host
         self.user=user
         self.passwd=passwd
@@ -25,7 +25,7 @@ class Conexion:
         """Traer registros"""
         self.resultado = self.mycursor.fetchall()
         print("se trajeron los archivos")
-
+        return self.resultado
     def enviar_commit(self,query):
         'enviar commit a la base de datos '
         consulta=query.lower()
@@ -39,22 +39,25 @@ class Conexion:
     #el metodo mas importante, el que va a Unitodo junto
     def ejecutar_set(self,consulta,valores=''):
         'llama a todos los metodos para hacer un Set a la base'
+        datos=False
         if (self.host and self.user and self.passwd and self.database and consulta):
             self.conectar()
             self.abrir_cursor()
             self.ejecutar_consulta(consulta,valores)
             self.enviar_commit(consulta)
             self.cerrar_cursor()
-        print("operacion exitosa")
+            datos=True
+        return datos
     def ejecutar_get(self,consulta,valores=''):
         'llama a todos los metodos para hacer un GET desde la base'
-        if (self.host and self.user and self.passwd and self.database and consulta):
+        datos=""
+        if (self,self.host and self.user and self.passwd and self.database and consulta):
             self.conectar()
             self.abrir_cursor()
             self.ejecutar_consulta(consulta,valores)
-            self.traer_datos()
+            datos=self.traer_datos()
             self.cerrar_cursor()
-            return self.resultado
+        return datos
 
 #----------------------------------------Consulta de prueba Cargar campos SET a la base
 '''
@@ -64,23 +67,22 @@ apellido=input("ingresa el apellido:\n")
 dni=int(input("ingresa el Dni:\n"))
 saldo=float(input("ingresa el saldo:\n"))
 
-sql="INSERT INTO registro(patente,nombre,apellido,dni,saldo) VALUES (%s,%s,%s,%s,%s)"
-valores=(patente,nombre,apellido,dni,saldo)
-
+sql="INSERT INTO usuario(usuario,contraseña,confirmar_contraseña,email,nombre_completo) VALUES (%s,%s,%s,%s,%s)"
+valores=("teo","123","123","teo@gmail.com","teo Scarpa")
 nuevo=Conexion()
 nuevo.ejecutar_set(sql,valores)'''
 #----------------------------------------Consulta de prueba GET a la base
-'''
-patente=input("ingrese la patente: \n")
-sql2="SELECT * FROM registro WHERE Patente='{0}'".format(patente)
+
+#patente=input("ingrese la patente: \n")
+#sql2="SELECT * FROM registro WHERE Patente='{0}'".format(patente)
+"""sql2="SELECT * FROM usuario WHERE usuario='nicolas' AND contraseña='123'"
 print(sql2)
 
 nueva=Conexion()
-nueva.ejecutar_get(sql2)
+x=nueva.ejecutar_get(sql2)
+dato=x[0]
+print(dato[1])"""
 
-x=nueva.resultado
-print(x)
-'''
 #---------------------------------------Consulta actualizar valores en la Base
 #sql3="UPDATE registro SET saldo=%s WHERE Patente=%s ;"
 #datos=(560,'A333')

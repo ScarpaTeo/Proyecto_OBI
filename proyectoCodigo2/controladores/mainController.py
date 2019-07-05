@@ -3,6 +3,7 @@ import sys
 sys.path.append('../vista')
 sys.path.append('../modelos')
 from loginModel import LoginModel
+from registroModel import RegitroModel
 from ventanaRegistro import Registro
 from Inicio import Login
 from Principal import Principal
@@ -64,12 +65,19 @@ class Controlador():
             self.levantarVentanaCalculo()
 
     def levantarVentanaRegistro(self):
+        def registroo(datos):
+            if datos=="Login":
+                self.validarUsuario() 
+            else:  
+                registro=RegitroModel()
+                bandera=registro.registrar(datos)
+                reg=Registro()
+                datos=reg.mostrarRegistro(bandera)
+                registroo(datos)
         reg=Registro()
-        reg.mostrarRegistro()
-        if not datos['name'] or not datos['user'] or not datos['email'] or not datos['contrasena'] or not datos['confirm_pass']:
-            self.erroCamVacios()
-        else:  
-            self.validarUsuario()       
+        datos=reg.mostrarRegistro()
+        registroo(datos)
+
     def levantarVentanaPrecio(self):
         ap = ActualizarPrecio()
         ap.vistaActualizar()
