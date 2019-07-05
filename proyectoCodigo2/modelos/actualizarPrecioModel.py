@@ -18,6 +18,6 @@ class actualizarLosPrecioModel():
         self.dato=dato
 
 
-x=actualizarLosPrecioModel()
-x.obtenerPrecios()
-print(x.dato)
+#x=actualizarLosPrecioModel()
+#x.obtenerPrecios()
+#print(x.dato)

@@ -1,5 +1,7 @@
 
 import sys
+sys.path.append('../conexion')
+from Clase_ConsultaBD import Conexion
 sys.path.append('../vista')
 sys.path.append('../modelos')
 from loginModel import LoginModel
@@ -153,7 +155,16 @@ class Controlador():
                 nuevo = Pilotines(dato['alto'], dato['ancho'], dato['profundidad'])
                 nuevo.calculo_pilotin()
                 lista1 = nuevo.detalle
-            precios = [(7.8), (1450), (2100),(850),(550)]
+
+            query = "SELECT precio FROM materiales WHERE id_materiales=2 or id_materiales=3 or id_materiales=4 or id_materiales=5 or id_materiales=6"
+            traer = Conexion()
+            precios2 = traer.ejecutar_get(query)
+            precios = []
+            for item in precios2:
+                for element in item:
+                    precios.append(int(element))
+
+            #precios = [(7.8), (1450), (2100),(850),(550)]
             total = [a * b for a, b in zip(precios, lista1)]
             string = '''
     Cemento...{0} kg\n
@@ -186,7 +197,16 @@ class Controlador():
                 nuevo = Reboque(dato['alto'], dato['ancho'])
                 nuevo.reboqueFino()
                 lista1 = nuevo.detalle
-            precios = [(10), (7.8), (1450)]
+
+            query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3"
+            traer = Conexion()
+            precios2 = traer.ejecutar_get(query)
+            precios = []
+            for item in precios2:
+                for element in item:
+                    precios.append(int(element))
+
+            #precios = [(10), (7.8), (1450)]
             total = [a * b for a, b in zip(precios, lista1)]
             string = '''
     Cal...{0} kg\n
@@ -208,7 +228,15 @@ class Controlador():
             nuevo = Contrapiso_calculo(dato['alto'], dato['ancho'], dato['profundidad'])
             nuevo.calcular_Contrapiso()
             lista1 = nuevo.detalle
-            precios = [(7.8), (1450), (1100)]
+            query = "SELECT precio FROM materiales WHERE id_materiales=2 or id_materiales=3 or id_materiales=4"
+            traer = Conexion()
+            precios2 = traer.ejecutar_get(query)
+            precios = []
+            for item in precios2:
+                for element in item:
+                    precios.append(int(element))
+
+            #precios = [(7.8), (1450), (1100)]
             total = [a * b for a, b in zip(precios, lista1)]
             string = '''
     Cemento...{0} kg\n
@@ -263,8 +291,15 @@ class Controlador():
                 nuevo = Pared_Comun(dato['alto'], dato['ancho'])
                 nuevo.calculo_PC30()
                 lista1 = nuevo.detalle
+            query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=4"
+            traer=Conexion()
+            precios2=traer.ejecutar_get(query)
+            precios=[]
+            for item in precios2:
+                for element in item:
+                    precios.append(int(element))
 
-            precios = [(10), (7.8), (1450), (4)]
+            #precios = [(10), (7.8), (1450), (4)]
             total = [a * b for a, b in zip(precios, lista1)]
             string = '''
         Cal...${0} kg\n
@@ -281,3 +316,13 @@ if __name__=="__main__":
     new=Controlador()
     new.validarUsuario()
     print(new.detalleGeneral)
+
+#consulta para traer los materiales
+#query="SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=4 or id_materiales=6"
+#orden de los materiales en la tabla
+#(1, 'cal', 10),
+#(2, 'cemento', 7.8),
+#(3,'arena',1450),
+#(4,'piedra',1100),
+#(5,'hierro del 10',850),
+#(6,'hierro del 4',450);
