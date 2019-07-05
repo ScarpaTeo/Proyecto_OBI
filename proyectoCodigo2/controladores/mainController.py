@@ -86,10 +86,15 @@ class Controlador():
             else:
                 actualizar = actualizarLosPrecioModel()
                 cadena=actualizar.actualizarPrecioMateriales(dato['tipo'], dato['precio'])
-                precioActualizado = ap.vistaActualizar(cadena,"disable","")
+                traer=actualizar.obtenerPrecios()
+                string=str(actualizar.dato)
+                precioActualizado = ap.vistaActualizar(cadena,"disable",string)
                 levPrecio(precioActualizado)
+
+        ab=actualizarLosPrecioModel()
+        ab.obtenerPrecios()
         ap = ActualizarPrecio()
-        ap.vistaActualizar()
+        ap.vistaActualizar("","normal",str(ab.dato))
         dato= ap.valor
         levPrecio(dato)
 

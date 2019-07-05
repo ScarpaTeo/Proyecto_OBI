@@ -37,10 +37,13 @@ CREATE TABLE `materiales` (
 --
 -- Volcado de datos para la tabla `materiales`
 --
-
 INSERT INTO `materiales` (`id_materiales`, `tipo`, `precio`) VALUES
-(1, 'Arena', 350),
-(2, 'Piedra', 500);
+(1, 'cal', 10),
+(2, 'cemento', 7.8),
+(3,'arena',1450),
+(4,'piedra',1100),
+(5,'hierro del 10',850),
+(6,'hierro del 4',450);
 
 -- --------------------------------------------------------
 
