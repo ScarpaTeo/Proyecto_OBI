@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-07-2019 a las 05:31:42
+-- Tiempo de generación: 05-07-2019 a las 17:09:51
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.3.0
 
@@ -21,6 +21,26 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `obi`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `materiales`
+--
+
+CREATE TABLE `materiales` (
+  `id_materiales` int(11) NOT NULL,
+  `tipo` varchar(50) NOT NULL,
+  `precio` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `materiales`
+--
+
+INSERT INTO `materiales` (`id_materiales`, `tipo`, `precio`) VALUES
+(1, 'Arena', 350),
+(2, 'Piedra', 500);
 
 -- --------------------------------------------------------
 
@@ -49,6 +69,12 @@ INSERT INTO `usuario` (`id_usuaro`, `usuario`, `contraseña`, `confirmar_contras
 --
 
 --
+-- Indices de la tabla `materiales`
+--
+ALTER TABLE `materiales`
+  ADD PRIMARY KEY (`id_materiales`);
+
+--
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
@@ -57,6 +83,12 @@ ALTER TABLE `usuario`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `materiales`
+--
+ALTER TABLE `materiales`
+  MODIFY `id_materiales` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
