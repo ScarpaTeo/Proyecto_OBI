@@ -4,6 +4,7 @@ sys.path.append('../vista')
 sys.path.append('../modelos')
 from loginModel import LoginModel
 from registroModel import RegitroModel
+from actualizarPrecioModel import actualizarLosPrecioModel
 from ventanaRegistro import Registro
 from Inicio import Login
 from Principal import Principal
@@ -79,16 +80,18 @@ class Controlador():
         registroo(datos)
 
     def levantarVentanaPrecio(self):
+        def levPrecio(dato):
+            if dato == "principal":
+                self.levantarMenu()
+            else:
+                actualizar = actualizarLosPrecioModel()
+                cadena=actualizar.actualizarPrecioMateriales(dato['tipo'], dato['precio'])
+                precioActualizado = ap.vistaActualizar(cadena,"disable","")
+                levPrecio(precioActualizado)
         ap = ActualizarPrecio()
         ap.vistaActualizar()
         dato= ap.valor
-        if dato == "principal":
-            self.levantarMenu()
-        else:
-            cadena = "%s.. $%s" %(dato['tipo'], dato['precio'])
-            precioActualizado = ap.vistaActualizar(cadena,"disable")
-            if precioActualizado == 'principal':
-                self.levantarMenu()
+        levPrecio(dato)
 
 
     def levantarVentanaCalculo(self):

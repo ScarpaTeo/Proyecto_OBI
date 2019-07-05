@@ -14,7 +14,7 @@ class ActualizarPrecio():
         self.valor=False
 
     
-    def vistaActualizar(self,resultado="",estado="normal",datos=""):
+    def vistaActualizar(self,resultado="",estado="normal"):
         def errorVacio():
             error.config(text="error! campos vacios")
         def errorIncorrecto():
@@ -29,7 +29,8 @@ class ActualizarPrecio():
         ventana.bind("<Return>",pressEnter)
         img=PhotoImage(file="../imagenes/Precios.png")
         Licono=Label(ventana,image=img).pack()
-        error=Label(ventana,text=resultado,bg="white",fg="red",font=("Arial",12))
+        error=Label(ventana,text=error=Label(ventana,text="",bg="white",fg="red",font=("Arial",12))
+        error.place(x=253, y=80),bg="white",fg="red",font=("Arial",12))
         error.place(x=253, y=80)
 
 
@@ -70,7 +71,7 @@ class ActualizarPrecio():
         #------------------------Text field
         Dtextfiel=Text(ventana,width=20,height=10,relief="flat",bg="#FFFFFF",font=('Arial',14))
         Dtextfiel.place(x=350 ,y=180)
-        Dtextfiel.insert(INSERT,datos)
+        Dtextfiel.insert(INSERT,resultado)
         Dtextfiel.configure(state='disabled')
     
         if estado=="normal":

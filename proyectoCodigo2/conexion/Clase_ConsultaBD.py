@@ -84,8 +84,9 @@ dato=x[0]
 print(dato[1])"""
 
 #---------------------------------------Consulta actualizar valores en la Base
-#sql3="UPDATE registro SET saldo=%s WHERE Patente=%s ;"
-#datos=(560,'A333')
+"""sql3="UPDATE usuario SET usuario=%s WHERE contraseña=%s ;"
+datos=("nicolass",'123')
 
-#actualizar=Conexion()
-#actualizar.ejecutar_set(sql3,datos)
+actualizar=Conexion()
+actualizar.ejecutar_set(sql3,datos)
+"""
