@@ -73,6 +73,7 @@ nuevo=Conexion()
 nuevo.ejecutar_set(sql,valores)'''
 #----------------------------------------Consulta de prueba GET a la base
 
+patente=''
 #patente=input("ingrese la patente: \n")
 #sql2="SELECT * FROM registro WHERE Patente='{0}'".format(patente)
 """sql2="SELECT * FROM usuario WHERE usuario='nicolas' AND contraseña='123'"
