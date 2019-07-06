@@ -89,14 +89,23 @@ class Controlador():
                 actualizar = actualizarLosPrecioModel()
                 cadena=actualizar.actualizarPrecioMateriales(dato['tipo'], dato['precio'])
                 traer=actualizar.obtenerPrecios()
-                string=str(actualizar.dato)
-                precioActualizado = ap.vistaActualizar(cadena,"disable",string)
+                detalle = ""
+                for item in actualizar.dato:
+                    texto = "%s.....$%s\n" % (str(item[1]), str(item[2]))
+                    detalle += texto
+                precioActualizado = ap.vistaActualizar(cadena,"disable",detalle)
                 levPrecio(precioActualizado)
 
         ab=actualizarLosPrecioModel()
         ab.obtenerPrecios()
+        print(ab.dato)
+        detalle=""
+        for item in ab.dato:
+            texto="%s.....$%s\n"%(str(item[1]),str(item[2]))
+            detalle+=texto
+
         ap = ActualizarPrecio()
-        ap.vistaActualizar("","normal",str(ab.dato))
+        ap.vistaActualizar("","normal",str(detalle))
         dato= ap.valor
         levPrecio(dato)
 
@@ -259,39 +268,47 @@ class Controlador():
                 nuevo = Pared_Bloques(dato['alto'], dato['ancho'])
                 nuevo.calculo_PC15()
                 lista1 = nuevo.detalle
+                query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=8"
             elif dato['tipo']=='Pared de Bloques' and dato['espesor']=='0.20 cm':
                 nuevo = Pared_Bloques(dato['alto'], dato['ancho'])
                 nuevo.calculo_PC20()
                 lista1 = nuevo.detalle
+                query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=9"
             elif dato['tipo']=='Pared de Bloques' and dato['espesor']=='0.30 cm':
                 nuevo = Pared_Bloques(dato['alto'], dato['ancho'])
                 nuevo.calculo_PC20()
                 lista1 = nuevo.detalle
+                query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=9"
             elif dato['tipo']=='Pared de Tabiques' and dato['espesor']=='0.15 cm':
                 nuevo = Pared_tabiques(dato['alto'], dato['ancho'])
                 nuevo.calculo_PH15()
                 lista1 = nuevo.detalle
+                query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=10"
             elif dato['tipo']=='Pared de Tabiques' and dato['espesor']=='0.20 cm':
                 nuevo = Pared_tabiques(dato['alto'], dato['ancho'])
                 nuevo.calculo_PH20()
                 lista1 = nuevo.detalle
+                query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=11"
             elif dato['tipo']=='Pared de Tabiques' and dato['espesor']=='0.30 cm':
                 nuevo = Pared_tabiques(dato['alto'], dato['ancho'])
                 nuevo.calculo_PH20()
                 lista1 = nuevo.detalle
+                query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=11"
             elif dato['tipo']=='Pared Común' and dato['espesor']=='0.15 cm':
                 nuevo = Pared_Comun(dato['alto'], dato['ancho'])
                 nuevo.calculo_PC15()
                 lista1 = nuevo.detalle
+                query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=7"
             elif dato['tipo']=='Pared Común' and dato['espesor']=='0.20 cm':
                 nuevo = Pared_Comun(dato['alto'], dato['ancho'])
                 nuevo.calculo_PC20()
                 lista1 = nuevo.detalle
+                query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=7"
             elif dato['tipo'] == 'Pared Común' and dato['espesor'] == '0.30 cm':
                 nuevo = Pared_Comun(dato['alto'], dato['ancho'])
                 nuevo.calculo_PC30()
                 lista1 = nuevo.detalle
-            query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=4"
+                query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=7"
             traer=Conexion()
             precios2=traer.ejecutar_get(query)
             precios=[]
@@ -302,8 +319,8 @@ class Controlador():
             #precios = [(10), (7.8), (1450), (4)]
             total = [a * b for a, b in zip(precios, lista1)]
             string = '''
-        Cal...${0} kg\n
-        Cemento...${1} kg\n
+        Cal...{0} kg\n
+        Cemento...{1} kg\n
         Arena...{2} m3\n
         Ladrillos...{3}
         Total...${4}'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2], 2),round(lista1[3], 2),round(sum(total), 2))
@@ -326,3 +343,8 @@ if __name__=="__main__":
 #(4,'piedra',1100),
 #(5,'hierro del 10',850),
 #(6,'hierro del 4',450);
+#7	Ladrillo Comun 0,15	10
+#8	Bloque Ceramico 0,15	10
+#9	Bloque Ceramico 0,20	10
+#10	bloque de hormigon 0,15	10
+#11	bloque de hormigon 0,20	10

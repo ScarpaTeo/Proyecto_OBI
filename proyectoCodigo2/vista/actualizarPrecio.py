@@ -42,6 +42,16 @@ class ActualizarPrecio():
                 try:
                     tipo=str(Ccombo.get())
                     precio=float(Cprecio.get())
+                    if tipo=="Cal":
+                        precio=precio/20
+                    elif tipo=="Cemento":
+                        precio=precio/50
+                    elif tipo=="Hierro del 10":
+                        precio=precio/12
+                    elif tipo=="Hierro del 4":
+                        precio=precio/12
+
+
                 except Exception:
                     errorIncorrecto()
                     Ccombo.delete(0,END)
@@ -59,7 +69,7 @@ class ActualizarPrecio():
    
 
          #--------------combo box tipo de pared
-        Ccombo = ttk.Combobox(values=["Arena","Cal","Cemento","Hierro del 10","Hierro del 4","Piedra"],state="readonly",font=('Arial',12))
+        Ccombo = ttk.Combobox(values=["Arena","Cal","Cemento","Hierro del 10","Hierro del 4","Piedra","Ladrillo Común 0,15","Bloque Ceramico 0,15","Bloque Ceramico 0,20","Bloque Hormigón 0,15","Bloque Hormigón 0,20"],state="readonly",font=('Arial',12))
         Ccombo.configure(width=16)
         Ccombo.place(x=129,y=223)
 
@@ -68,8 +78,8 @@ class ActualizarPrecio():
         Cprecio.place(x=128,y=325)
 
         #------------------------Text field
-        Dtextfiel=Text(ventana,width=20,height=10,relief="flat",bg="#FFFFFF",font=('Arial',14))
-        Dtextfiel.place(x=350 ,y=180)
+        Dtextfiel=Text(ventana,width=26,height=13,relief="flat",bg="#FFFFFF",font=('Arial',12))
+        Dtextfiel.place(x=342 ,y=180)
         Dtextfiel.insert(INSERT,datos)
         Dtextfiel.configure(state='disabled')
     
@@ -82,3 +92,6 @@ class ActualizarPrecio():
         ventana.focus_force()
         ventana.mainloop()
         return self.valor
+
+#x=ActualizarPrecio()
+#x.vistaActualizar()

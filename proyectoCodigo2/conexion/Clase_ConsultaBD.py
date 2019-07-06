@@ -1,7 +1,7 @@
 import mysql.connector
 
 class Conexion:
-    def __init__(self,host="localhost",user="root",passwd="",database="obi"):
+    def __init__(self,host="localhost",user="root",passwd="464985",database="obi"):
         self.host=host
         self.user=user
         self.passwd=passwd
@@ -73,7 +73,7 @@ nuevo=Conexion()
 nuevo.ejecutar_set(sql,valores)'''
 #----------------------------------------Consulta de prueba GET a la base
 
-patente=''
+#patente=''
 #patente=input("ingrese la patente: \n")
 #sql2="SELECT * FROM registro WHERE Patente='{0}'".format(patente)
 """sql2="SELECT * FROM usuario WHERE usuario='nicolas' AND contraseña='123'"

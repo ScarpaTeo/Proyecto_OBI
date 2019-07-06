@@ -43,7 +43,12 @@ INSERT INTO `materiales` (`id_materiales`, `tipo`, `precio`) VALUES
 (3,'arena',1450),
 (4,'piedra',1100),
 (5,'hierro del 10',850),
-(6,'hierro del 4',450);
+(6,'hierro del 4',450),
+(7,'Ladrillo Comun 0,15',10),
+(8,'Bloque Ceramico 0,15',10),
+(9,'Bloque Ceramico 0,20',10),
+(10,'Bloque Hormigón 0,15',10),
+(11,'Bloque Hormigón 0,20',10);
 
 -- --------------------------------------------------------
 
