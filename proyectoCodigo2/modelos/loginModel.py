@@ -5,7 +5,7 @@ class LoginModel():
 
     def validarUsuarioModel(self,user,passw):
         #consulta
-        sql2="SELECT * FROM usuario WHERE usuario='{0}' AND contraseña={1}".format(user,passw)
+        sql2="SELECT * FROM usuario WHERE usuario='{0}' AND contraseña='{1}'".format(user,passw)
         #conexion
         nueva=Conexion()
         #se ejecuta el get y se traen los datos retornados cono un tupla dentro de un arreglo

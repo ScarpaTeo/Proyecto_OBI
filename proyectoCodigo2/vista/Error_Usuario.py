@@ -9,7 +9,6 @@ class Error_Usuario():
         ventana = Tk()
         ventana.title('ERROR')
         ventana.geometry('570x110+430+320')
-        ventana.bind("<Return>", pressEnter)
         img = PhotoImage(file="../imagenes/usuariocontraseña.png")
         Licono = Label(ventana, image=img).pack()
         msjError=Label(ventana, image=img).place(x=-2, y=-13)
