@@ -61,7 +61,7 @@ class Cimiento():
             ventana.destroy()
             self.valor="principal"    
         #--------------combo box
-        Ccombo = ttk.Combobox(values=["Corrida", "viga", "pilotin"],state="readonly",width=16,font=('Arial',12))
+        Ccombo = ttk.Combobox(values=["Zapata Corrida", "Viga de Hormigón", "Pilotin de Hormigón"],state="readonly",width=16,font=('Arial',12))
         Ccombo.place(x=101,y=140)
 
         #--------------------campo y label Alto
@@ -77,7 +77,7 @@ class Cimiento():
         Cprofundidad.place(x=98,y=388)
 
         #------------------------Text field
-        Dtextfiel=Text(ventana,width=21,height=12,relief="flat",bg="#FFFFFF",font=('Arial',14))
+        Dtextfiel=Text(ventana,width=23,height=12,relief="flat",bg="#FFFFFF",font=('Arial',14))
         Dtextfiel.place(x=350 ,y=143)
         Dtextfiel.insert(INSERT,resultado)
         Dtextfiel.configure(state='disabled')

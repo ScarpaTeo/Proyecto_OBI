@@ -67,7 +67,7 @@ class Pared():
             self.valor="principal"
 
         #--------------combo box tipo de pared
-        Ccombo = ttk.Combobox(values=["Pared de Bloques", "Pared de Tabiques", "Pared Común"],state="readonly",font=('Arial',12))
+        Ccombo = ttk.Combobox(values=["Ladrillo Común","Bloque de Hormigón", "Bloque Cerámico",],state="readonly",font=('Arial',12))
         Ccombo.configure(width=16)
         Ccombo.place(x=105,y=136)
         #--------------------campo Alto

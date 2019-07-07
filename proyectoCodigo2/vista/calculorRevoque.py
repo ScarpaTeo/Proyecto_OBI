@@ -61,7 +61,7 @@ class Revoque():
             self.valor="principal"
 
         #--------------combo box tipo de pared
-        Ccombo = ttk.Combobox(values=["Revoque Impearmeable", "Reboque Grueso", "Reboque fino"],state="readonly",font=('Arial',12))
+        Ccombo = ttk.Combobox(values=["Revoque Exterior Completo", "Revoque Interior Completo"],state="readonly",font=('Arial',12))
         Ccombo.configure(width=16)
         Ccombo.place(x=105,y=200)
         #--------------------campo Alto
