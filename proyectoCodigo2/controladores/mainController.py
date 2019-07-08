@@ -27,7 +27,14 @@ from Error_Usuario import *
 
 class Controlador():
     def __init__(self):
-        self.detalleGeneral=[]
+        self.totales={
+            "fecha":0,
+            "cimiento":0,
+            "contrapiso":0,
+            "revoque":0,
+            "pared":0,
+            "techo":0
+        }
 
     def validarUsuario(self):
         modelo = LoginModel()
@@ -149,10 +156,12 @@ Chapas de 1x%s.\n
             string = '''
     Chapas...{0}\n
     Total...${1}'''.format(round(lista1[0], 2), round(sum(total), 2))
+            
             texto = descripcion + string
             new_t= t.vistaTecho(texto, "disable")
-            self.detalleGeneral.append(texto)
-            if t.valor == "principal":
+            if t.valor == "añadir":
+                self.totales['techo']=texto
+                print(self.totales)
                 self.levantarVentanaCalculo()
     def verCimiento(self):
         c=Cimiento()
@@ -216,8 +225,8 @@ Hierro 4...{4}m\n
 Total...${5}'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2], 2), round(lista1[3], 2), round(lista1[4], 2),round(sum(total), 2))
             texto=descripcion+string
             new_c = c.vistaCimiento(texto, "DISABLE")
-            self.detalleGeneral.append(texto)
-            if c.valor == "principal":
+            if c.valor == "añadir":
+                self.totales['cimiento']=texto
                 self.levantarVentanaCalculo()
 
     def verRevoque(self):
@@ -268,8 +277,8 @@ Arena...{2} m3\n
 Total...${3}'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2], 3),round(sum(total), 2))
             texto = descripcion + string
             new_r = r.vistaRevoque(texto, "disable")
-            self.detalleGeneral.append(texto)
-            if r.valor == "principal":
+            if r.valor == "añadir":
+                self.totales['revoque']=texto
                 self.levantarVentanaCalculo()
 
     def verContrapiso(self):
@@ -308,8 +317,8 @@ Piedra...{2} m3\n
 Total...${3}'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2], 2),round(sum(total), 2))
             texto = descripcion + string
             new_cn = cn.vistaContrapiso(texto, "disable")
-            self.detalleGeneral.append(texto)
-            if cn.valor == "principal":
+            if cn.valor == "añadir":
+                self.totales['contrapiso']=texto
                 self.levantarVentanaCalculo()
 
     def verPared(self):
@@ -453,14 +462,13 @@ Ladrillos...{3}\n
 Total...${4}'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2], 2),round(lista1[3], 2),round(sum(total), 2))
             texto = descripcion + string
             new_p = p.vistaPared(texto, "disable")
-            self.detalleGeneral.append(texto)
-            if p.valor == "principal":
+            if p.valor == "añadir":
+                self.totales['pared']=texto
                 self.levantarVentanaCalculo()
-
+        print(self.totales)
 if __name__=="__main__":
     new=Controlador()
-    new.validarUsuario()
-    print(new.detalleGeneral)
+    new.validarUsuario()    
 
 #consulta para traer los materiales
 #query="SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=4 or id_materiales=6"

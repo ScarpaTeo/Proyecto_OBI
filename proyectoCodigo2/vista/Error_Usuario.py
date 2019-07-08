@@ -33,7 +33,3 @@ class Error_Usuario():
         Aceptar.place(x=211, y=61)
         ventana.mainloop()
         return self.valor
-
-
-#x=Error_Usuario()
-#x.errorCamposVacios()

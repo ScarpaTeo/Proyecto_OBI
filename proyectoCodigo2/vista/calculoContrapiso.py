@@ -61,6 +61,9 @@ class Contrapiso():
         def volverAtras():
             ventana.destroy()
             self.valor="principal"
+        def añadir():
+            ventana.destroy()
+            self.valor="añadir"
 
         #--------------------campo Alto
         Calto=Entry(ventana,width=14,relief="flat",bg="#FEE780",font=('Arial',16))
@@ -83,17 +86,18 @@ class Contrapiso():
         if estado=="normal":
             #---------boton calcular
             BcalcularCimiento=Button(ventana,width=12,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=100,y=465)
+            #--------------seguir calculando
+            Bañadir=Button(ventana,state=DISABLED,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="añadir",command=añadir).place(x=369,y=475)
         else:
             BcalcularCimiento=Button(ventana,state=DISABLED,width=12,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=100,y=465)
+            #--------------seguir calculando
+            Bañadir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="añadir",command=añadir).place(x=369,y=475)
         # ---------boton atras
         Batras=Button(ventana,width=8,relief="flat",bg="#FFFFFF",font=('Arial',10),text="Atras",command=volverAtras).place(x=543,y=91)
         #-------------imprimir detalle
         Bimprimir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="imprimir",command=volverAtras).place(x=516,y=475)
-        #--------------seguir calculando
-        Bañadir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="añadir",command=volverAtras).place(x=369,y=475)
+        
         
         ventana.focus_force()        
         ventana.mainloop()
         return self.valor
-#x=Contrapiso()
-#x.vistaContrapiso()
