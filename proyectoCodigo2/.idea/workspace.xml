@@ -2,15 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c69abf5-e6d9-4a7b-a768-dc7db273947d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/calculos/Clase_reboque.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculos/Clase_reboque.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controladores/mainController.py" beforeDir="false" afterPath="$PROJECT_DIR$/controladores/mainController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conexion/Clase_ConsultaBD.py" beforeDir="false" afterPath="$PROJECT_DIR$/conexion/Clase_ConsultaBD.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes/Opc.png" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes/Opc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes/Precios.png" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes/Precios.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes/Registro.png" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes/Registro.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes/Sing-in.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes/campos-vacios2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes/campos-vacios3.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagenes/cimiento.png" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes/cimiento.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes/cimiento2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes/cimiento3.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagenes/contrapiso.png" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes/contrapiso.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes/contrapiso2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes/imgLogin.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes/log2.png" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes/log2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes/menu.png" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes/menu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes/pala.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/imagenes/pared.png" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes/pared.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/calculoCimiento.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/calculoCimiento.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/calculoPared.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/calculoPared.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/calculorRevoque.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/calculorRevoque.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes/pared2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes/revoque.png" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes/revoque.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes/techo.png" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes/techo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes/usuariocontraseña2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/imagenes/usuariocontraseña3.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controladores/mainController.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="457" column="23" lean-forward="true" selection-start-line="457" selection-start-column="23" selection-end-line="457" selection-end-column="23" />
+            <state relative-caret-position="2139">
+              <caret line="344" column="42" selection-start-line="344" selection-start-column="42" selection-end-line="344" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -63,13 +76,13 @@
         <option value="$PROJECT_DIR$/vista/Principal.py" />
         <option value="$PROJECT_DIR$/vista/Error_Usuario.py" />
         <option value="$PROJECT_DIR$/modelos/actualizarPrecioModel.py" />
-        <option value="$PROJECT_DIR$/conexion/Clase_ConsultaBD.py" />
         <option value="$PROJECT_DIR$/vista/actualizarPrecio.py" />
         <option value="$PROJECT_DIR$/vista/calculoPared.py" />
         <option value="$PROJECT_DIR$/vista/calculoCimiento.py" />
         <option value="$PROJECT_DIR$/vista/calculorRevoque.py" />
         <option value="$PROJECT_DIR$/controladores/mainController.py" />
         <option value="$PROJECT_DIR$/calculos/Clase_reboque.py" />
+        <option value="$PROJECT_DIR$/conexion/Clase_ConsultaBD.py" />
       </list>
     </option>
   </component>
@@ -293,17 +306,18 @@
       <workItem from="1562193283129" duration="23786000" />
       <workItem from="1562438939568" duration="10694000" />
       <workItem from="1562479050327" duration="18314000" />
+      <workItem from="1562625955654" duration="1210000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150184000" />
+    <option name="totallyTimeSpent" value="151394000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16490166" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16717096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -371,7 +385,7 @@
     <SUITE FILE_PATH="coverage/proyectoCodigo2$calculoCimiento.coverage" NAME="calculoCimiento Coverage Results" MODIFIED="1562515881521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
     <SUITE FILE_PATH="coverage/proyectoCodigo$Menu.coverage" NAME="Menu Coverage Results" MODIFIED="1562092500383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
     <SUITE FILE_PATH="coverage/proyectoCodigo2$Error_Usuario.coverage" NAME="Error_Usuario Coverage Results" MODIFIED="1562366006616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
-    <SUITE FILE_PATH="coverage/proyectoCodigo2$mainController.coverage" NAME="mainController Coverage Results" MODIFIED="1562541799146" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controladores" />
+    <SUITE FILE_PATH="coverage/proyectoCodigo2$mainController.coverage" NAME="mainController Coverage Results" MODIFIED="1562626983142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controladores" />
     <SUITE FILE_PATH="coverage/proyectoCodigo2$calcularTecho.coverage" NAME="calcularTecho Coverage Results" MODIFIED="1562253758032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
     <SUITE FILE_PATH="coverage/proyectoCodigo2$Clase_reboque.coverage" NAME="Clase_reboque Coverage Results" MODIFIED="1562536394465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/calculos" />
     <SUITE FILE_PATH="coverage/proyectoCodigo$loginController.coverage" NAME="loginController Coverage Results" MODIFIED="1562087255555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controladores" />
@@ -471,13 +485,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vista/actualizarPrecio.py.51c4be5929d8f14cca5a975a2d056acd.py" />
-    <entry file="file://$PROJECT_DIR$/conexion/Clase_ConsultaBD.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="75" column="1" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modelos/actualizarPrecioModel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -534,10 +541,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/conexion/Clase_ConsultaBD.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" column="65" selection-start-line="3" selection-start-column="65" selection-end-line="3" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/animaciones.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controladores/mainController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="457" column="23" lean-forward="true" selection-start-line="457" selection-start-column="23" selection-end-line="457" selection-end-column="23" />
+        <state relative-caret-position="2139">
+          <caret line="344" column="42" selection-start-line="344" selection-start-column="42" selection-end-line="344" selection-end-column="42" />
         </state>
       </provider>
     </entry>
