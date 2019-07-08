@@ -48,6 +48,6 @@ class Error_Usuario():
         ventana.mainloop()
         return self.valor
 
-
+'''
 x=Error_Usuario()
-x.errorUsarioIncorrecto()
+x.errorUsarioIncorrecto()'''
