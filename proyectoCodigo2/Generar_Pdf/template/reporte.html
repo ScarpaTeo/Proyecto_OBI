@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Presupuesto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        
+        }
+        .contenedor{
+            width: 100%;
+            height: 100%;
+            
+        }
+        .contenedor header{
+            width: 500px;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contenedor header .cabezera{
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        header .cabezera h1{
+            font-size: 50px;
+            float: left;
+            margin: 40px 20px;
+        }
+        header .cabezera img{
+            margin: 15px;
+        }
+        
+        header .contenido h1{
+            text-align: center;
+            
+        }
+        
+    </style>
+</head>
+<body>
+        <div class="contenedor">
+            <header>
+                <div class="cabezera">
+                    <H1>Presupuesto</H1>
+                    <img src="../imagenes/casco.png" width="100" height="100">
+                </div>  
+                <div class="contenido">
+                        <p>{{fecha}}</p><br>
+                        <p>{{cimiento}}</p><br>
+                        <p>{{revoque}}</p><br>
+                        <p>{{contrapiso}}</p><br>
+                        <p>{{techo}}</p><br>
+                        <p>{{pared}}</p>
+                </div>
+            </header>
+        </div>     
+</body>
+</html>

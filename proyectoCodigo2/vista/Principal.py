@@ -38,6 +38,10 @@ class Principal():
         def volverAtras():
             ventana.destroy()
             self.dato="menu"
+        def Reporte():
+            ventana.destroy()
+            self.dato="reporte"
+        
 
         Bcimiento=Button(ventana, text="Cimiento",fg="black", bg="#FFDE00",relief="flat", height=2, width=25, font=("Arial",12),command=cimiento)
         Bcimiento.place(x=259, y=106)
@@ -55,12 +59,10 @@ class Principal():
         Btecho.place(x=259, y=475)
         # ---------boton atras
         Batras=Button(ventana,width=8,relief="flat",bg="#303030",fg="#FFDE00",font=('Arial',10),text="Atras",command=volverAtras).place(x=598,y=37)
-        Bimprimir=Button(ventana,width=8,relief="flat",bg="#292929",fg="#FFDE00",font=('Arial',10),text="Imprimir",command=volverAtras).place(x=503,y=37)
+        
+        Bimprimir=Button(ventana,width=8,relief="flat",bg="#292929",fg="#FFDE00",font=('Arial',10),text="Imprimir",command=Reporte).place(x=503,y=37)
 
         bt_ayuda = Button(ventana, text="Ayuda", fg="#FFDE00", bg="#1E1E1E", relief="flat", height=1, width=4).place(x=10, y=563)
         ventana.focus_force()
         ventana.mainloop()
         return self.dato
-
-#x=Principal()
-#x.mostrar()

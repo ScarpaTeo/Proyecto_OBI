@@ -45,6 +45,3 @@ class MostrarMenu:
 
         ventana.focus_force()
         ventana.mainloop()
-
-#x=MostrarMenu()
-#x.mostrar()

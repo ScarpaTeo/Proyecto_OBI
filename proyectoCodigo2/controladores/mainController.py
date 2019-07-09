@@ -2,6 +2,7 @@
 import sys
 sys.path.append('../conexion')
 from Clase_ConsultaBD import Conexion
+from Reporte import generaReporte
 sys.path.append('../vista')
 sys.path.append('../modelos')
 from loginModel import LoginModel
@@ -28,7 +29,7 @@ from Error_Usuario import *
 class Controlador():
     def __init__(self):
         self.totales={
-            "fecha":0,
+            "fecha":"09/06/19",
             "cimiento":0,
             "contrapiso":0,
             "revoque":0,
@@ -120,7 +121,9 @@ class Controlador():
     def levantarVentanaCalculo(self):
         pri=Principal()
         tipo=pri.mostrar()
-        if tipo=="cimiento":
+        if tipo=="reporte":
+            generaReporte(self.totales,"nicolassss")
+        elif tipo=="cimiento":
             self.verCimiento()
         elif tipo=="revoque":
             self.verRevoque()
@@ -143,18 +146,18 @@ class Controlador():
             nuevo = Techos_calculo(dato['alto'], dato['ancho'], dato['tipo'])
             nuevo.calculo_techo()
             descripcion = """
-------------------OBI------------------\n
-Cubierta de Chapa.\n
-%s de Largo.\n
-%s de Ancho.\n
-Chapas de 1x%s.\n
+------------------OBI------------------\n<br>
+Cubierta de Chapa.\n<br>
+%s de Largo.\n<br>
+%s de Ancho.\n<br>
+Chapas de 1x%s.\n<br>
 ------------------------------------------\n""" % (dato['alto'], dato['ancho'], dato['tipo'])
 
             lista1 = nuevo.detalle
             precios = [(1000)]
             total = [a * b for a, b in zip(precios, lista1)]
             string = '''
-    Chapas...{0}\n
+    Chapas...{0}\n<br>
     Total...${1}'''.format(round(lista1[0], 2), round(sum(total), 2))
             
             texto = descripcion + string
@@ -277,6 +280,8 @@ Arena...{2} m3\n
 Total...${3}'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2], 3),round(sum(total), 2))
             texto = descripcion + string
             new_r = r.vistaRevoque(texto, "disable")
+            if r.valor=="principal":
+                 self.levantarVentanaCalculo()
             if r.valor == "añadir":
                 self.totales['revoque']=texto
                 self.levantarVentanaCalculo()
@@ -317,6 +322,8 @@ Piedra...{2} m3\n
 Total...${3}'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2], 2),round(sum(total), 2))
             texto = descripcion + string
             new_cn = cn.vistaContrapiso(texto, "disable")
+            if cn.valor=="principal":
+                self.levantarVentanaCalculo()
             if cn.valor == "añadir":
                 self.totales['contrapiso']=texto
                 self.levantarVentanaCalculo()
