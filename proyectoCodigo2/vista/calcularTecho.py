@@ -59,6 +59,9 @@ class Techo():
         def volverAtras():
             ventana.destroy()
             self.valor="principal"
+        def añadir():
+            ventana.destroy()
+            self.valor="añadir"
 
         #--------------combo box tipo de pared
         Ccombo = ttk.Combobox(values=["1.83","2.13","2.44","2.74","3.05","3.36","3.66","3.96"],state="readonly",font=('Arial',12))
@@ -81,18 +84,17 @@ class Techo():
         if estado=="normal":
         #---------boton calcular
             BcalcularCimiento=Button(ventana,width=11,relief="flat",bg="#FFDE00",font=('Arial',19),text="Calcular",command=calcular).place(x=101,y=464)
+            #--------------seguir calculando
+            Bañadir=Button(ventana,state=DISABLED,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="añadir",command=añadir).place(x=369,y=475)
         else:
+            Bañadir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="añadir",command=añadir).place(x=369,y=475)
             BcalcularCimiento=Button(ventana,state=DISABLED,width=11,relief="flat",bg="#FFDE00",font=('Arial',19),text="Calcular",command=calcular).place(x=101,y=464)
         #--------boton atras
         Batras=Button(ventana,width=8,relief="flat",bg="#FFFFFF",font=('Arial',10),text="Atras",command=volverAtras).place(x=543,y=91)
         #-------------imprimir detalle
         Bimprimir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="imprimir",command=volverAtras).place(x=516,y=475)
-        #--------------seguir calculando
-        Bañadir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="añadir",command=volverAtras).place(x=369,y=475)
+        
         
         ventana.focus_force()        
         ventana.mainloop()
         return self.valor
-
-#x=Techo()
-#x.vistaTecho()
