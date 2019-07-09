@@ -36,9 +36,12 @@ class MostrarMenu:
 
         # --------------- botones nuevo presupues y cargar precio
         B_presupuesto = Button(ventana, text="Nuevo Presupuesto", fg="black", bg="#FFDE00",command=presupuesto, relief="flat", height=3,width=21,font=('Arial',13))
-        B_presupuesto.place(x=138, y=363)
+        B_presupuesto.place(x=139, y=360)
         B_cargarPrecio= Button(ventana, text="Cargar Precios", fg="black", bg="#FFDE00",command=cargarPr, relief="flat", height=3, width=21,font=('Arial',13))
-        B_cargarPrecio.place(x=364, y=153)
+        B_cargarPrecio.place(x=364, y=150)
+        bt_ayuda = Button(ventana, text="Ayuda", fg="#FFDE00", bg="#1E1E1E", relief="flat", height=1, width=4).place(x=10, y=563)
+        bt_cerrar = Button(ventana, text="Cerrar Sesión", fg="#FFDE00", bg="#2F2F2F", relief="flat", height=1, width=9).place(
+            x=595, y=34)
 
         ventana.focus_force()
         ventana.mainloop()

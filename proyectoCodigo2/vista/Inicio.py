@@ -44,10 +44,16 @@ class Login():
 
         #--------------- botones enter y cancelar
         bt_enter = Button(ventana, text="Ingresar", fg="black", bg="#FFDE00", command=validar, relief="flat", height=2,
-                          width=14).place(x=212, y=445)
+                          width=14).place(x=209, y=448)#FFFFFF
         bt_registrar = Button(ventana, text="Registrarse", fg="black", bg="#FFFFFF", relief="flat", height=2, width=14,
-                             command=registrarse).place(x=404, y=445)
-        
+                              command=registrarse).place(x=402, y=448)
+
+        bt_ayuda = Button(ventana, text="Ayuda", fg="#FFDE00", bg="#1E1E1E", relief="flat", height=1, width=4,
+                              command=animacion).place(x=10, y=563)
+
         ventana.focus_force()
         ventana.mainloop()
         return self.datos
+
+#x=Login()
+#x.Motrar()
