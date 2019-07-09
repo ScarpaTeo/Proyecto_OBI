@@ -6,6 +6,8 @@ class Registro():
         def mostrarRegistro(self,resultado=""):
             def errorVacio():
                 error.config(text="Error!, todos los campos deben estar completos!")
+            def errorContraseñas():
+                error.config(text="Error!, Las contraseñas no coinciden!")
             #-------------------Seccion ventana
             ventana=Tk()
             ventana.title("Registro")
@@ -26,20 +28,23 @@ class Registro():
                if not self.name.get() or not self.user.get() or not self.email.get() or not self.contrasena.get() or not self.confirm_contrasena.get():
                    errorVacio()
                else:
-                   nombre_completo = str(self.name.get())
-                   usuario = str(self.user.get())
-                   email = str(self.email.get())
-                   password = str(self.contrasena.get())
-                   confirm_pass = str(self.confirm_contrasena.get())
+                   if self.contrasena.get()==self.confirm_contrasena.get():
+                        nombre_completo = str(self.name.get())
+                        usuario = str(self.user.get())
+                        email = str(self.email.get())
+                        password = str(self.contrasena.get())
+                        confirm_pass = str(self.confirm_contrasena.get())
 
-                   self.datos = {
-                        "nombre_completo":nombre_completo,
-                        "usuario":usuario,
-                        "email":email,
-                        "contraseña":password,
-                        "confirmar_contraseña":confirm_pass
-                   }
-                   ventana.destroy()
+                        self.datos = {
+                            "nombre_completo":nombre_completo,
+                            "usuario":usuario,
+                            "email":email,
+                            "contraseña":password,
+                            "confirmar_contraseña":confirm_pass
+                        }
+                        ventana.destroy()
+                   else:
+                         errorContraseñas()
 
             def volverLogin():
             #cierra la ventana y vuelve al menu de login
