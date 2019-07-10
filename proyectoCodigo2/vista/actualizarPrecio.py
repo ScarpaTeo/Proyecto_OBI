@@ -88,10 +88,10 @@ class ActualizarPrecio():
     
         if estado=="normal":
         #---------boton Actualizar#FFDE00
-            BcalcularCimiento=Button(ventana,width=11,relief="flat",bg="#FFDE00",font=('Arial',18),text="Actualizar",command=actulizar).place(x=136,y=447)
+            BcalcularCimiento=Button(ventana,width=11,relief="flat",activebackground="#FFDE00",bg="#FFDE00",font=('Arial',18),text="Actualizar",command=actulizar).place(x=136,y=447)
         #--------boton atras
-        Batras=Button(ventana,width=8,relief="flat",bg="#FFFFFF",font=('Arial',10),text="Atras",command=volverAtras).place(x=514,y=85)
-        bt_ayuda = Button(ventana, text="Ayuda", fg="#FFDE00", bg="#1E1E1E", relief="flat", height=1, width=4,
+        Batras=Button(ventana,width=8,relief="flat",bg="#FFFFFF",activebackground="#FFFFFF",font=('Arial',10),text="Atras",command=volverAtras).place(x=514,y=85)
+        bt_ayuda = Button(ventana, text="Ayuda", fg="#FFDE00",activebackground="#1E1E1E", bg="#1E1E1E", relief="flat", height=1, width=4,
                               command=animacion).place(x=10, y=563)
         ventana.focus_force()
         ventana.mainloop()

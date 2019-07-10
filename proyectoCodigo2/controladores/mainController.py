@@ -74,6 +74,8 @@ class Controlador():
             self.levantarVentanaPrecio()
         elif dato=="presupuesto":
             self.levantarVentanaCalculo()
+        elif dato=="cerrar Sesion":
+            self.validarUsuario()
 
     def levantarVentanaRegistro(self):
         def registroo(datos):

@@ -69,11 +69,11 @@ class Registro():
             self.confirm_contrasena=Entry(ventana,show="*",width=32,relief="flat",bg="#FFFFFF",font=('Arial',16))
             self.confirm_contrasena.place(x=166, y=448)
             #-------------------seccion botones
-            bt_register = Button(ventana, text="Registrar", fg="black", bg="#FFDE00", command=validar, relief="flat", height=2,
+            bt_register = Button(ventana, text="Registrar", fg="black",activebackground="#FFDE00",bg="#FFDE00", command=validar, relief="flat", height=2,
                           width=13,font=('Arial',11)).place(x=215, y=522)
-            bt_cancelar = Button(ventana, text="Atras", fg="black", bg="#FFFFFF", command=volverLogin, relief="flat", height=2,
+            bt_cancelar = Button(ventana, text="Atras", fg="black",activebackground="#FFFFFF", bg="#FFFFFF", command=volverLogin, relief="flat", height=2,
                           width=13,font=('Arial',9)).place(x=401, y=522)
-            bt_ayuda = Button(ventana, text="Ayuda",command=animacion ,fg="#FFDE00", bg="#1E1E1E", relief="flat", height=1,
+            bt_ayuda = Button(ventana, text="Ayuda",command=animacion ,fg="#FFDE00",activebackground="#1E1E1E",bg="#1E1E1E", relief="flat", height=1,
                               width=4).place(x=10, y=557)
 
             ventana.mainloop()
