@@ -122,7 +122,7 @@ class Controlador():
         pri=Principal()
         tipo=pri.mostrar()
         if tipo=="reporte":
-            generaReporte(self.totales,"nicolassss")
+            generaReporte(self.totales,"Presupuesto")
         elif tipo=="cimiento":
             self.verCimiento()
         elif tipo=="revoque":
