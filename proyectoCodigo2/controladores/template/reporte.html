@@ -15,34 +15,39 @@
         
         }
         .contenedor{
-            width: 100%;
+           
+            width: 90%;
+            margin: 0 auto;
             height: 100%;
             
         }
         .contenedor header{
-            width: 500px;
+            background: url("../imagenes/presupuesto.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            width: 100%;
             margin: 20px auto;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
         .contenedor header .cabezera{
-            margin: 0 auto;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
+            width: 100%;
+            height: 200px;
+            display: block;
+
         }
-        header .cabezera h1{
-            font-size: 50px;
-            float: left;
-            margin: 40px 20px;
+        .contenedor header .cabezera .fecha{
+            float: right;
+            margin: 68px 65px;
+
         }
-        header .cabezera img{
-            margin: 15px;
+        header .contenido{
+            width: 400px;
+            margin: 100px 220px;
         }
-        
-        header .contenido h1{
-            text-align: center;
+        header .contenido p{
+            font-size: 30px;
             
         }
         
@@ -52,11 +57,9 @@
         <div class="contenedor">
             <header>
                 <div class="cabezera">
-                    <H1>Presupuesto</H1>
-                    <img src="../imagenes/casco.png" width="100" height="100">
-                </div>  
+                    <p class="fecha">{{fecha}}</p>
+                </div>
                 <div class="contenido">
-                        <p>{{fecha}}</p><br>
                         <p>{{cimiento}}</p><br>
                         <p>{{revoque}}</p><br>
                         <p>{{contrapiso}}</p><br>

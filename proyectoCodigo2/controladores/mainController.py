@@ -30,11 +30,11 @@ class Controlador():
     def __init__(self):
         self.totales={
             "fecha":"09/06/19",
-            "cimiento":0,
-            "contrapiso":0,
-            "revoque":0,
-            "pared":0,
-            "techo":0
+            "cimiento":"",
+            "contrapiso":"",
+            "revoque":"",
+            "pared":"",
+            "techo":""
         }
 
     def validarUsuario(self):
@@ -151,7 +151,7 @@ Cubierta de Chapa.\n<br>
 %s de Largo.\n<br>
 %s de Ancho.\n<br>
 Chapas de 1x%s.\n<br>
-------------------------------------------\n""" % (dato['alto'], dato['ancho'], dato['tipo'])
+------------------------------------------\n<br>""" % (dato['alto'], dato['ancho'], dato['tipo'])
 
             lista1 = nuevo.detalle
             precios = [(1000)]
@@ -162,9 +162,10 @@ Chapas de 1x%s.\n<br>
             
             texto = descripcion + string
             new_t= t.vistaTecho(texto, "disable")
+            if t.valor=="principal":
+                self.levantarVentanaCalculo()
             if t.valor == "añadir":
                 self.totales['techo']=texto
-                print(self.totales)
                 self.levantarVentanaCalculo()
     def verCimiento(self):
         c=Cimiento()
@@ -177,35 +178,35 @@ Chapas de 1x%s.\n<br>
                 nuevo = Zapata_corrida(dato['alto'], dato['ancho'], dato['profundidad'])
                 nuevo.Corrida_cemento()
                 descripcion = """
-------------------OBI------------------\n
-Zapata Corrida de H°.\n
-%s de Largo.\n
-%s de Ancho.\n
-%s de Profundidad.\n
-------------------------------------------\n""" % (dato['alto'], dato['ancho'], dato['profundidad'])
+------------------OBI------------------\n<br>
+Zapata Corrida de H°.\n<br>
+%s de Largo.\n<br>
+%s de Ancho.\n<br>
+%s de Profundidad.\n<br>
+------------------------------------------\n<br>""" % (dato['alto'], dato['ancho'], dato['profundidad'])
 
                 lista1 = nuevo.detalle
             elif dato['tipo_a_calcular']=='Viga de Hormigón':
                 nuevo = Viga_encadenado(dato['alto'], dato['ancho'], dato['profundidad'])
                 nuevo.calculo_Viga()
                 descripcion = """
-------------------OBI------------------\n
-Viga de Encadenado H°.\n
-%s de Largo.\n
-%s de Ancho.\n
-%s de Profundidad.\n
-------------------------------------------\n""" % (dato['alto'], dato['ancho'], dato['profundidad'])
+------------------OBI------------------\n<br>
+Viga de Encadenado H°.\n<br>
+%s de Largo.\n<br>
+%s de Ancho.\n<br>
+%s de Profundidad.\n<br>
+------------------------------------------\n<br>""" % (dato['alto'], dato['ancho'], dato['profundidad'])
 
                 lista1 = nuevo.detalle
             elif dato['tipo_a_calcular']=='Pilotin de Hormigón':
                 nuevo = Pilotines(dato['ancho'], dato['profundidad'],dato['alto'])
                 nuevo.calculo_pilotin()
                 descripcion="""
-------------------OBI------------------\n
-%s Pilotin de H°.\n
-%s de Diametro.\n
-%s de Profundidad.\n
-------------------------------------------\n"""%(dato['alto'],dato['ancho'], dato['profundidad'])
+------------------OBI------------------\n<br>
+%s Pilotin de H°.\n<br>
+%s de Diametro.\n<br>
+%s de Profundidad.\n<br>
+------------------------------------------\n<br>"""%(dato['alto'],dato['ancho'], dato['profundidad'])
                 lista1 = nuevo.detalle
 
             query = "SELECT precio FROM materiales WHERE id_materiales=2 or id_materiales=3 or id_materiales=4 or id_materiales=5 or id_materiales=6"
@@ -219,16 +220,18 @@ Viga de Encadenado H°.\n
             #precios = [(7.8), (1450), (2100),(850),(550)]
             total = [a * b for a, b in zip(precios, lista1)]
             string = '''
-Cemento...{0} kg\n
-Arena...{1} m3\n
-Piedra...{2} m3\n
-Hierro 10...{3}m\n
-Hierro 4...{4}m\n
-------------------------------------------\n
-Total...${5}'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2], 2), round(lista1[3], 2), round(lista1[4], 2),round(sum(total), 2))
+Cemento...{0} kg\n<br>
+Arena...{1} m3\n<br>
+Piedra...{2} m3\n<br>
+Hierro 10...{3}m\n<br>
+Hierro 4...{4}m\n<br>
+------------------------------------------\n<br>
+Total...${5}<br>'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2], 2), round(lista1[3], 2), round(lista1[4], 2),round(sum(total), 2))
             texto=descripcion+string
             new_c = c.vistaCimiento(texto, "DISABLE")
-            if c.valor == "añadir":
+            if c.valor=="principal":
+                self.levantarVentanaCalculo()
+            elif c.valor == "añadir":
                 self.totales['cimiento']=texto
                 self.levantarVentanaCalculo()
 
@@ -243,22 +246,22 @@ Total...${5}'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2]
                 nuevo = Reboque(dato['alto'], dato['ancho'])
                 nuevo.reboqueExterior()
                 descripcion = """
-------------------OBI------------------\n
-Revoque de Pared Exterior completo.\n
-%s de Alto.\n
-%s de Ancho.\n
-------------------------------------------\n""" % (dato['alto'], dato['ancho'])
+------------------OBI------------------\n<br>
+Revoque de Pared Exterior completo.\n<br>
+%s de Alto.\n<br>
+%s de Ancho.\n<br>
+------------------------------------------\n<br>""" % (dato['alto'], dato['ancho'])
 
                 lista1 = nuevo.detalle
             elif dato["tipo"]=="Revoque Interior Completo":
                 nuevo = Reboque(dato['alto'], dato['ancho'])
                 nuevo.reboqueinterior()
                 descripcion = """
-------------------OBI------------------\n
-Revoque de Pared Interior completo.\n
-%s de Alto.\n
-%s de Ancho.\n
-------------------------------------------\n""" % (dato['alto'], dato['ancho'])
+------------------OBI------------------\n<br>
+Revoque de Pared Interior completo.\n<br>
+%s de Alto.\n<br>
+%s de Ancho.\n<br>
+------------------------------------------\n<br>""" % (dato['alto'], dato['ancho'])
                 lista1 = nuevo.detalle
 
 
@@ -273,11 +276,11 @@ Revoque de Pared Interior completo.\n
             #precios = [(10), (7.8), (1450)]
             total = [a * b for a, b in zip(precios, lista1)]
             string = '''
-Cal...{0} kg\n
-Cemento...{1} kg\n
-Arena...{2} m3\n
-------------------------------------------\n
-Total...${3}'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2], 3),round(sum(total), 2))
+Cal...{0} kg\n<br>
+Cemento...{1} kg\n<br>
+Arena...{2} m3\n<br>
+------------------------------------------\n<br>
+Total...${3}<br>'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2], 3),round(sum(total), 2))
             texto = descripcion + string
             new_r = r.vistaRevoque(texto, "disable")
             if r.valor=="principal":
@@ -296,12 +299,12 @@ Total...${3}'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2]
             nuevo = Contrapiso_calculo(dato['alto'], dato['ancho'], dato['profundidad'])
             nuevo.calcular_Contrapiso()
             descripcion = """
-------------------OBI------------------\n
-Contrapiso de H°.\n
-%s de Largo.\n
-%s de Ancho.\n
-%s de Espesor.\n
-------------------------------------------\n""" % (dato['alto'], dato['ancho'],dato['profundidad'])
+------------------OBI------------------\n<br>
+Contrapiso de H°.\n<br>
+%s de Largo.\n<br>
+%s de Ancho.\n<br>
+%s de Espesor.\n<br>
+------------------------------------------\n<br>""" % (dato['alto'], dato['ancho'],dato['profundidad'])
 
             lista1 = nuevo.detalle
             query = "SELECT precio FROM materiales WHERE id_materiales=2 or id_materiales=3 or id_materiales=4"
@@ -315,11 +318,11 @@ Contrapiso de H°.\n
             #precios = [(7.8), (1450), (1100)]
             total = [a * b for a, b in zip(precios, lista1)]
             string = '''
-Cemento...{0} kg\n
-Arena...{1} m3\n
-Piedra...{2} m3\n
-------------------------------------------\n
-Total...${3}'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2], 2),round(sum(total), 2))
+Cemento...{0} kg\n<br>
+Arena...{1} m3\n<br>
+Piedra...{2} m3\n<br>
+------------------------------------------\n<br>
+Total...${3}<br>'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2], 2),round(sum(total), 2))
             texto = descripcion + string
             new_cn = cn.vistaContrapiso(texto, "disable")
             if cn.valor=="principal":
@@ -339,12 +342,12 @@ Total...${3}'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2]
                 nuevo = Pared_Bloques(dato['alto'], dato['ancho'])
                 nuevo.calculo_PC15()
                 descripcion = """
-------------------OBI------------------\n
-Pared de Bloque Cerámico\n
-%s de Alto.\n
-%s de Ancho.\n
-%s de Espesor.\n
-------------------------------------------\n""" % (dato['alto'], dato['ancho'],dato['espesor'])
+------------------OBI------------------\n<br>
+Pared de Bloque Cerámico\n<br>
+%s de Alto.\n<br>
+%s de Ancho.\n<br>
+%s de Espesor.\n<br>
+------------------------------------------\n<br>""" % (dato['alto'], dato['ancho'],dato['espesor'])
 
                 lista1 = nuevo.detalle
                 query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=8"
@@ -352,12 +355,12 @@ Pared de Bloque Cerámico\n
                 nuevo = Pared_Bloques(dato['alto'], dato['ancho'])
                 nuevo.calculo_PC20()
                 descripcion = """
-------------------OBI------------------\n
-Pared de Bloque Cerámico\n
-%s de Alto.\n
-%s de Ancho.\n
-%s de Espesor.\n
-------------------------------------------\n""" % (dato['alto'], dato['ancho'], dato['espesor'])
+------------------OBI------------------\n<br>
+Pared de Bloque Cerámico\n<br>
+%s de Alto.\n<br>
+%s de Ancho.\n<br>
+%s de Espesor.\n<br>
+------------------------------------------\n<br>""" % (dato['alto'], dato['ancho'], dato['espesor'])
 
                 lista1 = nuevo.detalle
                 query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=9"
@@ -365,24 +368,24 @@ Pared de Bloque Cerámico\n
                 nuevo = Pared_Bloques(dato['alto'], dato['ancho'])
                 nuevo.calculo_PC20()
                 descripcion = """
-------------------OBI------------------\n
-Pared de Bloque Cerámico\n
-%s de Alto.\n
-%s de Ancho.\n
-%s de Espesor.\n
-------------------------------------------\n""" % (dato['alto'], dato['ancho'], dato['espesor'])
+------------------OBI------------------\n<br>
+Pared de Bloque Cerámico\n<br>
+%s de Alto.\n<br>
+%s de Ancho.\n<br>
+%s de Espesor.\n<br>
+------------------------------------------\n<br>""" % (dato['alto'], dato['ancho'], dato['espesor'])
                 lista1 = nuevo.detalle
                 query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=9"
             elif dato['tipo']=='Bloque de Hormigón' and dato['espesor']=='0.15 cm':
                 nuevo = Pared_tabiques(dato['alto'], dato['ancho'])
                 nuevo.calculo_PH15()
                 descripcion = """
-------------------OBI------------------\n
-Pared de Bloque Hormigón\n
-%s de Alto.\n
-%s de Ancho.\n
-%s de Espesor.\n
-------------------------------------------\n""" % (dato['alto'], dato['ancho'], dato['espesor'])
+------------------OBI------------------\n<br>
+Pared de Bloque Hormigón\n<br>
+%s de Alto.\n<br>
+%s de Ancho.\n<br>
+%s de Espesor.\n<br>
+------------------------------------------\n<br>""" % (dato['alto'], dato['ancho'], dato['espesor'])
 
                 lista1 = nuevo.detalle
                 query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=10"
@@ -390,12 +393,12 @@ Pared de Bloque Hormigón\n
                 nuevo = Pared_tabiques(dato['alto'], dato['ancho'])
                 nuevo.calculo_PH20()
                 descripcion = """
-------------------OBI------------------\n
-Pared de Bloque Hormigón\n
-%s de Alto.\n
-%s de Ancho.\n
-%s de Espesor.\n
-------------------------------------------\n""" % (dato['alto'], dato['ancho'], dato['espesor'])
+------------------OBI------------------\n<br>
+Pared de Bloque Hormigón\n<br>
+%s de Alto.\n<br>
+%s de Ancho.\n<br>
+%s de Espesor.\n<br>
+------------------------------------------\n<br>""" % (dato['alto'], dato['ancho'], dato['espesor'])
 
                 lista1 = nuevo.detalle
                 query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=11"
@@ -403,12 +406,12 @@ Pared de Bloque Hormigón\n
                 nuevo = Pared_tabiques(dato['alto'], dato['ancho'])
                 nuevo.calculo_PH20()
                 descripcion = """
-------------------OBI------------------\n
-Pared de Bloque Hormigón\n
-%s de Alto.\n
-%s de Ancho.\n
-%s de Espesor.\n
-------------------------------------------\n""" % (dato['alto'], dato['ancho'], dato['espesor'])
+------------------OBI------------------\n<br>
+Pared de Bloque Hormigón\n<br>
+%s de Alto.\n<br>
+%s de Ancho.\n<br>
+%s de Espesor.\n<br>
+------------------------------------------\n<br>""" % (dato['alto'], dato['ancho'], dato['espesor'])
 
                 lista1 = nuevo.detalle
                 query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=11"
@@ -416,12 +419,12 @@ Pared de Bloque Hormigón\n
                 nuevo = Pared_Comun(dato['alto'], dato['ancho'])
                 nuevo.calculo_PC15()
                 descripcion = """
-------------------OBI------------------\n
-Pared de Ladrillos Comúnes\n
-%s de Alto.\n
-%s de Ancho.\n
-%s de Espesor.\n
-------------------------------------------\n""" % (dato['alto'], dato['ancho'], dato['espesor'])
+------------------OBI------------------\n<br>
+Pared de Ladrillos Comúnes\n<br>
+%s de Alto.\n<br>
+%s de Ancho.\n<br>
+%s de Espesor.\n<br>
+------------------------------------------\n<br>""" % (dato['alto'], dato['ancho'], dato['espesor'])
 
                 lista1 = nuevo.detalle
                 query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=7"
@@ -429,12 +432,12 @@ Pared de Ladrillos Comúnes\n
                 nuevo = Pared_Comun(dato['alto'], dato['ancho'])
                 nuevo.calculo_PC20()
                 descripcion = """
-------------------OBI------------------\n
-Pared de Ladrillos Comúnes\n
-%s de Alto.\n
-%s de Ancho.\n
-%s de Espesor.\n
-------------------------------------------\n""" % (dato['alto'], dato['ancho'], dato['espesor'])
+------------------OBI------------------\n<br>
+Pared de Ladrillos Comúnes\n<br>
+%s de Alto.\n<br>
+%s de Ancho.\n<br>
+%s de Espesor.\n<br>
+------------------------------------------\n<br>""" % (dato['alto'], dato['ancho'], dato['espesor'])
 
                 lista1 = nuevo.detalle
                 query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=7"
@@ -442,12 +445,12 @@ Pared de Ladrillos Comúnes\n
                 nuevo = Pared_Comun(dato['alto'], dato['ancho'])
                 nuevo.calculo_PC30()
                 descripcion = """
-------------------OBI------------------\n
-Pared de Ladrillos Comúnes\n
-%s de Alto.\n
-%s de Ancho.\n
-%s de Espesor.\n
-------------------------------------------\n""" % (dato['alto'], dato['ancho'], dato['espesor'])
+------------------OBI------------------\n<br>
+Pared de Ladrillos Comúnes\n<br>
+%s de Alto.\n<br>
+%s de Ancho.\n<br>
+%s de Espesor.\n<br>
+------------------------------------------\n<br>""" % (dato['alto'], dato['ancho'], dato['espesor'])
 
                 lista1 = nuevo.detalle
                 query = "SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=2 or id_materiales=3 or id_materiales=7"
@@ -461,18 +464,19 @@ Pared de Ladrillos Comúnes\n
             #precios = [(10), (7.8), (1450), (4)]
             total = [a * b for a, b in zip(precios, lista1)]
             string = '''
-Cal...{0} kg\n
-Cemento...{1} kg\n
-Arena...{2} m3\n
-Ladrillos...{3}\n
-------------------------------------------\n
-Total...${4}'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2], 2),round(lista1[3], 2),round(sum(total), 2))
+Cal...{0} kg\n<br>
+Cemento...{1} kg\n<br>
+Arena...{2} m3\n<br>
+Ladrillos...{3}\n<br>
+------------------------------------------\n<br>
+Total...${4}<br>'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista1[2], 2),round(lista1[3], 2),round(sum(total), 2))
             texto = descripcion + string
             new_p = p.vistaPared(texto, "disable")
-            if p.valor == "añadir":
+            if p.valor=="principal":
+                self.levantarVentanaCalculo()
+            elif p.valor == "añadir":
                 self.totales['pared']=texto
                 self.levantarVentanaCalculo()
-        print(self.totales)
 if __name__=="__main__":
     new=Controlador()
     new.validarUsuario()    
