@@ -7,6 +7,13 @@
       <change beforePath="$PROJECT_DIR$/vista/Inicio.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/Inicio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vista/Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/Menu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vista/Principal.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/Principal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/actualizarPrecio.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/actualizarPrecio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/animaciones.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/animaciones.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/calcularTecho.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/calcularTecho.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/calculoCimiento.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/calculoCimiento.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/calculoContrapiso.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/calculoContrapiso.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/calculoPared.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/calculoPared.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vista/calculorRevoque.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/calculorRevoque.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/vista/ventanaRegistro.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/ventanaRegistro.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,37 +25,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controladores/mainController.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="71" column="2" selection-start-line="71" selection-start-column="2" selection-end-line="71" selection-end-column="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vista/Principal.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="59" column="19" selection-start-line="59" selection-end-line="60" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vista/ventanaRegistro.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="73" column="21" selection-start-line="73" selection-end-line="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vista/actualizarPrecio.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="71" column="194" lean-forward="true" selection-start-line="71" selection-start-column="194" selection-end-line="71" selection-end-column="214" />
+            <state relative-caret-position="2134">
+              <caret line="98" column="1" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -56,8 +36,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vista/Inicio.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="51" selection-end-column="67" />
+            <state relative-caret-position="1144">
+              <caret line="52" selection-start-line="52" selection-end-line="53" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -65,8 +45,71 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vista/Menu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="41" column="9" selection-start-line="41" selection-end-line="42" />
+            <state relative-caret-position="946">
+              <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vista/Principal.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1452">
+              <caret line="66" column="19" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vista/ventanaRegistro.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1650">
+              <caret line="75" column="21" selection-start-line="75" selection-start-column="71" selection-end-line="76" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vista/Error_Usuario.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="858">
+              <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vista/animaciones.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="13" column="71" selection-start-line="13" selection-start-column="71" selection-end-line="13" selection-end-column="71" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vista/calcularTecho.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2376">
+              <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vista/calculoCimiento.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2552">
+              <caret line="117" column="1" selection-start-line="117" selection-start-column="1" selection-end-line="117" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vista/calculoContrapiso.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2354">
+              <caret line="108" column="1" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -96,16 +139,10 @@
         <option value="$PROJECT_DIR$/controladores/loginController.py" />
         <option value="$PROJECT_DIR$/calculos/Clase_ConsultaBD.py" />
         <option value="$PROJECT_DIR$/calculos/Clase_contrapiso.py" />
-        <option value="$PROJECT_DIR$/vista/calculoContrapiso.py" />
         <option value="$PROJECT_DIR$/calculos/Clase_pared.py" />
         <option value="$PROJECT_DIR$/calculos/Clase_cimiento.py" />
-        <option value="$PROJECT_DIR$/vista/calcularTecho.py" />
         <option value="$PROJECT_DIR$/vista/Error_Usuario.py" />
         <option value="$PROJECT_DIR$/modelos/actualizarPrecioModel.py" />
-        <option value="$PROJECT_DIR$/vista/actualizarPrecio.py" />
-        <option value="$PROJECT_DIR$/vista/calculoPared.py" />
-        <option value="$PROJECT_DIR$/vista/calculoCimiento.py" />
-        <option value="$PROJECT_DIR$/vista/calculorRevoque.py" />
         <option value="$PROJECT_DIR$/controladores/mainController.py" />
         <option value="$PROJECT_DIR$/calculos/Clase_reboque.py" />
         <option value="$PROJECT_DIR$/conexion/Clase_ConsultaBD.py" />
@@ -113,6 +150,13 @@
         <option value="$PROJECT_DIR$/vista/Menu.py" />
         <option value="$PROJECT_DIR$/vista/Principal.py" />
         <option value="$PROJECT_DIR$/vista/ventanaRegistro.py" />
+        <option value="$PROJECT_DIR$/vista/calculorRevoque.py" />
+        <option value="$PROJECT_DIR$/vista/calculoPared.py" />
+        <option value="$PROJECT_DIR$/vista/calculoContrapiso.py" />
+        <option value="$PROJECT_DIR$/vista/calculoCimiento.py" />
+        <option value="$PROJECT_DIR$/vista/calcularTecho.py" />
+        <option value="$PROJECT_DIR$/vista/actualizarPrecio.py" />
+        <option value="$PROJECT_DIR$/vista/animaciones.py" />
       </list>
     </option>
   </component>
@@ -128,6 +172,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -164,7 +209,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -192,8 +236,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ventanaRegistro">
-    <configuration name="Inicio" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.animaciones">
+    <configuration name="animaciones" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="proyectoCodigo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -206,7 +250,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vista/Inicio.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vista/animaciones.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -215,7 +259,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Menu" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="calculoCimiento" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="proyectoCodigo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -228,7 +272,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vista/Menu.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vista/calculoCimiento.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -237,7 +281,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Principal" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="calculoContrapiso" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="proyectoCodigo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -250,7 +294,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vista/Principal.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vista/calculoContrapiso.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -259,29 +303,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="mainController" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="proyectoCodigo" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/controladores" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/controladores/mainController.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="ventanaRegistro" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="calculoPared" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="proyectoCodigo" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -294,7 +316,29 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vista/ventanaRegistro.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vista/calculoPared.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="calculorRevoque" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="proyectoCodigo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/vista" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/vista/calculorRevoque.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -305,11 +349,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ventanaRegistro" />
-        <item itemvalue="Python.Principal" />
-        <item itemvalue="Python.Menu" />
-        <item itemvalue="Python.Inicio" />
-        <item itemvalue="Python.mainController" />
+        <item itemvalue="Python.animaciones" />
+        <item itemvalue="Python.calculorRevoque" />
+        <item itemvalue="Python.calculoPared" />
+        <item itemvalue="Python.calculoContrapiso" />
+        <item itemvalue="Python.calculoCimiento" />
       </list>
     </recent_temporary>
   </component>
@@ -338,22 +382,26 @@
       <workItem from="1562479050327" duration="18314000" />
       <workItem from="1562625955654" duration="1587000" />
       <workItem from="1562698784772" duration="4933000" />
+      <workItem from="1562731566885" duration="1643000" />
+      <workItem from="1562733408464" duration="1742000" />
+      <workItem from="1562735276287" duration="1755000" />
+      <workItem from="1562737153996" duration="1748000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="156704000" />
+    <option name="totallyTimeSpent" value="163592000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13842663" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1913767" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.17184943" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17184943" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.198036" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -398,13 +446,14 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/proyectoCodigo2$calculorRevoque.coverage" NAME="calculorRevoque Coverage Results" MODIFIED="1562214258075" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
+    <SUITE FILE_PATH="coverage/proyectoCodigo2$calculorRevoque.coverage" NAME="calculorRevoque Coverage Results" MODIFIED="1562736221197" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
     <SUITE FILE_PATH="coverage/proyectoCodigo2$Inicio.coverage" NAME="Inicio Coverage Results" MODIFIED="1562699953831" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
     <SUITE FILE_PATH="coverage/proyectoCodigo$Principal.coverage" NAME="Principal Coverage Results" MODIFIED="1561143540944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
-    <SUITE FILE_PATH="coverage/proyectoCodigo2$actualizarPrecio.coverage" NAME="actualizarPrecio Coverage Results" MODIFIED="1562446453189" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
+    <SUITE FILE_PATH="coverage/proyectoCodigo2$actualizarPrecio.coverage" NAME="actualizarPrecio Coverage Results" MODIFIED="1562731762998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
     <SUITE FILE_PATH="coverage/proyectoCodigo2$Principal.coverage" NAME="Principal Coverage Results" MODIFIED="1562701621997" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
     <SUITE FILE_PATH="coverage/proyectoCodigo2$actualizarPrecioModel.coverage" NAME="actualizarPrecioModel Coverage Results" MODIFIED="1562440762401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/modelos" />
-    <SUITE FILE_PATH="coverage/proyectoCodigo2$calculoPared.coverage" NAME="calculoPared Coverage Results" MODIFIED="1562247490231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
+    <SUITE FILE_PATH="coverage/proyectoCodigo2$calculoPared.coverage" NAME="calculoPared Coverage Results" MODIFIED="1562734972524" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
+    <SUITE FILE_PATH="coverage/proyectoCodigo2$animaciones.coverage" NAME="animaciones Coverage Results" MODIFIED="1562738469232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
     <SUITE FILE_PATH="coverage/proyectoCodigo$Clase_contrapiso.coverage" NAME="Clase_contrapiso Coverage Results" MODIFIED="1561321696439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/calculos" />
     <SUITE FILE_PATH="coverage/proyectoCodigo$ErrorUsuarioController.coverage" NAME="ErrorUsuarioController Coverage Results" MODIFIED="1562087141605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controladores" />
     <SUITE FILE_PATH="coverage/proyectoCodigo$Inicio.coverage" NAME="Inicio Coverage Results" MODIFIED="1561143831606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
@@ -413,18 +462,18 @@
     <SUITE FILE_PATH="coverage/proyectoCodigo2$Clase_pared.coverage" NAME="Clase_pared Coverage Results" MODIFIED="1562244778605" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/calculos" />
     <SUITE FILE_PATH="coverage/proyectoCodigo$ErrorUsController.coverage" NAME="ErrorUsController Coverage Results" MODIFIED="1561157105984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controladores" />
     <SUITE FILE_PATH="coverage/proyectoCodigo$calculosController.coverage" NAME="calculosController Coverage Results" MODIFIED="1561325558232" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controladores" />
-    <SUITE FILE_PATH="coverage/proyectoCodigo2$calculoCimiento.coverage" NAME="calculoCimiento Coverage Results" MODIFIED="1562515881521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
+    <SUITE FILE_PATH="coverage/proyectoCodigo2$calculoCimiento.coverage" NAME="calculoCimiento Coverage Results" MODIFIED="1562732970167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
     <SUITE FILE_PATH="coverage/proyectoCodigo$Menu.coverage" NAME="Menu Coverage Results" MODIFIED="1562092500383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
     <SUITE FILE_PATH="coverage/proyectoCodigo2$Error_Usuario.coverage" NAME="Error_Usuario Coverage Results" MODIFIED="1562366006616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
     <SUITE FILE_PATH="coverage/proyectoCodigo2$Menu.coverage" NAME="Menu Coverage Results" MODIFIED="1562700633344" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
-    <SUITE FILE_PATH="coverage/proyectoCodigo2$mainController.coverage" NAME="mainController Coverage Results" MODIFIED="1562698974318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controladores" />
-    <SUITE FILE_PATH="coverage/proyectoCodigo2$calcularTecho.coverage" NAME="calcularTecho Coverage Results" MODIFIED="1562253758032" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
+    <SUITE FILE_PATH="coverage/proyectoCodigo2$mainController.coverage" NAME="mainController Coverage Results" MODIFIED="1562731672112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controladores" />
     <SUITE FILE_PATH="coverage/proyectoCodigo2$ventanaRegistro.coverage" NAME="ventanaRegistro Coverage Results" MODIFIED="1562702548663" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
+    <SUITE FILE_PATH="coverage/proyectoCodigo2$calcularTecho.coverage" NAME="calcularTecho Coverage Results" MODIFIED="1562732913698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
     <SUITE FILE_PATH="coverage/proyectoCodigo2$Clase_reboque.coverage" NAME="Clase_reboque Coverage Results" MODIFIED="1562536394465" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/calculos" />
     <SUITE FILE_PATH="coverage/proyectoCodigo$loginController.coverage" NAME="loginController Coverage Results" MODIFIED="1562087255555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controladores" />
     <SUITE FILE_PATH="coverage/proyectoCodigo$calculo.coverage" NAME="calculo Coverage Results" MODIFIED="1561157548167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
     <SUITE FILE_PATH="coverage/proyectoCodigo$mainController.coverage" NAME="mainController Coverage Results" MODIFIED="1562183074489" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/controladores" />
-    <SUITE FILE_PATH="coverage/proyectoCodigo2$calculoContrapiso.coverage" NAME="calculoContrapiso Coverage Results" MODIFIED="1562213957168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
+    <SUITE FILE_PATH="coverage/proyectoCodigo2$calculoContrapiso.coverage" NAME="calculoContrapiso Coverage Results" MODIFIED="1562734366035" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/vista" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../OBI-OLD.py" />
@@ -462,31 +511,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vista/calculoContrapiso.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="84" column="56" lean-forward="true" selection-start-line="84" selection-start-column="56" selection-end-line="84" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modelos/registroModel.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="7" column="104" lean-forward="true" selection-start-line="7" selection-start-column="104" selection-end-line="7" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vista/calcularTecho.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="37" column="23" lean-forward="true" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vista/Error_Usuario.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -498,31 +526,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vista/calculoPared.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="69" column="39" lean-forward="true" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/calculos/Clase_cimiento.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-682">
           <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vista/calculoCimiento.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1124">
-          <caret line="102" column="13" lean-forward="true" selection-start-line="102" selection-start-column="13" selection-end-line="102" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vista/calculorRevoque.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-435">
-          <caret line="63" column="67" lean-forward="true" selection-start-line="63" selection-start-column="67" selection-end-line="63" selection-end-column="94" />
         </state>
       </provider>
     </entry>
@@ -540,13 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vista/animaciones.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="22" column="1" lean-forward="true" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/conexion/Clase_ConsultaBD.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -554,45 +554,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vista/Menu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="41" column="9" selection-start-line="41" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controladores/mainController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="71" column="2" selection-start-line="71" selection-start-column="2" selection-end-line="71" selection-end-column="2" />
+        <state relative-caret-position="198">
+          <caret line="76" lean-forward="true" selection-start-line="76" selection-end-line="76" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vista/Principal.py">
+    <entry file="file://$PROJECT_DIR$/vista/calculorRevoque.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="59" column="19" selection-start-line="59" selection-end-line="60" />
+        <state relative-caret-position="312">
+          <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vista/Inicio.py">
+    <entry file="file://$PROJECT_DIR$/vista/calculoPared.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="51" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vista/ventanaRegistro.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="73" column="21" selection-start-line="73" selection-end-line="74" />
+        <state relative-caret-position="290">
+          <caret line="120" column="1" selection-start-line="120" selection-start-column="1" selection-end-line="120" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vista/actualizarPrecio.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="71" column="194" lean-forward="true" selection-start-line="71" selection-start-column="194" selection-end-line="71" selection-end-column="214" />
+        <state relative-caret-position="2134">
+          <caret line="98" column="1" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/Inicio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1144">
+          <caret line="52" selection-start-line="52" selection-end-line="53" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/Menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="946">
+          <caret line="44" column="9" selection-start-line="44" selection-start-column="9" selection-end-line="44" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/Principal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1452">
+          <caret line="66" column="19" selection-start-line="66" selection-start-column="19" selection-end-line="66" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/ventanaRegistro.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="75" column="21" selection-start-line="75" selection-start-column="71" selection-end-line="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/Error_Usuario.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/calcularTecho.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2376">
+          <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/calculoCimiento.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2552">
+          <caret line="117" column="1" selection-start-line="117" selection-start-column="1" selection-end-line="117" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/calculoContrapiso.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2354">
+          <caret line="108" column="1" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vista/animaciones.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="71" selection-start-line="13" selection-start-column="71" selection-end-line="13" selection-end-column="71" />
         </state>
       </provider>
     </entry>

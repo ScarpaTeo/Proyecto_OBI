@@ -8,6 +8,7 @@
 
 from tkinter import *
 import tkinter.ttk as ttk
+from animaciones import *
 # import sys
 # sys.path.append('../calculos')
 # from calculo import *
@@ -68,22 +69,28 @@ class Pared():
         def añadir():
             ventana.destroy()
             self.valor="añadir"
+
+        def animacion():
+            x=Mensajes()
+            x.mensajecalculos()
+
+
         #--------------combo box tipo de pared
         Ccombo = ttk.Combobox(values=["Ladrillo Común","Bloque de Hormigón", "Bloque Cerámico",],state="readonly",font=('Arial',12))
         Ccombo.configure(width=16)
-        Ccombo.place(x=105,y=136)
-        #--------------------campo Alto
-        Calto=Entry(ventana,width=14,relief="flat",bg="#FEE780",font=('Arial',16))
-        Calto.place(x=101,y=216)
+        Ccombo.place(x=108,y=132)
+        #--------------------campo Alto#FEE780
+        Calto=Entry(ventana,width=15,relief="flat",bg="#FEE780",font=('Arial',15))
+        Calto.place(x=106,y=212)
 
         #-------------------campo ancho
-        Cancho=Entry(ventana,width=14,relief="flat",bg="#FEE780",font=('Arial',16))
-        Cancho.place(x=101,y=297)
+        Cancho=Entry(ventana,width=15,relief="flat",bg="#FEE780",font=('Arial',15))
+        Cancho.place(x=106,y=295)
 
         #---------------combox espesor
         Cespesor= ttk.Combobox(values=["0.15 cm", "0.20 cm", "0.30 cm"],state="readonly",font=('Arial',11))
         Cespesor.configure(width=9)
-        Cespesor.place(x=106,y=385)
+        Cespesor.place(x=108,y=381)
 
         #------------------------Text field
         Dtextfiel=Text(ventana,width=24,height=12,relief="flat",bg="#FFFFFF",font=('Arial',14))
@@ -92,20 +99,21 @@ class Pared():
         Dtextfiel.configure(state='disabled')
         if estado=="normal":
         #---------boton calcular
-            BcalcularCimiento=Button(ventana,width=12,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=99,y=448)
+            BcalcularCimiento=Button(ventana,width=12,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=102,y=445)
             #--------------seguir calculando
-            Bañadir=Button(ventana,state=DISABLED,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="añadir",command=añadir).place(x=369,y=458)
+            Bañadir=Button(ventana,state=DISABLED,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="añadir",command=añadir).place(x=371,y=454)
             #-------------imprimir detalle
-            Bimprimir=Button(ventana,state=DISABLED,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="imprimir",command=volverAtras).place(x=516,y=458)
+            Bimprimir=Button(ventana,state=DISABLED,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="imprimir",command=volverAtras).place(x=517,y=454)
         else:
-            BcalcularCimiento=Button(ventana,state=DISABLED,width=12,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=99,y=448)
+            BcalcularCimiento=Button(ventana,state=DISABLED,width=12,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=102,y=445)
             #--------------seguir calculando
-            Bañadir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="añadir",command=añadir).place(x=369,y=458)
+            Bañadir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="añadir",command=añadir).place(x=371,y=454)
              #-------------imprimir detalle
-            Bimprimir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="imprimir",command=volverAtras).place(x=516,y=458)
+            Bimprimir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="imprimir",command=volverAtras).place(x=517,y=454)
         #--------boton atras
-        Batras=Button(ventana,width=8,relief="flat",bg="#FFFFFF",font=('Arial',10),text="Atras",command=volverAtras).place(x=543,y=70)
-       
+        Batras=Button(ventana,width=8,relief="flat",bg="#FFFFFF",font=('Arial',10),text="Atras",command=volverAtras).place(x=545,y=66)
+        bt_ayuda = Button(ventana, text="Ayuda",command=animacion, fg="#FFDE00", bg="#1E1E1E", relief="flat", height=1, width=4).place(x=10, y=563)
+
         
         ventana.focus_force()        
         ventana.mainloop()

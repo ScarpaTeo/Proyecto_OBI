@@ -4,6 +4,7 @@
 
 from tkinter import *
 from tkinter import messagebox
+from animaciones import *
 
 class MostrarMenu:
     def __init__(self):
@@ -24,6 +25,10 @@ class MostrarMenu:
             if pregunta == True:
                 ventana.destroy()
 
+        def animacion():
+            x=Mensajes()
+            x.mensajeMenu()
+
         'crea la ventana menu'
         ventana = Tk()
         ventana.title("Menu")
@@ -39,9 +44,8 @@ class MostrarMenu:
         B_presupuesto.place(x=139, y=360)
         B_cargarPrecio= Button(ventana, text="Cargar Precios", fg="black", bg="#FFDE00",command=cargarPr, relief="flat", height=3, width=21,font=('Arial',13))
         B_cargarPrecio.place(x=364, y=150)
-        bt_ayuda = Button(ventana, text="Ayuda", fg="#FFDE00", bg="#1E1E1E", relief="flat", height=1, width=4).place(x=10, y=563)
-        bt_cerrar = Button(ventana, text="Cerrar Sesión", fg="#FFDE00", bg="#2F2F2F", relief="flat", height=1, width=9).place(
-            x=595, y=34)
+        bt_ayuda = Button(ventana, text="Ayuda", fg="#FFDE00", bg="#1E1E1E", relief="flat", height=1,command=animacion,width=4).place(x=10, y=563)
+        bt_cerrar = Button(ventana, text="Cerrar Sesión", fg="#FFDE00", bg="#2F2F2F", relief="flat", height=1, width=9).place(x=595, y=34)
 
         ventana.focus_force()
         ventana.mainloop()

@@ -1,6 +1,7 @@
 import sys
 sys.path.append('../vista')
 from tkinter import *
+from animaciones import *
 class Login():
     def __init__(self):
         self.datos = None
@@ -23,6 +24,9 @@ class Login():
 
         def pressEnter(evento):
             validar()
+        def animacion():
+            x=Mensajes()
+            x.mensajeLogin()
 
         ventana=Tk()
         ventana.title("Log In")
@@ -48,8 +52,8 @@ class Login():
         bt_registrar = Button(ventana, text="Registrarse", fg="black", bg="#FFFFFF", relief="flat", height=2, width=14,
                               command=registrarse).place(x=402, y=448)
 
-      #  bt_ayuda = Button(ventana, text="Ayuda", fg="#FFDE00", bg="#1E1E1E", relief="flat", height=1, width=4,
-       #                       command=animacion).place(x=10, y=563)
+        bt_ayuda = Button(ventana, text="Ayuda", fg="#FFDE00", bg="#1E1E1E", relief="flat", height=1, width=4,
+                              command=animacion).place(x=10, y=563)
 
         ventana.focus_force()
         ventana.mainloop()
