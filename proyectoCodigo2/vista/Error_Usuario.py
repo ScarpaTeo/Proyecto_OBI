@@ -47,4 +47,7 @@ class Error_Usuario():
         ventana.focus_force()
         ventana.mainloop()
         return self.valor
+<<<<<<< HEAD
 
+=======
+>>>>>>> b7a92b2ede9b4270df5df98ab658abb28f27c7dd

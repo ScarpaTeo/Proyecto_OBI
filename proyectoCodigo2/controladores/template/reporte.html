@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Presupuesto</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        
+        }
+        .contenedor{
+           
+            width: 90%;
+            margin: 0 auto;
+            height: 100%;
+            
+        }
+        .contenedor header{
+            background: url("../imagenes/presupuesto.png");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            width: 100%;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contenedor header .cabezera{
+            width: 100%;
+            height: 200px;
+            display: block;
+
+        }
+        .contenedor header .cabezera .fecha{
+            float: right;
+            margin: 68px 65px;
+
+        }
+        header .contenido{
+            width: 400px;
+            margin: 100px 220px;
+        }
+        header .contenido p{
+            font-size: 30px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+        <div class="contenedor">
+            <header>
+                <div class="cabezera">
+                    <p class="fecha">{{fecha}}</p>
+                </div>
+                <div class="contenido">
+                        <p>{{cimiento}}</p><br>
+                        <p>{{revoque}}</p><br>
+                        <p>{{contrapiso}}</p><br>
+                        <p>{{techo}}</p><br>
+                        <p>{{pared}}</p>
+                </div>
+            </header>
+        </div>     
+</body>
+</html>

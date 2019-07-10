@@ -50,6 +50,8 @@ class Registro():
             #cierra la ventana y vuelve al menu de login
                 ventana.destroy()
                 self.datos = "Login"
+            def animacion():
+                pass
 
             #-------------------seccion de entrys
             self.name=Entry(ventana,width=32,relief="flat",bg="#FFFFFF",font=('Arial',16))
@@ -71,7 +73,7 @@ class Registro():
                           width=13,font=('Arial',11)).place(x=215, y=522)
             bt_cancelar = Button(ventana, text="Atras", fg="black", bg="#FFFFFF", command=volverLogin, relief="flat", height=2,
                           width=13,font=('Arial',9)).place(x=401, y=522)
-            bt_ayuda = Button(ventana, text="Ayuda", fg="#FFDE00", bg="#1E1E1E", relief="flat", height=1,
+            bt_ayuda = Button(ventana, text="Ayuda",command=animacion ,fg="#FFDE00", bg="#1E1E1E", relief="flat", height=1,
                               width=4).place(x=10, y=557)
 
             ventana.mainloop()

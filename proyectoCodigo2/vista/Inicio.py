@@ -1,6 +1,7 @@
 import sys
 sys.path.append('../vista')
 from tkinter import *
+from animaciones import *
 class Login():
     def __init__(self):
         self.datos = None
@@ -23,6 +24,9 @@ class Login():
 
         def pressEnter(evento):
             validar()
+        def animacion():
+            x=Mensajes()
+            x.mensajeLogin()
 
         ventana=Tk()
         ventana.title("Log In")

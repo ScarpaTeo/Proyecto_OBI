@@ -8,6 +8,7 @@
 
 from tkinter import *
 import tkinter.ttk as ttk
+from animaciones import *
 
 class ActualizarPrecio():
     def __init__(self):
@@ -65,17 +66,19 @@ class ActualizarPrecio():
         def volverAtras():
             ventana.destroy()
             self.valor="principal"
-        
+        def animacion():
+            x=Mensajes()
+            x.mensajePrecios()
    
 
          #--------------combo box tipo de pared
         Ccombo = ttk.Combobox(values=["Arena","Cal","Cemento","Hierro del 10","Hierro del 4","Piedra","Ladrillo Común 0,15","Bloque Ceramico 0,15","Bloque Ceramico 0,20","Bloque Hormigón 0,15","Bloque Hormigón 0,20"],state="readonly",font=('Arial',12))
         Ccombo.configure(width=16)
-        Ccombo.place(x=129,y=223)
+        Ccombo.place(x=129,y=219)
 
         #-------------------campo Precio
         Cprecio=Entry(ventana,width=15,relief="flat",bg="#FEE780",font=('Arial',15))
-        Cprecio.place(x=128,y=325)
+        Cprecio.place(x=128,y=321)
 
         #------------------------Text field
         Dtextfiel=Text(ventana,width=26,height=13,relief="flat",bg="#FFFFFF",font=('Arial',12))
@@ -84,11 +87,12 @@ class ActualizarPrecio():
         Dtextfiel.configure(state='disabled')
     
         if estado=="normal":
-        #---------boton Actualizar
-            BcalcularCimiento=Button(ventana,width=11,relief="flat",bg="#FFDE00",font=('Arial',18),text="Actualizar",command=actulizar).place(x=131,y=450)
+        #---------boton Actualizar#FFDE00
+            BcalcularCimiento=Button(ventana,width=11,relief="flat",bg="#FFDE00",font=('Arial',18),text="Actualizar",command=actulizar).place(x=136,y=447)
         #--------boton atras
-        Batras=Button(ventana,width=8,relief="flat",bg="#FFFFFF",font=('Arial',10),text="Atras",command=volverAtras).place(x=511,y=90)
-    
+        Batras=Button(ventana,width=8,relief="flat",bg="#FFFFFF",font=('Arial',10),text="Atras",command=volverAtras).place(x=514,y=85)
+        bt_ayuda = Button(ventana, text="Ayuda", fg="#FFDE00", bg="#1E1E1E", relief="flat", height=1, width=4,
+                              command=animacion).place(x=10, y=563)
         ventana.focus_force()
         ventana.mainloop()
         return self.valor
