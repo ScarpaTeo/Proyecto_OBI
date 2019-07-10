@@ -8,6 +8,7 @@
 
 from tkinter import *
 import tkinter.ttk as ttk
+from animaciones import *
 # import sys
 # sys.path.append('../calculos')
 # from calculo import *
@@ -62,17 +63,21 @@ class Revoque():
         def añadir():
             ventana.destroy()
             self.valor="añadir"
+
+        def animacion():
+            x=Mensajes()
+            x.mensajecalculos()
         #--------------combo box tipo de pared
         Ccombo = ttk.Combobox(values=["Revoque Exterior Completo", "Revoque Interior Completo"],state="readonly",font=('Arial',12))
         Ccombo.configure(width=16)
-        Ccombo.place(x=105,y=200)
-        #--------------------campo Alto
-        Calto=Entry(ventana,width=14,relief="flat",bg="#FEE780",font=('Arial',16))
-        Calto.place(x=101,y=281)
+        Ccombo.place(x=107,y=197)
+        #--------------------campo Alto#FEE780
+        Calto=Entry(ventana,width=15,relief="flat",bg="#FEE780",font=('Arial',15))
+        Calto.place(x=106,y=278)
 
         #-------------------campo ancho
-        Cancho=Entry(ventana,width=14,relief="flat",bg="#FEE780",font=('Arial',16))
-        Cancho.place(x=101,y=366)
+        Cancho=Entry(ventana,width=15,relief="flat",bg="#FEE780",font=('Arial',15))
+        Cancho.place(x=106,y=362)
 
         #------------------------Text field
         Dtextfiel=Text(ventana,width=24,height=12,relief="flat",bg="#FFFFFF",font=('Arial',14))
@@ -82,22 +87,26 @@ class Revoque():
 
         if estado=="normal":
         #---------boton calcular
-            BcalcularCimiento=Button(ventana,width=12,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=100,y=465)
+            BcalcularCimiento=Button(ventana,width=12,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=103,y=462)
             #--------------seguir calculando
-            Bañadir=Button(ventana,state=DISABLED,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="añadir",command=añadir).place(x=369,y=475)
+            Bañadir=Button(ventana,state=DISABLED,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="añadir",command=añadir).place(x=371,y=471)
             #-------------imprimir detalle
-            Bimprimir=Button(ventana,state=DISABLED,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="imprimir",command=volverAtras).place(x=516,y=475)
+            Bimprimir=Button(ventana,state=DISABLED,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="imprimir",command=volverAtras).place(x=518,y=471)
         else:
-            BcalcularCimiento=Button(ventana,state=DISABLED,width=12,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=100,y=465)
+            BcalcularCimiento=Button(ventana,state=DISABLED,width=12,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=103,y=462)
             #--------------seguir calculando
-            Bañadir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="añadir",command=añadir).place(x=369,y=475)
+            Bañadir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="añadir",command=añadir).place(x=371,y=471)
             #-------------imprimir detalle
-            Bimprimir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="imprimir",command=volverAtras).place(x=516,y=475)
+            Bimprimir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="imprimir",command=volverAtras).place(x=518,y=471)
         #--------boton atras
-        Batras=Button(ventana,width=8,relief="flat",bg="#FFFFFF",font=('Arial',10),text="Atras",command=volverAtras).place(x=544,y=91)
-        
+        Batras=Button(ventana,width=8,relief="flat",bg="#FFFFFF",font=('Arial',10),text="Atras",command=volverAtras).place(x=546,y=87)
+        bt_ayuda = Button(ventana, text="Ayuda",command=animacion, fg="#FFDE00", bg="#1E1E1E", relief="flat", height=1, width=4).place(x=10, y=563)
+
         
        
         ventana.focus_force()        
         ventana.mainloop()
         return self.valor
+
+#x=Revoque()
+#x.vistaRevoque()
