@@ -47,10 +47,4 @@ class Error_Usuario():
         ventana.focus_force()
         ventana.mainloop()
         return self.valor
-<<<<<<< HEAD
 
-'''
-x=Error_Usuario()
-x.errorUsarioIncorrecto()'''
-=======
->>>>>>> 97ae667fd60439a8fce3fc747260390c2dd8ee2f
