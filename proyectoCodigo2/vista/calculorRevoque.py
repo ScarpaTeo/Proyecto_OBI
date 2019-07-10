@@ -87,20 +87,20 @@ class Revoque():
 
         if estado=="normal":
         #---------boton calcular
-            BcalcularCimiento=Button(ventana,width=12,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=103,y=462)
+            BcalcularCimiento=Button(ventana,width=12,relief="flat",activebackground="#FFDE00",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=103,y=462)
             #--------------seguir calculando
-            Bañadir=Button(ventana,state=DISABLED,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="añadir",command=añadir).place(x=371,y=471)
+            Bañadir=Button(ventana,state=DISABLED,width=8,relief="flat",activebackground="#FFDE00",bg="#FFDE00",font=('Arial',10),text="añadir",command=añadir).place(x=371,y=471)
             #-------------imprimir detalle
-            Bimprimir=Button(ventana,state=DISABLED,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="imprimir",command=volverAtras).place(x=518,y=471)
+            Bimprimir=Button(ventana,state=DISABLED,width=8,relief="flat",activebackground="#FFDE00",bg="#FFDE00",font=('Arial',10),text="imprimir",command=volverAtras).place(x=518,y=471)
         else:
-            BcalcularCimiento=Button(ventana,state=DISABLED,width=12,relief="flat",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=103,y=462)
+            BcalcularCimiento=Button(ventana,state=DISABLED,width=12,relief="flat",activebackground="#FFDE00",bg="#FFDE00",font=('Arial',18),text="Calcular",command=calcular).place(x=103,y=462)
             #--------------seguir calculando
-            Bañadir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="añadir",command=añadir).place(x=371,y=471)
+            Bañadir=Button(ventana,width=8,relief="flat",activebackground="#FFDE00",bg="#FFDE00",font=('Arial',10),text="añadir",command=añadir).place(x=371,y=471)
             #-------------imprimir detalle
-            Bimprimir=Button(ventana,width=8,relief="flat",bg="#FFDE00",font=('Arial',10),text="imprimir",command=volverAtras).place(x=518,y=471)
+            Bimprimir=Button(ventana,width=8,relief="flat",activebackground="#FFDE00",bg="#FFDE00",font=('Arial',10),text="imprimir",command=volverAtras).place(x=518,y=471)
         #--------boton atras
-        Batras=Button(ventana,width=8,relief="flat",bg="#FFFFFF",font=('Arial',10),text="Atras",command=volverAtras).place(x=546,y=87)
-        bt_ayuda = Button(ventana, text="Ayuda",command=animacion, fg="#FFDE00", bg="#1E1E1E", relief="flat", height=1, width=4).place(x=10, y=563)
+        Batras=Button(ventana,width=8,relief="flat",activebackground="#FFFFFF",bg="#FFFFFF",font=('Arial',10),text="Atras",command=volverAtras).place(x=546,y=87)
+        bt_ayuda = Button(ventana, text="Ayuda",command=animacion, fg="#FFDE00",activebackground="#1E1E1E", bg="#1E1E1E", relief="flat", height=1, width=4).place(x=10, y=563)
 
         
        
