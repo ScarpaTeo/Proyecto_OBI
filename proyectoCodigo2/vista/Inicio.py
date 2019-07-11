@@ -40,19 +40,20 @@ class Login():
         
         #------------- campo user
         self.user=Entry(ventana, width=16,relief="flat",bg="#FEE780",font=('Arial',18))
-        self.user.place(x=253, y=281)
+        self.user.place(x=253, y=277)
         self.user.focus()
         #-----------campo contrasena
         self.contrasena=Entry(ventana,show="*" ,width=16,relief="flat",bg="#FEE780",font=('Arial',18))
-        self.contrasena.place(x=253 ,y=373)
+        self.contrasena.place(x=253 ,y=369)
 
         #--------------- botones enter y cancelar
-        bt_enter = Button(ventana, text="Ingresar", fg="black", bg="#FFDE00", command=validar, relief="flat", height=2,
+        bt_enter = Button(ventana, text="Ingresar",activebackground="#FFDE00",fg="black", bg="#FFDE00", command=validar, relief="flat", height=2,
                           width=14).place(x=209, y=448)#FFFFFF
-        bt_registrar = Button(ventana, text="Registrarse", fg="black", bg="#FFFFFF", relief="flat", height=2, width=14,
+        bt_registrar = Button(ventana, text="Registrarse",activebackground="#FFFFFF", fg="black", bg="#FFFFFF", relief="flat", height=2, width=14,
                               command=registrarse).place(x=402, y=448)
+        bt_ayuda = Button(ventana, text="Ayuda", fg="#FFDE00",activebackground="#1E1E1E", bg="#1E1E1E", relief="flat", height=1, width=4,
+                              command=animacion).place(x=10, y=563)
 
-        bt_ayuda = Button(ventana, text="Ayuda", fg="#FFDE00", bg="#1E1E1E", relief="flat", height=1, width=4).place(x=10, y=563)
 
         ventana.focus_force()
         ventana.mainloop()

@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c69abf5-e6d9-4a7b-a768-dc7db273947d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/conexion/Clase_ConsultaBD.py" beforeDir="false" afterPath="$PROJECT_DIR$/conexion/Clase_ConsultaBD.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/Inicio.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/Inicio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/Menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/Principal.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/Principal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/actualizarPrecio.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/actualizarPrecio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/animaciones.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/animaciones.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/calcularTecho.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/calcularTecho.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/calculoCimiento.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/calculoCimiento.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/calculoContrapiso.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/calculoContrapiso.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/calculoPared.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/calculoPared.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/calculorRevoque.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/calculorRevoque.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/ventanaRegistro.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/ventanaRegistro.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +78,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vista/calcularTecho.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2376">
+            <state relative-caret-position="2398">
               <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
             </state>
           </provider>
@@ -99,7 +87,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vista/calculoCimiento.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2552">
+            <state relative-caret-position="2574">
               <caret line="117" column="1" selection-start-line="117" selection-start-column="1" selection-end-line="117" selection-end-column="1" />
             </state>
           </provider>
@@ -108,7 +96,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vista/calculoContrapiso.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2354">
+            <state relative-caret-position="2376">
               <caret line="108" column="1" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
             </state>
           </provider>
@@ -179,31 +167,6 @@
             <path>
               <item name="proyectoCodigo2" type="b2602c69:ProjectViewProjectNode" />
               <item name="proyectoCodigo2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="proyectoCodigo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="proyectoCodigo2" type="462c0819:PsiDirectoryNode" />
-              <item name="calculos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="proyectoCodigo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="proyectoCodigo2" type="462c0819:PsiDirectoryNode" />
-              <item name="conexion" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="proyectoCodigo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="proyectoCodigo2" type="462c0819:PsiDirectoryNode" />
-              <item name="controladores" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="proyectoCodigo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="proyectoCodigo2" type="462c0819:PsiDirectoryNode" />
-              <item name="modelos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="proyectoCodigo2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="proyectoCodigo2" type="462c0819:PsiDirectoryNode" />
-              <item name="vista" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -386,17 +349,17 @@
       <workItem from="1562733408464" duration="1742000" />
       <workItem from="1562735276287" duration="1755000" />
       <workItem from="1562737153996" duration="1748000" />
+      <workItem from="1562774800633" duration="6000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="163592000" />
+    <option name="totallyTimeSpent" value="163598000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1913767" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19440243" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -619,21 +582,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vista/calcularTecho.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2376">
+        <state relative-caret-position="2398">
           <caret line="109" column="1" selection-start-line="109" selection-start-column="1" selection-end-line="109" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vista/calculoCimiento.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2552">
+        <state relative-caret-position="2574">
           <caret line="117" column="1" selection-start-line="117" selection-start-column="1" selection-end-line="117" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vista/calculoContrapiso.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2354">
+        <state relative-caret-position="2376">
           <caret line="108" column="1" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
         </state>
       </provider>
