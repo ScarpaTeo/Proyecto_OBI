@@ -74,6 +74,11 @@ class Controlador():
             self.levantarVentanaPrecio()
         elif dato=="presupuesto":
             self.levantarVentanaCalculo()
+            self.totales["cimiento"]=""
+            self.totales["contrapiso"]=""
+            self.totales["revoque"]=""
+            self.totales["pared"]=""
+            self.totales["techo"]=""
         elif dato=="cerrar Sesion":
             self.validarUsuario()
 
@@ -125,6 +130,7 @@ class Controlador():
         tipo=pri.mostrar()
         if tipo=="reporte":
             generaReporte(self.totales,"Presupuesto")
+            self.levantarMenu()
         elif tipo=="cimiento":
             self.verCimiento()
         elif tipo=="revoque":

@@ -46,26 +46,28 @@ class Principal():
             pass
         
 
-        Bcimiento=Button(ventana, text="Cimiento",fg="black",activebackground="#FFDE00", bg="#FFDE00",relief="flat", height=2, width=25, font=("Arial",12),command=cimiento)
-        Bcimiento.place(x=259, y=106)
+        Bcimiento=Button(ventana, text="Cimiento",fg="black",activebackground="#FFDE00", bg="#FFDE00",relief="flat", height=2, width=27, font=("Arial",13),command=cimiento)
+        Bcimiento.place(x=299, y=93)
 
-        Bpared=Button(ventana, text="Pared",fg="black",activebackground="#FFDE00",bg="#FFDE00",relief="flat", height=2, width=25, font=("Arial",12),command=pared)
-        Bpared.place(x=259,y=198)
+        Bpared=Button(ventana, text="Pared",fg="black",activebackground="#FFDE00",bg="#FFDE00",relief="flat", height=2, width=27, font=("Arial",13),command=pared)
+        Bpared.place(x=299,y=193)
 
-        Bcontrapiso=Button(ventana, text="Contrapiso",fg="black",activebackground="#FFDE00",bg="#FFDE00",relief="flat", height=2, width=25, font=("Arial",12),command=contrapiso)
-        Bcontrapiso.place(x=259, y=288)
+        Bcontrapiso=Button(ventana, text="Contrapiso",fg="black",activebackground="#FFDE00",bg="#FFDE00",relief="flat", height=2, width=27, font=("Arial",13),command=contrapiso)
+        Bcontrapiso.place(x=299, y=296)
 
-        Brevoque=Button(ventana, text="Revoque",fg="black",activebackground="#FFDE00",bg="#FFDE00",relief="flat", height=2, width=25, font=("Arial",12),command=revoque)
-        Brevoque.place(x=259, y=380)
+        Brevoque=Button(ventana, text="Revoque",fg="black",activebackground="#FFDE00",bg="#FFDE00",relief="flat", height=2, width=27, font=("Arial",13),command=revoque)
+        Brevoque.place(x=299, y=399)
 
-        Btecho=Button(ventana, text="Techo",fg="black",activebackground="#FFDE00", bg="#FFDE00",relief="flat", height=2, width=25, font=("Arial",12),command=techo)
-        Btecho.place(x=259, y=475)
+        Btecho=Button(ventana, text="Techo",fg="black",activebackground="#FFDE00", bg="#FFDE00",relief="flat", height=2, width=27, font=("Arial",13),command=techo)
+        Btecho.place(x=299, y=500)
         # ---------boton atras
-        Batras=Button(ventana,width=8,relief="flat",activebackground="#303030",bg="#303030",fg="#FFDE00",font=('Arial',10),text="Atras",command=volverAtras).place(x=598,y=37)
+        Batras=Button(ventana,width=8,relief="flat",activebackground="#303030",bg="#303030",fg="#FFDE00",font=('Arial',10),text="Atras",command=volverAtras).place(x=598,y=24)
         
-        Bimprimir=Button(ventana,width=8,relief="flat",activebackground="#292929",bg="#292929",fg="#FFDE00",font=('Arial',10),text="Imprimir",command=Reporte).place(x=503,y=37)
+        Bimprimir=Button(ventana,width=8,relief="flat",activebackground="#292929",bg="#292929",fg="#FFDE00",font=('Arial',10),text="Imprimir",command=Reporte).place(x=503,y=24)
 
         bt_ayuda = Button(ventana, text="Ayuda",command=animacion, fg="#FFDE00",activebackground="#1E1E1E", bg="#1E1E1E", relief="flat", height=1, width=4).place(x=10, y=563)
         ventana.focus_force()
         ventana.mainloop()
         return self.dato
+#x=Principal()
+#x.mostrar()

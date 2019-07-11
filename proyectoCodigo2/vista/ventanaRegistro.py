@@ -5,9 +5,9 @@ class Registro():
             self.datos=None
         def mostrarRegistro(self,resultado=""):
             def errorVacio():
-                error.config(text="Error!, todos los campos deben estar completos!")
+                error.config(text="    Error!  todos los campos deben estar completos!")
             def errorContraseñas():
-                error.config(text="Error!, Las contraseñas no coinciden!")
+                error.config(text="Error!,Las contraseñas no coinciden!")
             #-------------------Seccion ventana
             ventana=Tk()
             ventana.title("Registro")
