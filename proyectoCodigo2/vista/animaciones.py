@@ -16,7 +16,7 @@ class Mensajes():
         window.set_icon(icon)
 
         x, y = window.get_location()
-        window.set_location(x + 250, y + 10)
+        window.set_location(x + 350, y + 0)
 
         r,g,b,alpha=0.5,0.5,0.8,0.5
 
@@ -43,7 +43,7 @@ class Mensajes():
         window.set_icon(icon)
 
         x, y = window.get_location()
-        window.set_location(x + 250, y + 10)
+        window.set_location(x + 350, y + 0)
 
         r,g,b,alpha=0.5,0.5,0.8,0.5
 
@@ -70,7 +70,7 @@ class Mensajes():
         window.set_icon(icon)
 
         x, y = window.get_location()
-        window.set_location(x + 250, y + 10)
+        window.set_location(x + 350, y + 0)
 
         r,g,b,alpha=0.5,0.5,0.8,0.5
 
@@ -95,7 +95,7 @@ class Mensajes():
         window.set_icon(icon)
 
         x, y = window.get_location()
-        window.set_location(x + 250, y + 10)
+        window.set_location(x + 350, y + 0)
 
         r,g,b,alpha=0.5,0.5,0.8,0.5
 

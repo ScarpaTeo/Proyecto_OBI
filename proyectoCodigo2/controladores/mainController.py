@@ -101,9 +101,19 @@ class Controlador():
                 traer=actualizar.obtenerPrecios()
                 detalle = ""
                 for item in actualizar.dato:
-                    texto = "%s.....$%s\n" % (str(item[1]), str(item[2]))
-                    detalle += texto
-                precioActualizado = ap.vistaActualizar(cadena,"disable",detalle)
+                    if str(item[1])=='hierro del 10'or str(item[1])=='hierro del 4':
+                        texto = "%s.....$%s\n" % (str(item[1]), str(item[2]*12))
+                        detalle += texto
+                    elif str(item[1])=='cemento':
+                        texto = "%s.....$%s\n" % (str(item[1]), str(item[2]*50))
+                        detalle += texto
+                    elif str(item[1])=='cal':
+                        texto = "%s.....$%s\n" % (str(item[1]), str(item[2]*20))
+                        detalle += texto
+                    else:
+                        texto = "%s.....$%s\n" % (str(item[1]), str(item[2]))
+                        detalle += texto
+                precioActualizado = ap.vistaActualizar(cadena,"normal",detalle)
                 levPrecio(precioActualizado)
 
         ab=actualizarLosPrecioModel()
@@ -111,8 +121,18 @@ class Controlador():
         print(ab.dato)
         detalle=""
         for item in ab.dato:
-            texto="%s.....$%s\n"%(str(item[1]),str(item[2]))
-            detalle+=texto
+            if str(item[1])=='hierro del 10'or str(item[1])=='hierro del 4':
+                texto = "%s.....$%s\n" % (str(item[1]), str(item[2]*12))
+                detalle += texto
+            elif str(item[1])=='cemento':
+                texto = "%s.....$%s\n" % (str(item[1]), str(item[2]*50))
+                detalle += texto
+            elif str(item[1])=='cal':
+                texto = "%s.....$%s\n" % (str(item[1]), str(item[2]*20))
+                detalle += texto
+            else:
+                texto = "%s.....$%s\n" % (str(item[1]), str(item[2]))
+                detalle += texto
 
         ap = ActualizarPrecio()
         ap.vistaActualizar("","normal",str(detalle))
