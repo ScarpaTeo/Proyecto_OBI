@@ -66,6 +66,9 @@ class Techo():
         def animacion():
             x=Mensajes()
             x.mensajecalculos()
+        def imprimir():
+            ventana.destroy()
+            self.valor="imprimir"
 
         #--------------combo box tipo de pared
         Ccombo = ttk.Combobox(values=["1.83","2.13","2.44","2.74","3.05","3.36","3.66","3.96"],state="readonly",font=('Arial',12))
@@ -91,12 +94,12 @@ class Techo():
             #--------------seguir calculando
             Bañadir=Button(ventana,state=DISABLED,width=8,relief="flat",activebackground="#FFDE00",bg="#FFDE00",font=('Arial',10),text="añadir",command=añadir).place(x=371,y=472)#
             #-------------imprimir detalle
-            Bimprimir=Button(ventana,state=DISABLED,width=8,relief="flat",activebackground="#FFDE00",bg="#FFDE00",font=('Arial',10),text="imprimir",command=volverAtras).place(x=517,y=472)#
+            Bimprimir=Button(ventana,state=DISABLED,width=8,relief="flat",activebackground="#FFDE00",bg="#FFDE00",font=('Arial',10),text="imprimir",command=imprimir).place(x=517,y=472)#
         else:
             Bañadir=Button(ventana,width=8,relief="flat",activebackground="#FFDE00",bg="#FFDE00",font=('Arial',10),text="añadir",command=añadir).place(x=371,y=472)
             BcalcularCimiento=Button(ventana,state=DISABLED,width=11,relief="flat",activebackground="#FFDE00",bg="#FFDE00",font=('Arial',19),text="Calcular",command=calcular).place(x=103,y=461)
             #-------------imprimir detalle#FFDE00
-            Bimprimir=Button(ventana,width=8,relief="flat",activebackground="#FFDE00",bg="#FFDE00",font=('Arial',10),text="imprimir",command=volverAtras).place(x=517,y=472)
+            Bimprimir=Button(ventana,width=8,relief="flat",activebackground="#FFDE00",bg="#FFDE00",font=('Arial',10),text="imprimir",command=imprimir).place(x=517,y=472)
 
         #--------boton atras
         Batras=Button(ventana,width=8,relief="flat",activebackground="#FFFFFF",bg="#FFFFFF",font=('Arial',10),text="Atras",command=volverAtras).place(x=546,y=88)

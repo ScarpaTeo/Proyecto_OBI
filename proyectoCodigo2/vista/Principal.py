@@ -43,7 +43,8 @@ class Principal():
             ventana.destroy()
             self.dato="reporte"
         def animacion():
-            pass
+            x=Mensajes()
+            x.mensajeOpciones()
         
 
         Bcimiento=Button(ventana, text="Cimiento",fg="black",activebackground="#FFDE00", bg="#FFDE00",relief="flat", height=2, width=27, font=("Arial",13),command=cimiento)

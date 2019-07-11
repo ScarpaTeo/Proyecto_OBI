@@ -3,6 +3,7 @@ import sys
 sys.path.append('../conexion')
 from Clase_ConsultaBD import Conexion
 from Reporte import generaReporte
+from UnicoReporte import generaReporteUnico
 sys.path.append('../vista')
 sys.path.append('../modelos')
 from loginModel import LoginModel
@@ -29,7 +30,7 @@ from Error_Usuario import *
 class Controlador():
     def __init__(self):
         self.totales={
-            "fecha":"09/06/19",
+            "fecha":"11/07/19",
             "cimiento":"",
             "contrapiso":"",
             "revoque":"",
@@ -106,9 +107,19 @@ class Controlador():
                 traer=actualizar.obtenerPrecios()
                 detalle = ""
                 for item in actualizar.dato:
-                    texto = "%s.....$%s\n" % (str(item[1]), str(item[2]))
-                    detalle += texto
-                precioActualizado = ap.vistaActualizar(cadena,"disable",detalle)
+                    if str(item[1])=='hierro del 10' or str(item[1])=='hierro del 4':
+                        texto = "%s.....$%s\n" % (str(item[1]), str(item[2]*12))
+                        detalle += texto
+                    elif str(item[1])=='cemento':
+                        texto = "%s.....$%s\n" % (str(item[1]), str(item[2]*50))
+                        detalle += texto
+                    elif str(item[1])=='cal':
+                        texto = "%s.....$%s\n" % (str(item[1]), str(item[2]*20))
+                        detalle += texto
+                    else:
+                        texto = "%s.....$%s\n" % (str(item[1]), str(item[2]))
+                        detalle += texto
+                precioActualizado = ap.vistaActualizar(cadena,"normal",detalle)
                 levPrecio(precioActualizado)
 
         ab=actualizarLosPrecioModel()
@@ -116,8 +127,18 @@ class Controlador():
         print(ab.dato)
         detalle=""
         for item in ab.dato:
-            texto="%s.....$%s\n"%(str(item[1]),str(item[2]))
-            detalle+=texto
+            if str(item[1])=='hierro del 10' or str(item[1])=='hierro del 4':
+                texto = "%s.....$%s\n" % (str(item[1]), str(item[2]*12))
+                detalle += texto
+            elif str(item[1])=='cemento':
+                texto = "%s.....$%s\n" % (str(item[1]), str(item[2]*50))
+                detalle += texto
+            elif str(item[1])=='cal':
+                texto = "%s.....$%s\n" % (str(item[1]), str(item[2]*20))
+                detalle += texto
+            else:
+                texto = "%s.....$%s\n" % (str(item[1]), str(item[2]))
+                detalle += texto
 
         ap = ActualizarPrecio()
         ap.vistaActualizar("","normal",str(detalle))
@@ -186,6 +207,15 @@ Chapas de 1x%s.\n<br>
             if t.valor == "añadir":
                 self.totales['techo']=textohtm
                 self.levantarVentanaCalculo()
+            if t.valor=="imprimir":
+                data={
+                    "fecha":"11/07/19",
+                    "unico":textohtm
+                }
+                generaReporteUnico(data,"ReporteTecho")
+                self.levantarVentanaCalculo()
+                
+
     def verCimiento(self):
         c=Cimiento()
         c.vistaCimiento()
@@ -284,6 +314,13 @@ Total...${5}<br>'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista
             elif c.valor == "añadir":
                 self.totales['cimiento']=textohtm
                 self.levantarVentanaCalculo()
+            if c.valor=="imprimir":
+                data={
+                    "fecha":"11/07/19",
+                    "unico":textohtm
+                }
+                generaReporteUnico(data,"ReporteCimiento")
+                self.levantarVentanaCalculo()
 
     def verRevoque(self):
         r=Revoque()
@@ -359,6 +396,13 @@ Total...${3}<br>'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista
             if r.valor == "añadir":
                 self.totales['revoque']=textohtm
                 self.levantarVentanaCalculo()
+            if r.valor=="imprimir":
+                data={
+                    "fecha":"11/07/19",
+                    "unico":textohtm
+                }
+                generaReporteUnico(data,"ReporteRevoque")
+                self.levantarVentanaCalculo()
 
     def verContrapiso(self):
         cn=Contrapiso()
@@ -415,6 +459,13 @@ Total...${3}<br>'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista
                 self.levantarVentanaCalculo()
             if cn.valor == "añadir":
                 self.totales['contrapiso']=textohtm
+                self.levantarVentanaCalculo()
+            if cn.valor=="imprimir":
+                data={
+                    "fecha":"11/07/19",
+                    "unico":textohtm
+                }
+                generaReporteUnico(data,"ReporteContrapiso")
                 self.levantarVentanaCalculo()
 
     def verPared(self):
@@ -636,21 +687,14 @@ Total...${4}<br>'''.format(round(lista1[0], 2), round(lista1[1], 2), round(lista
             elif p.valor == "añadir":
                 self.totales['pared']=textohtm
                 self.levantarVentanaCalculo()
+            if p.valor=="imprimir":
+                data={
+                    "fecha":"11/07/19",
+                    "unico":textohtm
+                }
+                generaReporteUnico(data,"ReportePared")
+                self.levantarVentanaCalculo()
+
 if __name__=="__main__":
     new=Controlador()
-    new.validarUsuario()    
-
-#consulta para traer los materiales
-#query="SELECT precio FROM materiales WHERE id_materiales=1 or id_materiales=4 or id_materiales=6"
-#orden de los materiales en la tabla
-#(1, 'cal', 10),
-#(2, 'cemento', 7.8),
-#(3,'arena',1450),
-#(4,'piedra',1100),
-#(5,'hierro del 10',850),
-#(6,'hierro del 4',450);
-#7	Ladrillo Comun 0,15	10
-#8	Bloque Ceramico 0,15	10
-#9	Bloque Ceramico 0,20	10
-#10	bloque de hormigon 0,15	10
-#11	bloque de hormigon 0,20	10
+    new.validarUsuario()

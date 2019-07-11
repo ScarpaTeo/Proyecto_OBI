@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c69abf5-e6d9-4a7b-a768-dc7db273947d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/calculos/Clase_reboque.py" beforeDir="false" afterPath="$PROJECT_DIR$/calculos/Clase_reboque.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controladores/mainController.py" beforeDir="false" afterPath="$PROJECT_DIR$/controladores/mainController.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controladores/nicolassss.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/controladores/nicolassss.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controladores/nuevo.html" beforeDir="false" afterPath="$PROJECT_DIR$/controladores/nuevo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagenes/Opc.png" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes/Opc.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imagenes/menu.png" beforeDir="false" afterPath="$PROJECT_DIR$/imagenes/menu.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/Menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/Principal.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/Principal.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vista/animaciones.py" beforeDir="false" afterPath="$PROJECT_DIR$/vista/animaciones.py" afterDir="false" />
-    </list>
+    <list default="true" id="6c69abf5-e6d9-4a7b-a768-dc7db273947d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +13,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controladores/mainController.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="74" column="7" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
+            <state relative-caret-position="220">
+              <caret line="77" column="1" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -287,23 +277,22 @@
       <workItem from="1562735276287" duration="1755000" />
       <workItem from="1562737153996" duration="1748000" />
       <workItem from="1562774800633" duration="6000" />
-      <workItem from="1562823156755" duration="585000" />
+      <workItem from="1562823156755" duration="780000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164183000" />
+    <option name="totallyTimeSpent" value="164378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19742814" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.17184943" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.17184943" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.198036" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -542,8 +531,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controladores/mainController.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="74" column="7" selection-start-line="74" selection-start-column="7" selection-end-line="74" selection-end-column="7" />
+        <state relative-caret-position="220">
+          <caret line="77" column="1" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
         </state>
       </provider>
     </entry>

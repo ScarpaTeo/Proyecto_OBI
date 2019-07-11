@@ -1,7 +1,7 @@
 import mysql.connector
 
 class Conexion:
-    def __init__(self,host="localhost",user="root",passwd="",database="obi"):
+    def __init__(self,host="localhost",user="root",passwd="464985",database="obi"):
         self.host=host
         self.user=user
         self.passwd=passwd
@@ -9,22 +9,18 @@ class Conexion:
     def conectar(self):
         'crea una conexion con la base de datos '
         self.myBase = mysql.connector.connect(host=self.host,user=self.user,passwd=self.passwd,database=self.database)
-        print("se creo la conexion")
 
     def abrir_cursor(self):
         'aca creo el curso'
         self.mycursor = self.myBase.cursor()
-        print("se abrio el cursor")
 
     def ejecutar_consulta(self,query,values=''):
         'aca creo la consulta mysql'
         self.mycursor.execute(query,values)
-        print("se ejecuto la consulta")
 
     def traer_datos(self):
         """Traer registros"""
         self.resultado = self.mycursor.fetchall()
-        print("se trajeron los archivos")
         return self.resultado
     def enviar_commit(self,query):
         'enviar commit a la base de datos '
